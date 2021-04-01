@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lab
+namespace Lab.Campaña
 {
-    public partial class Form1 : Form
+    public partial class nuevaCamp : Form
     {
-        public Form1()
+        public nuevaCamp()
         {
             InitializeComponent();
         }
