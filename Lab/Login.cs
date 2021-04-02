@@ -19,35 +19,14 @@ namespace Lab
             InitializeComponent();
         }
 
-        //private Boolean checkPassword(string password)
-        //{
-        //    Boolean access = false;
-        //    /* Fetch the stored value */
-        //    string savedPasswordHash = password;
-        //    /* Extract the bytes */
-        //    byte[] hashBytes = Convert.FromBase64String(savedPasswordHash);
-        //    /* Get the salt */
-        //    byte[] salt = new byte[16];
-        //    Array.Copy(hashBytes, 0, salt, 0, 16);
-        //    /* Compute the hash on the password the user entered */
-        //    var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 100000);
-        //    byte[] hash = pbkdf2.GetBytes(20);
-        //    /* Compare the results */
+        private string hasing(string password) {
 
-        //    MessageBox.Show(hash.ToString() + " ... hash");
-        //    MessageBox.Show(pbkdf2.ToString() + " ... pbkdf2");
+            SHA1CryptoServiceProvider sha1 = new SHA1CryptoServiceProvider();
+            byte[] password_bytes = Encoding.ASCII.GetBytes(password);
+            byte[] encrypted_bytes = sha1.ComputeHash(password_bytes);
 
-        //    for (int i = 0; i < 20; i++)
-        //    {
-        //        MessageBox.Show(hashBytes[i + 16].ToString());
-        //        MessageBox.Show(hash[i].ToString());
-        //        if (hashBytes[i + 16] != hash[i])
-        //            access = false;
-        //        else
-        //            access = true;
-        //    }
-        //    return access;
-        //}
+            return Convert.ToBase64String(encrypted_bytes);
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -63,7 +42,7 @@ namespace Lab
                 using (laboratorio_pEntities db = new laboratorio_pEntities())
                 {
                     var query = from usuario in db.usuario
-                                where usuario.nombre_usuario == u && usuario.contraseña == p
+                                where usuario.nombre_usuario == u //&& usuario.contraseña == p
                                 select usuario;
 
                     var currentUser = query.ToList();
@@ -74,22 +53,32 @@ namespace Lab
 
                     if (currentUser.Count > 0)
                     {
-                        String userType = currentUser[0].tipo.ToString().Trim();
-
-                        id = currentUser[0].id_usuario;
-
-                        if (userType.Equals("admin"))
+                        if (hasing(p).Equals(currentUser[0].contraseña))
                         {
-                            MessageBox.Show("Admin Type");
-                            new AdminPanel.Admin().Show();
-                            this.Hide();
+                            MessageBox.Show("In");
+                            String userType = currentUser[0].tipo.ToString().Trim();
+
+                            id = currentUser[0].id_usuario;
+
+                            if (userType.Equals("admin"))
+                            {
+                                MessageBox.Show("Admin Type");
+                                new AdminPanel.Admin().Show();
+                                this.Hide();
+                            }
+                            else if (userType.Equals("user"))
+                            {
+                                MessageBox.Show("User type");
+                                new UserPanel.User().Show();
+                                this.Hide();
+                            }
+
                         }
-                        else if (userType.Equals("user"))
-                        {
-                            MessageBox.Show("User type");
-                            new UserPanel.User().Show();
-                            this.Hide();
+                        else {
+                            MessageBox.Show("out");
                         }
+
+                        
                        
                         /* 
                          * NOTA: 
