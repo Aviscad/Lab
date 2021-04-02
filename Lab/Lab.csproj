@@ -114,6 +114,18 @@
     <Compile Include="protozoarios_quistes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserPanel\Campania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel\Campania.Designer.cs">
+      <DependentUpon>Campania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\Pacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel\Pacientes.Designer.cs">
+      <DependentUpon>Pacientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPanel\User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +153,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserPanel\Campania.resx">
+      <DependentUpon>Campania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanel\Pacientes.resx">
+      <DependentUpon>Pacientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserPanel\User.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>

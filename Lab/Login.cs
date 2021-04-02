@@ -13,12 +13,14 @@ namespace Lab
 {
     public partial class login : Form
     {
+        public static int id = 0; //ID del usuario que inicio sesion
         public login()
         {
             InitializeComponent();
         }
 
-        //private Boolean checkPassword(string password) {
+        //private Boolean checkPassword(string password)
+        //{
         //    Boolean access = false;
         //    /* Fetch the stored value */
         //    string savedPasswordHash = password;
@@ -35,13 +37,15 @@ namespace Lab
         //    MessageBox.Show(hash.ToString() + " ... hash");
         //    MessageBox.Show(pbkdf2.ToString() + " ... pbkdf2");
 
-        //    for (int i = 0; i < 20; i++) { 
-        //    MessageBox.Show(hashBytes[i + 16].ToString());
+        //    for (int i = 0; i < 20; i++)
+        //    {
+        //        MessageBox.Show(hashBytes[i + 16].ToString());
         //        MessageBox.Show(hash[i].ToString());
         //        if (hashBytes[i + 16] != hash[i])
-        //        access = false;
-        //    else
-        //        access = true; }
+        //            access = false;
+        //        else
+        //            access = true;
+        //    }
         //    return access;
         //}
 
@@ -59,26 +63,21 @@ namespace Lab
                 using (laboratorio_pEntities db = new laboratorio_pEntities())
                 {
                     var query = from usuario in db.usuario
-                                where usuario.nombre_usuario == u && usuario.contraseña ==p
+                                where usuario.nombre_usuario == u && usuario.contraseña == p
                                 select usuario;
 
                     var currentUser = query.ToList();
 
                    // MessageBox.Show(currentUser[0].contraseña.ToString());
                    // Boolean f = checkPassword(currentUser[0].contraseña.ToString());
-
                    // if (f) { MessageBox.Show("yes");}
 
                     if (currentUser.Count > 0)
                     {
-                        //Check user type
                         String userType = currentUser[0].tipo.ToString().Trim();
 
+                        id = currentUser[0].id_usuario;
 
-
-
-                        //if (access)
-                        //{
                         if (userType.Equals("admin"))
                         {
                             MessageBox.Show("Admin Type");
@@ -91,13 +90,7 @@ namespace Lab
                             new UserPanel.User().Show();
                             this.Hide();
                         }
-                        //}
-                        //else
-                        //{
-                        //    MessageBox.Show("Contrase;a incorrecta");
-                        //}
-
-
+                       
                         /* 
                          * NOTA: 
                          * FALTA BUSCAR UNA MANERA PARA CERRAR EL MAIN FORM SIN QUE SE CIERRE LA APLICACION
