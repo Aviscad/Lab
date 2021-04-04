@@ -42,14 +42,10 @@ namespace Lab
                 using (laboratorio_pEntities db = new laboratorio_pEntities())
                 {
                     var query = from usuario in db.usuario
-                                where usuario.nombre_usuario == u //&& usuario.contraseña == p
+                                where usuario.nombre_usuario == u
                                 select usuario;
 
                     var currentUser = query.ToList();
-
-                   // MessageBox.Show(currentUser[0].contraseña.ToString());
-                   // Boolean f = checkPassword(currentUser[0].contraseña.ToString());
-                   // if (f) { MessageBox.Show("yes");}
 
                     if (currentUser.Count > 0)
                     {
@@ -72,22 +68,10 @@ namespace Lab
                                 new UserPanel.User().Show();
                                 this.Hide();
                             }
-
                         }
                         else {
                             MessageBox.Show("out");
                         }
-
-                        
-                       
-                        /* 
-                         * NOTA: 
-                         * FALTA BUSCAR UNA MANERA PARA CERRAR EL MAIN FORM SIN QUE SE CIERRE LA APLICACION
-                         * AL UTILIZAR EL .Hide() SOLO SE OCULTA TEMPORALMENTE, PARA SALIR DE LA APLICACION
-                         * HAY QUE FORZAR EL CIERRE CON Application.Exit();
-                         * 
-                         * FALTA ENCRIPTAR LAS CONTRASEÑAS EN LA DB <--- OJO
-                         */
                     }
                     else
                     {
