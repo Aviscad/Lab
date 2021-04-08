@@ -18,20 +18,22 @@ namespace Lab.UserPanel
             InitializeComponent();
         }
 
-
         private void Clear()
         {
             txtNombre.Text = txtEdad.Text = txtCodigo.Text = "";
             btnEliminar.Enabled = false;
             btnGuardar.Text = "Guardar";
             pacienteModel.id_paciente = 0;
+
+            cbbCampania.SelectedIndex = 0;
+            cbbGenero.SelectedIndex = 0;
         }
 
         paciente pacienteModel = new paciente();
 
         private void Pacientes_Load(object sender, EventArgs e)
         {
-            //Fill campaña
+            //Fill campaña comboBox
             using (laboratorio_pEntities DB = new laboratorio_pEntities()) 
             {
                 var query = from campaña in DB.campaña select campaña;
@@ -41,7 +43,6 @@ namespace Lab.UserPanel
                 cbbCampania.ValueMember = "id_campaña";
                 cbbGenero.SelectedIndex = 0;     
             }
-
             fillRows();
             Clear();
         }
@@ -54,30 +55,45 @@ namespace Lab.UserPanel
             }
             else
             {
-                pacienteModel.nombre = txtNombre.Text.Trim();
-                pacienteModel.edad =  Convert.ToInt32(txtEdad.Text.Trim());
-                pacienteModel.codigo = txtCodigo.Text.Trim();
-                pacienteModel.genero = cbbGenero.SelectedItem.ToString().Trim();
-                pacienteModel.id_campaña = Convert.ToInt32(cbbCampania.SelectedValue.ToString().Trim());
-
-                using (laboratorio_pEntities DB = new laboratorio_pEntities())
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txtNombre.Text, @"^[A-Z\sÑ]+$")) //regEx solo letras
                 {
-                    if (pacienteModel.id_paciente == 0)
+                    MessageBox.Show("El Nombre debe contener solo letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else 
+                {
+                    if (Convert.ToInt32(txtEdad.Text.Trim()) < 1)
                     {
-                        DB.paciente.Add(pacienteModel);
-                        MessageBox.Show("Registro agregado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("La Edad tiene que ser mayor de 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        DB.Entry(pacienteModel).State = EntityState.Modified;
-                        MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        pacienteModel.nombre = txtNombre.Text.Trim();
+                        pacienteModel.edad = Convert.ToInt32(txtEdad.Text.Trim());
+                        pacienteModel.codigo = txtCodigo.Text.Trim();
+                        pacienteModel.genero = cbbGenero.SelectedItem.ToString().Trim();
+                        pacienteModel.id_campaña = Convert.ToInt32(cbbCampania.SelectedValue.ToString().Trim());
+
+                        using (laboratorio_pEntities DB = new laboratorio_pEntities())
+                        {
+                            if (pacienteModel.id_paciente == 0)
+                            {
+                                DB.paciente.Add(pacienteModel);
+                                MessageBox.Show("Registro agregado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                DB.Entry(pacienteModel).State = EntityState.Modified;
+                                MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            DB.SaveChanges();
+                        }
+                        fillRows();
+                        Clear();
                     }
-                    DB.SaveChanges();
                 }
-                fillRows();
-                Clear();
             }
         }
+
         private void fillRows() {
             dgvPacientes.Rows.Clear();
             using (laboratorio_pEntities DB = new laboratorio_pEntities())
@@ -115,7 +131,6 @@ namespace Lab.UserPanel
                     else if(pacienteModel.genero.Equals("Femenino")){
                         cbbGenero.SelectedIndex = 1;
                     }
-                    
                     btnGuardar.Text = "Modificar";
                     btnEliminar.Enabled = true;
                 }
@@ -144,6 +159,11 @@ namespace Lab.UserPanel
                     MessageBox.Show("Registro eliminado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Clear();
         }
     }
 }
