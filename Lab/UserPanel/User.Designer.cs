@@ -31,6 +31,7 @@ namespace Lab.UserPanel
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnHemograma = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -53,11 +54,22 @@ namespace Lab.UserPanel
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnHemograma
+            // 
+            this.btnHemograma.Location = new System.Drawing.Point(81, 167);
+            this.btnHemograma.Name = "btnHemograma";
+            this.btnHemograma.Size = new System.Drawing.Size(75, 23);
+            this.btnHemograma.TabIndex = 2;
+            this.btnHemograma.Text = "Hemograma";
+            this.btnHemograma.UseVisualStyleBackColor = true;
+            this.btnHemograma.Click += new System.EventHandler(this.btnHemograma_Click);
+            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 681);
+            this.Controls.Add(this.btnHemograma);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "User";
@@ -73,5 +85,6 @@ namespace Lab.UserPanel
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnHemograma;
     }
 }

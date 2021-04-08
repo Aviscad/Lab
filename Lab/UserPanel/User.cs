@@ -36,5 +36,10 @@ namespace Lab.UserPanel
         {
             new Pacientes().Show();
         }
+
+        private void btnHemograma_Click(object sender, EventArgs e)
+        {
+            new Hemograma().Show();
+        }
     }
 }

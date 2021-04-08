@@ -46,48 +46,58 @@ namespace Lab.UserPanel
                         MessageBox.Show("Rellene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else {
-                        if (campaniaModel.id_campaña == 0)
-                        {
-                            var query = from campaña in DB.campaña where campaña.nombre == txtNomCampania.Text.Trim() select campaña;
-                            var campaniaCheck = query.ToList();
 
-                            if (campaniaCheck.Count > 0)
+                        var checkCampania = from campaña in DB.campaña
+                                            where campaña.nombre == campaniaModel.nombre
+                                            select campaña;
+
+                        if (checkCampania.ToList().Count > 0)
+                        {
+                            MessageBox.Show("La campaña " + campaniaModel.nombre + " ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else {
+                            if (campaniaModel.id_campaña == 0)
                             {
-                                MessageBox.Show("La campaña '" + txtNomCampania.Text.Trim() + "' ya existe!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                var query = from campaña in DB.campaña where campaña.nombre == txtNomCampania.Text.Trim() select campaña;
+                                var campaniaCheck = query.ToList();
+
+                                if (campaniaCheck.Count > 0)
+                                {
+                                    MessageBox.Show("La campaña '" + txtNomCampania.Text.Trim() + "' ya existe!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                else
+                                {
+                                    DB.campaña.Add(campaniaModel); //insert
+                                    MessageBox.Show("Registro agregado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
                             }
                             else
                             {
-                                DB.campaña.Add(campaniaModel); //insert
-                                MessageBox.Show("Registro agregado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                        }
-                        else
-                        {
-                            var query = from campaña in DB.campaña where campaña.nombre == txtNomCampania.Text.Trim() select campaña;
-                            var campaniaCheck = query.ToList();
+                                var query = from campaña in DB.campaña where campaña.nombre == txtNomCampania.Text.Trim() select campaña;
+                                var campaniaCheck = query.ToList();
 
-                            if (campaniaCheck.Count > 0)
-                            {
-                                MessageBox.Show("La campaña '" + txtNomCampania.Text.Trim() + "' ya existe!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                if (campaniaCheck.Count > 0)
+                                {
+                                    MessageBox.Show("La campaña '" + txtNomCampania.Text.Trim() + "' ya existe!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                                else
+                                {
+                                    DB.Entry(campaniaModel).State = EntityState.Modified; //update
+                                    MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
                             }
-                            else
-                            {
-                                DB.Entry(campaniaModel).State = EntityState.Modified; //update
-                                MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
+                            DB.SaveChanges();
+                            fillRows();
+                            Clear();
                         }
-                        DB.SaveChanges();
-                        fillRows();
                     }
                 }
-                Clear();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
 
         void fillRows()
         {
@@ -98,8 +108,8 @@ namespace Lab.UserPanel
                 {
                     var query = from usuario in DB.usuario where usuario.id_usuario == row.id_usuario select usuario;
                     var currentUser = query.ToList();
-
-                    dgvCampania.Rows.Add(row.id_campaña, row.nombre, row.fecha, currentUser[0].nombre_usuario);
+                    string[] dateHelper = row.fecha.ToString().Split(' ');
+                    dgvCampania.Rows.Add(row.id_campaña, row.nombre, dateHelper[0], currentUser[0].nombre_usuario);
                 }
             }
         }

@@ -114,6 +114,12 @@
     <Compile Include="UserPanel\Campania.Designer.cs">
       <DependentUpon>Campania.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserPanel\Hemograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel\Hemograma.Designer.cs">
+      <DependentUpon>Hemograma.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPanel\Pacientes.cs">
       <SubType>Form</SubType>
     </Compile>

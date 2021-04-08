@@ -69,33 +69,39 @@ namespace Lab.AdminPanel
             }
             else {
 
-                userModel.nombre_usuario = txtUsuario.Text.Trim();
-                userModel.tipo = cbbTipo.SelectedItem.ToString();
-
-                /*
-                 * NOTA: ACTUALIZAR CONTRASE;A SE MUESTRA CON LA PASSWORD HASHED EN EL TEXTBOX;
-                 */
-
                 if (txtCont.Text.Trim().Equals(txtReCont.Text.Trim()))
                 {
+
+                    userModel.nombre_usuario = txtUsuario.Text.Trim();
+                    userModel.tipo = cbbTipo.SelectedItem.ToString();
                     userModel.contraseña = hasing(txtCont.Text.Trim());
 
                     using (laboratorio_pEntities DB = new laboratorio_pEntities())
                     {
-                        if (userModel.id_usuario == 0)
+                        var checkUsername = from usuario in DB.usuario
+                                    where usuario.nombre_usuario == userModel.nombre_usuario
+                                    select usuario;
+
+                        if (checkUsername.ToList().Count > 0)
                         {
-                            DB.usuario.Add(userModel);
-                            MessageBox.Show("Registro agregado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("El usuario " + userModel.nombre_usuario + " ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        else
-                        {
-                            DB.Entry(userModel).State = EntityState.Modified;
-                            MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        DB.SaveChanges();
+                        else {
+                            if (userModel.id_usuario == 0)
+                            {
+                                DB.usuario.Add(userModel);
+                                MessageBox.Show("Registro agregado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                DB.Entry(userModel).State = EntityState.Modified;
+                                MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            DB.SaveChanges();
+                            fillRows();
+                            Clear();
+                        }                        
                     }
-                    fillRows();
-                    Clear();
                 }
                 else
                 {

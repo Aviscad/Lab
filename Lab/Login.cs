@@ -51,26 +51,26 @@ namespace Lab
                     {
                         if (hasing(p).Equals(currentUser[0].contraseña))
                         {
-                            MessageBox.Show("In");
+                           // MessageBox.Show("In");
                             String userType = currentUser[0].tipo.ToString().Trim();
 
                             id = currentUser[0].id_usuario;
 
                             if (userType.Equals("admin"))
                             {
-                                MessageBox.Show("Admin Type");
+                                //MessageBox.Show("Admin Type");
                                 new AdminPanel.Admin().Show();
                                 this.Hide();
                             }
                             else if (userType.Equals("user"))
                             {
-                                MessageBox.Show("User type");
+                                //MessageBox.Show("User type");
                                 new UserPanel.User().Show();
                                 this.Hide();
                             }
                         }
                         else {
-                            MessageBox.Show("out");
+                            MessageBox.Show("La contraseña es incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
