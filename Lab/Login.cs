@@ -19,7 +19,7 @@ namespace Lab
             InitializeComponent();
         }
 
-        private string hasing(string password) {
+        private string hashing(string password) {
 
             SHA1CryptoServiceProvider sha1 = new SHA1CryptoServiceProvider();
             byte[] password_bytes = Encoding.ASCII.GetBytes(password);
@@ -56,24 +56,22 @@ namespace Lab
 
                     if (currentUser.Count > 0)
                     {
-                        if (hasing(p).Equals(currentUser[0].contraseña))
+                        if (hashing(p).Equals(currentUser[0].contraseña))
                         {
-                            // MessageBox.Show("In");
                             String userType = currentUser[0].tipo.ToString().Trim();
-
                             id = currentUser[0].id_usuario;
 
                             if (userType.Equals("admin"))
                             {
-                                //MessageBox.Show("Admin Type");
                                 new AdminPanel.Admin().Show();
                                 this.Hide();
+                                MessageBox.Show("Bienvenido " + txtUsuario.Text + "!","Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else if (userType.Equals("user"))
                             {
-                                //MessageBox.Show("User type");
                                 new UserPanel.User().Show();
                                 this.Hide();
+                                MessageBox.Show("Bienvenido " + txtUsuario.Text + "!","Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         else
