@@ -28,16 +28,23 @@ namespace Lab
             return Convert.ToBase64String(encrypted_bytes);
         }
 
+        private void login_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             //Get Username and Password
-            string u = txtUsername.Text.Trim();
-            String p = txtPass.Text.Trim();
-            if (u.Equals("") || p.Equals(""))
+            string u = txtUsuario.Text.Trim();
+            String p = txtContrasenia.Text.Trim();
+            if (u.Equals("") || p.Equals("") || p.Equals("eejemploo"))
             {
-                MessageBox.Show("Por favor rellene los campos","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Por favor rellene los campos: \n- Nombre de Usuario \n- Contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsuario.Focus();
             }
-            else {
+            else
+            {
                 //Check username and password on DB
                 using (laboratorio_pEntities db = new laboratorio_pEntities())
                 {
@@ -51,7 +58,7 @@ namespace Lab
                     {
                         if (hasing(p).Equals(currentUser[0].contraseña))
                         {
-                           // MessageBox.Show("In");
+                            // MessageBox.Show("In");
                             String userType = currentUser[0].tipo.ToString().Trim();
 
                             id = currentUser[0].id_usuario;
@@ -69,7 +76,8 @@ namespace Lab
                                 this.Hide();
                             }
                         }
-                        else {
+                        else
+                        {
                             MessageBox.Show("La contraseña es incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
@@ -78,7 +86,12 @@ namespace Lab
                         MessageBox.Show("El nombre de usuario o contraseña estan incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-            }   
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

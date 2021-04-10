@@ -92,7 +92,7 @@ namespace Lab.UserPanel
             // 
             this.txtBuscarText.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBuscarText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtBuscarText.Location = new System.Drawing.Point(159, 25);
+            this.txtBuscarText.Location = new System.Drawing.Point(239, 25);
             this.txtBuscarText.Name = "txtBuscarText";
             this.txtBuscarText.Size = new System.Drawing.Size(350, 26);
             this.txtBuscarText.TabIndex = 0;
@@ -122,9 +122,9 @@ namespace Lab.UserPanel
             this.cbbBuscarPor.Items.AddRange(new object[] {
             "Nombre",
             "Codigo"});
-            this.cbbBuscarPor.Location = new System.Drawing.Point(658, 25);
+            this.cbbBuscarPor.Location = new System.Drawing.Point(691, 25);
             this.cbbBuscarPor.Name = "cbbBuscarPor";
-            this.cbbBuscarPor.Size = new System.Drawing.Size(142, 28);
+            this.cbbBuscarPor.Size = new System.Drawing.Size(109, 28);
             this.cbbBuscarPor.TabIndex = 3;
             this.cbbBuscarPor.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -132,7 +132,7 @@ namespace Lab.UserPanel
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(562, 28);
+            this.label1.Location = new System.Drawing.Point(595, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 4;
@@ -631,9 +631,9 @@ namespace Lab.UserPanel
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(17, 28);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(136, 20);
+            this.label31.Size = new System.Drawing.Size(224, 20);
             this.label31.TabIndex = 22;
-            this.label31.Text = "Nombre o Código:";
+            this.label31.Text = "Nombre o Código de Paciente:";
             // 
             // btnGuardar
             // 
