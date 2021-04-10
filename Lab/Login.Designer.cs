@@ -58,7 +58,7 @@ namespace Lab
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(116, 214);
+            this.button1.Location = new System.Drawing.Point(116, 204);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 35);
             this.button1.TabIndex = 2;

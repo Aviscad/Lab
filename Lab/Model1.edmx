@@ -24,7 +24,7 @@
           <Property Name="id_heces" Type="int" />
           <Property Name="id_hemograma" Type="int" />
           <Property Name="fecha" Type="date" Nullable="false" />
-          <Property Name="reportado" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="reportado" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="heces">
           <Key>
@@ -308,7 +308,7 @@
           <Property Name="id_heces" Type="Int32" />
           <Property Name="id_hemograma" Type="Int32" />
           <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="reportado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="reportado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="heces" Relationship="Self.FK_examenes_heces" FromRole="examenes" ToRole="heces" />
           <NavigationProperty Name="hemograma" Relationship="Self.FK_examenes_hemograma" FromRole="examenes" ToRole="hemograma" />
           <NavigationProperty Name="orina" Relationship="Self.FK_examenes_orina" FromRole="examenes" ToRole="orina" />

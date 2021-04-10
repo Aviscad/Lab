@@ -21,6 +21,7 @@ namespace Lab
         public Nullable<int> id_hemograma { get; set; }
         public System.DateTime fecha { get; set; }
         public string reportado { get; set; }
+    
         public virtual heces heces { get; set; }
         public virtual hemograma hemograma { get; set; }
         public virtual orina orina { get; set; }

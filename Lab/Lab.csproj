@@ -153,6 +153,9 @@
     <EmbeddedResource Include="UserPanel\Campania.resx">
       <DependentUpon>Campania.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserPanel\Hemograma.resx">
+      <DependentUpon>Hemograma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserPanel\Pacientes.resx">
       <DependentUpon>Pacientes.cs</DependentUpon>
     </EmbeddedResource>

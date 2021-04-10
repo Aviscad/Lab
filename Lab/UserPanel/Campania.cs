@@ -32,11 +32,9 @@ namespace Lab.UserPanel
         {
             try
             {
-                string[] currentDate = DateTime.Now.ToString().Split(' ');
-
                 MessageBox.Show(id.ToString());
                 campaniaModel.nombre = txtNomCampania.Text.Trim();
-                campaniaModel.fecha = Convert.ToDateTime(currentDate[0]);
+                campaniaModel.fecha = DateTime.Today;
                 campaniaModel.id_usuario = id;
 
                 using (laboratorio_pEntities DB = new laboratorio_pEntities())
