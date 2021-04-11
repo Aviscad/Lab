@@ -34,9 +34,11 @@ namespace Lab.AdminPanel
         }
 
 
-        private void fillRows() {
+        private void fillRows()
+        {
             dgvUsuarios.Rows.Clear();
-            using (laboratorio_pEntities DB = new laboratorio_pEntities()) {
+            using (laboratorio_pEntities DB = new laboratorio_pEntities())
+            {
                 foreach (var user in DB.usuario)
                 {
                     dgvUsuarios.Rows.Add(user.id_usuario, user.nombre_usuario, user.contraseña, user.tipo);
@@ -62,50 +64,121 @@ namespace Lab.AdminPanel
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text.Trim().Equals("") || txtCont.Text.Trim().Equals("") ||
-                txtReCont.Text.Trim().Equals(""))
+            if (txtUsuario.Text.Trim().Equals(""))
             {
-                MessageBox.Show("Rellene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Introduzca el nombre de usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else {
-
-                if (txtCont.Text.Trim().Equals(txtReCont.Text.Trim()))
+            else
+            {
+                using (laboratorio_pEntities DB = new laboratorio_pEntities())
                 {
-
-                    userModel.nombre_usuario = txtUsuario.Text.Trim();
-                    userModel.tipo = cbbTipo.SelectedItem.ToString();
-                    userModel.contraseña = hasing(txtCont.Text.Trim());
-
-                    using (laboratorio_pEntities DB = new laboratorio_pEntities())
+                    /* INSERT CON VERIFICACION DE EXISTENCIA DE USUARIO */
+                    if (userModel.id_usuario == 0)
                     {
-                        var checkUsername = from usuario in DB.usuario
-                                    where usuario.nombre_usuario == userModel.nombre_usuario
-                                    select usuario;
+                        var userExist = from usuario in DB.usuario
+                                        where usuario.nombre_usuario == txtUsuario.Text.Trim()
+                                        select usuario;
 
-                        if (checkUsername.ToList().Count > 0)
+                        if (userExist.ToList().Count > 0)
                         {
-                            MessageBox.Show("El usuario " + userModel.nombre_usuario + " ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("El usuario " + txtUsuario.Text.Trim() + " ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                        else {
-                            if (userModel.id_usuario == 0)
+                        else
+                        {
+                            if (txtCont.Text.Trim().Equals(txtReCont.Text.Trim()))
                             {
+                                userModel.nombre_usuario = txtUsuario.Text.Trim();
+                                userModel.tipo = cbbTipo.SelectedItem.ToString();
+                                userModel.contraseña = hasing(txtCont.Text.Trim());
+
                                 DB.usuario.Add(userModel);
                                 MessageBox.Show("Registro agregado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {
+                                MessageBox.Show("Las contraseñas no coinciden!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                    /* UPDATE CON VERIFICACION DE EXISTENCIA DE USUARIO */
+                    else
+                    {
+                        if (userModel.nombre_usuario != txtUsuario.Text.Trim())
+                        {
+                            var userExist = from usuario in DB.usuario
+                                            where usuario.nombre_usuario == txtUsuario.Text.Trim()
+                                            select usuario;
+
+                            if (userExist.ToList().Count > 0)
+                            {
+                                MessageBox.Show("El usuario " + txtUsuario.Text.Trim() + " ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                /* USUARIO NO EXISTE? COMPROBAR SI LA CONTRASE;A SE QUIERE CAMBIAR */
+                                if (
+                                    !txtCont.Text.Trim().Equals("") &&
+                                    !txtReCont.Text.Trim().Equals("")
+                                    )
+                                {
+                                    if (txtCont.Text.Trim().Equals(txtReCont.Text.Trim()))
+                                    {
+                                        userModel.nombre_usuario = txtUsuario.Text.Trim();
+                                        userModel.tipo = cbbTipo.SelectedItem.ToString();
+                                        userModel.contraseña = hasing(txtCont.Text.Trim());
+
+                                        DB.Entry(userModel).State = EntityState.Modified;
+                                        MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Las contraseñas no coinciden!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+                                }
+                                /* SI LA CONTRASE;A NO SE QUIERE CAMBIAR SOLO MODIFICA NOMBRE DE USUARIO Y TIPO */
+                                else
+                                {
+                                    userModel.nombre_usuario = txtUsuario.Text.Trim();
+                                    userModel.tipo = cbbTipo.SelectedItem.ToString();
+
+                                    DB.Entry(userModel).State = EntityState.Modified;
+                                    MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                            }
+                        }
+                        /* SI NO SE QUIERE CAMBIAR EL NOMBRE DE USUARIO DEJAR EL MISMO */
+                        else
+                        {
+                            if (
+                                !txtCont.Text.Trim().Equals("") &&
+                                !txtReCont.Text.Trim().Equals("")
+                                )
+                            {
+                                if (txtCont.Text.Trim().Equals(txtReCont.Text.Trim()))
+                                {
+                                    userModel.tipo = cbbTipo.SelectedItem.ToString();
+                                    userModel.contraseña = hasing(txtCont.Text.Trim());
+
+                                    DB.Entry(userModel).State = EntityState.Modified;
+                                    MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Las contraseñas no coinciden!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else
+                            {
+                                userModel.tipo = cbbTipo.SelectedItem.ToString();
+
                                 DB.Entry(userModel).State = EntityState.Modified;
                                 MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
-                            DB.SaveChanges();
-                            fillRows();
-                            Clear();
-                        }                        
+                        }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Las contraseñas no coinciden!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DB.SaveChanges();
+                    fillRows();
+                    Clear();
                 }
             }
         }
@@ -132,7 +205,7 @@ namespace Lab.AdminPanel
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -157,7 +230,7 @@ namespace Lab.AdminPanel
                     Clear();
                     fillRows();
 
-                    MessageBox.Show("Registro eliminado","Información",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Registro eliminado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
