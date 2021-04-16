@@ -24,7 +24,6 @@
           <Property Name="id_heces" Type="int" />
           <Property Name="id_hemograma" Type="int" />
           <Property Name="fecha" Type="date" Nullable="false" />
-          <Property Name="reportado" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="heces">
           <Key>
@@ -130,7 +129,8 @@
           <Property Name="id_protozoarios_quistes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="entamoeba_histolitica" Type="varchar" MaxLength="25" />
           <Property Name="entamoeba_coli" Type="varchar" MaxLength="25" />
-          <Property Name="guiardia_lambia" Type="varchar" MaxLength="25" />
+          <Property Name="endolimax_nana" Type="varchar" MaxLength="25" />
+          <Property Name="guiardia_lamblia" Type="varchar" MaxLength="25" />
           <Property Name="trichomonas_hominis" Type="varchar" MaxLength="25" />
           <Property Name="chilomastrix_mesnili" Type="varchar" MaxLength="25" />
           <Property Name="blostocistis_hominis" Type="varchar" MaxLength="25" />
@@ -308,7 +308,6 @@
           <Property Name="id_heces" Type="Int32" />
           <Property Name="id_hemograma" Type="Int32" />
           <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="reportado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="heces" Relationship="Self.FK_examenes_heces" FromRole="examenes" ToRole="heces" />
           <NavigationProperty Name="hemograma" Relationship="Self.FK_examenes_hemograma" FromRole="examenes" ToRole="hemograma" />
           <NavigationProperty Name="orina" Relationship="Self.FK_examenes_orina" FromRole="examenes" ToRole="orina" />
@@ -426,11 +425,12 @@
           <Property Name="id_protozoarios_quistes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="entamoeba_histolitica" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="entamoeba_coli" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
-          <Property Name="guiardia_lambia" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="trichomonas_hominis" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="chilomastrix_mesnili" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <Property Name="blostocistis_hominis" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="heces" Relationship="Self.FK_heces_protozoarios_quistes" FromRole="protozoarios_quistes" ToRole="heces" />
+          <Property Name="endolimax_nana" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="guiardia_lamblia" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="usuario">
           <Key>
@@ -606,7 +606,6 @@
                 <ScalarProperty Name="id_heces" ColumnName="id_heces" />
                 <ScalarProperty Name="id_hemograma" ColumnName="id_hemograma" />
                 <ScalarProperty Name="fecha" ColumnName="fecha" />
-                <ScalarProperty Name="reportado" ColumnName="reportado" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -715,10 +714,11 @@
           <EntitySetMapping Name="protozoarios_quistes">
             <EntityTypeMapping TypeName="laboratorio_pModel.protozoarios_quistes">
               <MappingFragment StoreEntitySet="protozoarios_quistes">
+                <ScalarProperty Name="guiardia_lamblia" ColumnName="guiardia_lamblia" />
+                <ScalarProperty Name="endolimax_nana" ColumnName="endolimax_nana" />
                 <ScalarProperty Name="id_protozoarios_quistes" ColumnName="id_protozoarios_quistes" />
                 <ScalarProperty Name="entamoeba_histolitica" ColumnName="entamoeba_histolitica" />
                 <ScalarProperty Name="entamoeba_coli" ColumnName="entamoeba_coli" />
-                <ScalarProperty Name="guiardia_lambia" ColumnName="guiardia_lambia" />
                 <ScalarProperty Name="trichomonas_hominis" ColumnName="trichomonas_hominis" />
                 <ScalarProperty Name="chilomastrix_mesnili" ColumnName="chilomastrix_mesnili" />
                 <ScalarProperty Name="blostocistis_hominis" ColumnName="blostocistis_hominis" />

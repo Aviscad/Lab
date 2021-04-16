@@ -23,10 +23,11 @@ namespace Lab
         public int id_protozoarios_quistes { get; set; }
         public string entamoeba_histolitica { get; set; }
         public string entamoeba_coli { get; set; }
-        public string guiardia_lambia { get; set; }
         public string trichomonas_hominis { get; set; }
         public string chilomastrix_mesnili { get; set; }
         public string blostocistis_hominis { get; set; }
+        public string endolimax_nana { get; set; }
+        public string guiardia_lamblia { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<heces> heces { get; set; }

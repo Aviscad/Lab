@@ -38,7 +38,7 @@ namespace Lab
             //Get Username and Password
             string u = txtUsuario.Text.Trim();
             String p = txtContrasenia.Text.Trim();
-            if (u.Equals("") || p.Equals("") || p.Equals("eejemploo"))
+            if (u.Equals("") || p.Equals(""))
             {
                 MessageBox.Show("Por favor rellene los campos: \n- Nombre de Usuario \n- Contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUsuario.Focus();
@@ -65,13 +65,11 @@ namespace Lab
                             {
                                 new AdminPanel.Admin().Show();
                                 this.Hide();
-                                MessageBox.Show("Bienvenido " + txtUsuario.Text + "!","Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else if (userType.Equals("user"))
                             {
                                 new UserPanel.User().Show();
                                 this.Hide();
-                                MessageBox.Show("Bienvenido " + txtUsuario.Text + "!","Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         else

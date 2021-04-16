@@ -28,9 +28,25 @@ namespace Lab.AdminPanel
 
         private void Admin_Load(object sender, EventArgs e)
         {
+            using (laboratorio_pEntities DB = new laboratorio_pEntities())
+            {
+                var getUserName = (from usuario in DB.usuario
+                                   where usuario.id_usuario == login.id
+                                   select usuario.nombre_usuario).FirstOrDefault();
+                lblUserLogged.Text = "Bienvenido: \n" + getUserName.ToString().ToUpper();
+            }
+
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+
+
             fillRows();
             Clear();
             cbbTipo.SelectedIndex = 0;
+
+            dgvUsuarios.EnableHeadersVisualStyles = false;
+            dgvUsuarios.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#1682a7");
+            dgvUsuarios.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
 
@@ -232,6 +248,20 @@ namespace Lab.AdminPanel
 
                     MessageBox.Show("Registro eliminado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new login().Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Esta seguro que desea salir?", "Información", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }

@@ -29,11 +29,6 @@ namespace Lab.UserPanel
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtBuscarText = new System.Windows.Forms.TextBox();
-            this.dgvResultadosBusqueda = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbbBuscarPor = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtGlobulosRojos = new System.Windows.Forms.TextBox();
             this.txtHemoglobina = new System.Windows.Forms.TextBox();
             this.txtHematocrito = new System.Windows.Forms.TextBox();
@@ -81,62 +76,11 @@ namespace Lab.UserPanel
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResultadosBusqueda)).BeginInit();
+            this.label32 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtBuscarText
-            // 
-            this.txtBuscarText.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBuscarText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtBuscarText.Location = new System.Drawing.Point(239, 25);
-            this.txtBuscarText.Name = "txtBuscarText";
-            this.txtBuscarText.Size = new System.Drawing.Size(350, 26);
-            this.txtBuscarText.TabIndex = 0;
-            this.txtBuscarText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // dgvResultadosBusqueda
-            // 
-            this.dgvResultadosBusqueda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvResultadosBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResultadosBusqueda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
-            this.dgvResultadosBusqueda.Location = new System.Drawing.Point(21, 59);
-            this.dgvResultadosBusqueda.Name = "dgvResultadosBusqueda";
-            this.dgvResultadosBusqueda.Size = new System.Drawing.Size(779, 120);
-            this.dgvResultadosBusqueda.TabIndex = 2;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "nombre";
-            this.Column1.Name = "Column1";
-            // 
-            // cbbBuscarPor
-            // 
-            this.cbbBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbBuscarPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.cbbBuscarPor.FormattingEnabled = true;
-            this.cbbBuscarPor.Items.AddRange(new object[] {
-            "Nombre",
-            "Codigo"});
-            this.cbbBuscarPor.Location = new System.Drawing.Point(691, 25);
-            this.cbbBuscarPor.Name = "cbbBuscarPor";
-            this.cbbBuscarPor.Size = new System.Drawing.Size(109, 28);
-            this.cbbBuscarPor.TabIndex = 3;
-            this.cbbBuscarPor.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(595, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Buscar por:";
             // 
             // txtGlobulosRojos
             // 
@@ -253,7 +197,7 @@ namespace Lab.UserPanel
             // txtMacroplaquetas
             // 
             this.txtMacroplaquetas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtMacroplaquetas.Location = new System.Drawing.Point(592, 296);
+            this.txtMacroplaquetas.Location = new System.Drawing.Point(602, 296);
             this.txtMacroplaquetas.Name = "txtMacroplaquetas";
             this.txtMacroplaquetas.Size = new System.Drawing.Size(110, 26);
             this.txtMacroplaquetas.TabIndex = 19;
@@ -271,6 +215,7 @@ namespace Lab.UserPanel
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label30);
+            this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.label29);
             this.groupBox1.Controls.Add(this.label28);
             this.groupBox1.Controls.Add(this.label14);
@@ -297,12 +242,12 @@ namespace Lab.UserPanel
             this.groupBox1.Controls.Add(this.txtCHCM);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.groupBox1.Location = new System.Drawing.Point(21, 177);
+            this.groupBox1.Location = new System.Drawing.Point(42, 76);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(779, 484);
+            this.groupBox1.Size = new System.Drawing.Size(787, 553);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Hemograma";
+            this.groupBox1.Text = "DATOS EXAMEN";
             // 
             // label30
             // 
@@ -318,7 +263,7 @@ namespace Lab.UserPanel
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(418, 299);
+            this.label29.Location = new System.Drawing.Point(428, 299);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(168, 20);
             this.label29.TabIndex = 34;
@@ -478,7 +423,7 @@ namespace Lab.UserPanel
             this.groupBox2.Controls.Add(this.txtEosinofilo);
             this.groupBox2.Controls.Add(this.txtBasofilo);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(384, 25);
+            this.groupBox2.Location = new System.Drawing.Point(394, 25);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(377, 256);
             this.groupBox2.TabIndex = 11;
@@ -609,11 +554,11 @@ namespace Lab.UserPanel
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(16, 56);
+            this.label15.Location = new System.Drawing.Point(6, 56);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(186, 20);
+            this.label15.Size = new System.Drawing.Size(190, 20);
             this.label15.TabIndex = 28;
-            this.label15.Text = "Neutrófilos segmentaros:";
+            this.label15.Text = "Neutrófilos segmentados:";
             // 
             // label8
             // 
@@ -625,42 +570,39 @@ namespace Lab.UserPanel
             this.label8.TabIndex = 27;
             this.label8.Text = "Leucocitos:";
             // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(17, 28);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(224, 20);
-            this.label31.TabIndex = 22;
-            this.label31.Text = "Nombre o Código de Paciente:";
-            // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(691, 688);
+            this.btnGuardar.Location = new System.Drawing.Point(654, 486);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(107, 35);
             this.btnGuardar.TabIndex = 36;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(368, 35);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(126, 20);
+            this.label32.TabIndex = 45;
+            this.label32.Text = "HEMOGRAMA";
+            // 
             // Hemograma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 755);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.label31);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(876, 803);
+            this.Controls.Add(this.label32);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbbBuscarPor);
-            this.Controls.Add(this.dgvResultadosBusqueda);
-            this.Controls.Add(this.txtBuscarText);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Hemograma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hemograma";
             this.Load += new System.EventHandler(this.Hemograma_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResultadosBusqueda)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -671,12 +613,6 @@ namespace Lab.UserPanel
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtBuscarText;
-        private System.Windows.Forms.DataGridView dgvResultadosBusqueda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.ComboBox cbbBuscarPor;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtGlobulosRojos;
         private System.Windows.Forms.TextBox txtHemoglobina;
         private System.Windows.Forms.TextBox txtHematocrito;
@@ -724,7 +660,7 @@ namespace Lab.UserPanel
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label label32;
     }
 }

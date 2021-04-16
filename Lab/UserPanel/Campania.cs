@@ -26,6 +26,12 @@ namespace Lab.UserPanel
             fillRows();
             //ID de usuario logeado para agregarlo en la creacion de la campaña
             id = login.id;
+
+
+            //Cambiar de color header
+            dgvCampania.EnableHeadersVisualStyles = false;
+            dgvCampania.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#1682a7");
+            dgvCampania.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -165,6 +171,11 @@ namespace Lab.UserPanel
                     MessageBox.Show("Registro eliminado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void Campania_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
     }
 }

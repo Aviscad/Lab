@@ -17,74 +17,22 @@ namespace Lab.UserPanel
             InitializeComponent();
         }
 
+        private int idExamen = 0;
         paciente pacienteModel = new paciente();
+        public int getExamenId() {
+            return idExamen;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             
         }
 
-        public void Clear() {
-            txtBuscarText.Text = "";
-            dgvResultadosBusqueda.Rows.Clear();
-        }
-
         private void Hemograma_Load(object sender, EventArgs e)
         {
-            cbbBuscarPor.SelectedIndex = 0;
+            
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            dgvResultadosBusqueda.Rows.Clear();
-            if (cbbBuscarPor.SelectedIndex == 0)
-            {
-                using (laboratorio_pEntities DB = new laboratorio_pEntities())
-                {
-                    var query = from paciente in DB.paciente where paciente.nombre.Contains(txtBuscarText.Text) select paciente;
-
-                    foreach (var paciente in query.ToList())
-                    {
-                        dgvResultadosBusqueda.Rows.Add(paciente.nombre);
-
-                        pacienteModel.id_paciente = paciente.id_paciente;
-                        pacienteModel.id_campaña = paciente.id_campaña;
-                        pacienteModel.nombre = paciente.nombre;
-                        pacienteModel.edad = paciente.edad;
-                        pacienteModel.codigo = paciente.codigo;
-                        pacienteModel.genero = paciente.genero;
-                    }
-
-                    
-                }
-            }
-            else
-            {
-                using (laboratorio_pEntities DB = new laboratorio_pEntities())
-                {
-                    var query = from paciente in DB.paciente
-                                where paciente.codigo.Contains(txtBuscarText.Text) || paciente.codigo == txtBuscarText.Text
-                                select paciente;
-
-                    foreach (var paciente in query.ToList())
-                    {
-                        dgvResultadosBusqueda.Rows.Add(paciente.nombre);
-
-                        pacienteModel.id_paciente = paciente.id_paciente;
-                        pacienteModel.id_campaña = paciente.id_campaña;
-                        pacienteModel.nombre = paciente.nombre;
-                        pacienteModel.edad = paciente.edad;
-                        pacienteModel.codigo = paciente.codigo;
-                        pacienteModel.genero = paciente.genero;
-                    }
-                }
-            }
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Clear();
-        }
-
+       
         private void button1_Click_1(object sender, EventArgs e)
         {
             using (laboratorio_pEntities DB = new laboratorio_pEntities()) {
@@ -115,23 +63,37 @@ namespace Lab.UserPanel
                 DB.hemograma.Add(newHemograma);
                 DB.SaveChanges();
 
-                int getHemogramaID = newHemograma.id_hemograma;
+                MessageBox.Show("Examen agregado correctamente","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
-                /* NOTA: 
-                 * LUEGO DE GUARDAR EL EXAMEN AL USAR EL DB.SAVECHANGES() 
-                 * SE ACTUALIZA EL MODEL CON EL ID CORRESPONDIENTE
-                 */
+                AddExamenes parent = Owner as AddExamenes;
+                parent.id_hemograma = newHemograma.id_hemograma;
 
-                examenes newExamen = new examenes();
+                this.Close();
 
-                newExamen.id_paciente = pacienteModel.id_paciente;
-                newExamen.id_hemograma = getHemogramaID;
-                newExamen.fecha = DateTime.Today;
+                //int getHemogramaID = newHemograma.id_hemograma;
 
-                MessageBox.Show(pacienteModel.id_paciente.ToString());
+                ///* NOTA: 
+                // * LUEGO DE GUARDAR EL EXAMEN AL USAR EL DB.SAVECHANGES() 
+                // * SE ACTUALIZA EL MODEL CON EL ID CORRESPONDIENTE
+                // */
 
-                DB.examenes.Add(newExamen);
-                DB.SaveChanges();
+                //examenes newExamen = new examenes();
+
+                //newExamen.id_paciente = pacienteModel.id_paciente;
+                //newExamen.id_hemograma = getHemogramaID;
+                //newExamen.fecha = DateTime.Today;
+
+                //MessageBox.Show(pacienteModel.id_paciente.ToString());
+
+                //DB.examenes.Add(newExamen);
+                //DB.SaveChanges();
+
+                //idExamen = newExamen.id_examenes;
+
+                //User u = Owner as User;
+                //u.id_examen = newExamen.id_examenes;
+                //u.id_paciente = pacienteModel.id_paciente;
+                //send currnet examen id
 
                 /*
                  * FALTAN LAS VALIDACIONES Y EL RESET DE LOS TXT ( Clear(); )

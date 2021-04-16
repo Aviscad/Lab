@@ -61,7 +61,7 @@ namespace Lab
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.Size = new System.Drawing.Size(220, 38);
             this.txtContrasenia.TabIndex = 3;
-            this.txtContrasenia.Text = "eejemploo";
+            this.txtContrasenia.Text = "ejem";
             this.txtContrasenia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtUsuario

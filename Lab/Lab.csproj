@@ -112,17 +112,35 @@
     <Compile Include="protozoarios_quistes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="UserPanel\AddExamenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel\AddExamenes.Designer.cs">
+      <DependentUpon>AddExamenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPanel\Campania.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserPanel\Campania.Designer.cs">
       <DependentUpon>Campania.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserPanel\Heces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel\Heces.Designer.cs">
+      <DependentUpon>Heces.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPanel\Hemograma.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserPanel\Hemograma.Designer.cs">
       <DependentUpon>Hemograma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanel\Orina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel\Orina.Designer.cs">
+      <DependentUpon>Orina.cs</DependentUpon>
     </Compile>
     <Compile Include="UserPanel\Pacientes.cs">
       <SubType>Form</SubType>
@@ -155,11 +173,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserPanel\AddExamenes.resx">
+      <DependentUpon>AddExamenes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserPanel\Campania.resx">
       <DependentUpon>Campania.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserPanel\Heces.resx">
+      <DependentUpon>Heces.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserPanel\Hemograma.resx">
       <DependentUpon>Hemograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanel\Orina.resx">
+      <DependentUpon>Orina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPanel\Pacientes.resx">
       <DependentUpon>Pacientes.cs</DependentUpon>

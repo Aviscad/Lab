@@ -45,6 +45,10 @@ namespace Lab.UserPanel
             }
             fillRows();
             Clear();
+
+            dgvPacientes.EnableHeadersVisualStyles = false;
+            dgvPacientes.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#1682a7");
+            dgvPacientes.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void button1_Click(object sender, EventArgs e)
