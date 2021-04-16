@@ -56,6 +56,7 @@ namespace Lab.UserPanel
                 examenOrina.celulas_epiteliales = txtCelulasEpiteliales.Text.Trim();
                 examenOrina.cristales = txtCristales.Text.Trim();
                 examenOrina.parasitos = txtParasitos.Text.Trim();
+                examenOrina.observaciones = rtxtObservaciones.Text.Trim();
 
                 //insert examen
                 DB.orina.Add(examenOrina);
@@ -66,6 +67,7 @@ namespace Lab.UserPanel
 
                 MessageBox.Show("Examen agregado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                this.Close();
                 /*
                  * FALTAN LAS VALIDACIONES Y EL RESET DE LOS TXT ( Clear(); )
                  */

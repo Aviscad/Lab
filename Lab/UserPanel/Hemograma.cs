@@ -44,6 +44,7 @@ namespace Lab.UserPanel
                 newHemograma.hematocrito = txtHematocrito.Text.Trim();
                 newHemograma.vgm = txtVGM.Text.Trim();
                 newHemograma.hcm = txtHCM.Text.Trim();
+                newHemograma.chcm = txtCHCM.Text.Trim();
 
                 //Leucocitos
                 newHemograma.leucocitos = txtLeucocitos.Text.Trim();
