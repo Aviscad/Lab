@@ -38,7 +38,6 @@ namespace Lab.UserPanel
         {
             try
             {
-                MessageBox.Show(id.ToString());
                 campaniaModel.nombre = txtNomCampania.Text.Trim();
                 campaniaModel.fecha = DateTime.Today;
                 campaniaModel.id_usuario = id;

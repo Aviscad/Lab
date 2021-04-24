@@ -53,7 +53,7 @@ namespace Lab.UserPanel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text.Trim().Equals("") || txtEdad.Text.Trim().Equals("") || txtEdad.Text.Trim().Equals(""))
+            if (txtNombre.Text.Trim().Equals("")  )
             {
                 MessageBox.Show("Rellene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -65,27 +65,21 @@ namespace Lab.UserPanel
                 }
                 else 
                 {
-                    if (Convert.ToInt32(txtEdad.Text.Trim()) < 1)
-                    {
-                        MessageBox.Show("La Edad tiene que ser mayor de 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
+                    //if (Convert.ToInt32(txtEdad.Text.Trim()) < 1){
+                    //    MessageBox.Show("La Edad tiene que ser mayor de 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //} else {
                         pacienteModel.nombre = txtNombre.Text.Trim();
-                        pacienteModel.edad = Convert.ToInt32(txtEdad.Text.Trim());
+                        pacienteModel.fecha_nacimiento = Convert.ToDateTime(dateTimePicker1.Value.ToShortDateString());
                         pacienteModel.codigo = txtCodigo.Text.Trim();
                         pacienteModel.genero = cbbGenero.SelectedItem.ToString().Trim();
                         pacienteModel.id_campaña = Convert.ToInt32(cbbCampania.SelectedValue.ToString().Trim());
 
                         using (laboratorio_pEntities DB = new laboratorio_pEntities())
                         {
-                            if (pacienteModel.id_paciente == 0)
-                            {
+                            if (pacienteModel.id_paciente == 0){
                                 DB.paciente.Add(pacienteModel);
                                 MessageBox.Show("Registro agregado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else
-                            {
+                            } else {
                                 DB.Entry(pacienteModel).State = EntityState.Modified;
                                 MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
@@ -93,7 +87,7 @@ namespace Lab.UserPanel
                         }
                         fillRows();
                         Clear();
-                    }
+                    //}
                 }
             }
         }
@@ -108,7 +102,7 @@ namespace Lab.UserPanel
                     var query = from campaña in DB.campaña where campaña.id_campaña == paciente.id_campaña select campaña;
                     var getCampania = query.ToList();
 
-                    dgvPacientes.Rows.Add(paciente.id_paciente, paciente.nombre, paciente.edad, getCampania[0].nombre, paciente.codigo, paciente.genero);
+                    dgvPacientes.Rows.Add(paciente.id_paciente, paciente.nombre, paciente.fecha_nacimiento.ToShortDateString(), getCampania[0].nombre, paciente.codigo, paciente.genero);
                 }
             }
         }
@@ -124,7 +118,7 @@ namespace Lab.UserPanel
                     pacienteModel = DB.paciente.Where(x => x.id_paciente == pacienteModel.id_paciente).FirstOrDefault();
                     
                     txtNombre.Text = pacienteModel.nombre;
-                    txtEdad.Text = pacienteModel.edad.ToString();
+                    txtEdad.Text = pacienteModel.fecha_nacimiento.ToString();
                     txtCodigo.Text = pacienteModel.codigo;
 
                     cbbCampania.SelectedValue = pacienteModel.id_campaña;

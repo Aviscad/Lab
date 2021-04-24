@@ -105,7 +105,7 @@
           <Property Name="id_paciente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_campaña" Type="int" />
           <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="edad" Type="int" Nullable="false" />
+          <Property Name="fecha_nacimiento" Type="date" Nullable="false" />
           <Property Name="codigo" Type="varchar" MaxLength="10" />
           <Property Name="genero" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
@@ -228,18 +228,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_paciente_campaña">
-          <End Role="campaña" Type="Self.campaña" Multiplicity="0..1" />
-          <End Role="paciente" Type="Self.paciente" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="campaña">
-              <PropertyRef Name="id_campaña" />
-            </Principal>
-            <Dependent Role="paciente">
-              <PropertyRef Name="id_campaña" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="laboratorio_pModelStoreContainer">
           <EntitySet Name="campaña" EntityType="Self.campaña" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="examenes" EntityType="Self.examenes" Schema="dbo" store:Type="Tables" />
@@ -277,10 +265,6 @@
           <AssociationSet Name="FK_heces_protozoarios_quistes" Association="Self.FK_heces_protozoarios_quistes">
             <End Role="protozoarios_quistes" EntitySet="protozoarios_quistes" />
             <End Role="heces" EntitySet="heces" />
-          </AssociationSet>
-          <AssociationSet Name="FK_paciente_campaña" Association="Self.FK_paciente_campaña">
-            <End Role="campaña" EntitySet="campaña" />
-            <End Role="paciente" EntitySet="paciente" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -398,11 +382,11 @@
           <Property Name="id_paciente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_campaña" Type="Int32" />
           <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="edad" Type="Int32" Nullable="false" />
           <Property Name="codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="genero" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="campaña" Relationship="Self.FK_paciente_campaña" FromRole="paciente" ToRole="campaña" />
           <NavigationProperty Name="examenes" Relationship="Self.FK_examenes_paciente" FromRole="paciente" ToRole="examenes" />
+          <Property Name="fecha_nacimiento" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
         <EntityType Name="protozoarios_activos">
           <Key>
@@ -688,10 +672,10 @@
           <EntitySetMapping Name="paciente">
             <EntityTypeMapping TypeName="laboratorio_pModel.paciente">
               <MappingFragment StoreEntitySet="paciente">
+                <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
                 <ScalarProperty Name="id_paciente" ColumnName="id_paciente" />
                 <ScalarProperty Name="id_campaña" ColumnName="id_campaña" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="edad" ColumnName="edad" />
                 <ScalarProperty Name="codigo" ColumnName="codigo" />
                 <ScalarProperty Name="genero" ColumnName="genero" />
               </MappingFragment>
