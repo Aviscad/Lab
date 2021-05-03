@@ -32,6 +32,7 @@ namespace Lab.UserPanel
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.rtxtObservaciones = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtStrongy = new System.Windows.Forms.TextBox();
@@ -84,7 +85,6 @@ namespace Lab.UserPanel
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.txtColor = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -128,6 +128,16 @@ namespace Lab.UserPanel
             this.rtxtObservaciones.Size = new System.Drawing.Size(513, 244);
             this.rtxtObservaciones.TabIndex = 20;
             this.rtxtObservaciones.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(961, 601);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 45);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox4
             // 
@@ -517,7 +527,6 @@ namespace Lab.UserPanel
             this.groupBox3.Size = new System.Drawing.Size(486, 214);
             this.groupBox3.TabIndex = 36;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Examen Fisicoquímico";
             // 
             // txtRestosAlimen
             // 
@@ -645,16 +654,6 @@ namespace Lab.UserPanel
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(110, 26);
             this.txtColor.TabIndex = 36;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(961, 601);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 45);
-            this.button1.TabIndex = 45;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label13
             // 

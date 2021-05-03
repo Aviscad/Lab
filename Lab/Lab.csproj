@@ -112,6 +112,18 @@
     <Compile Include="protozoarios_quistes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\reporteHeces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reporteHeces.Designer.cs">
+      <DependentUpon>reporteHeces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reporteHemograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reporteHemograma.Designer.cs">
+      <DependentUpon>reporteHemograma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\reporteOrina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +197,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\reporteHeces.resx">
+      <DependentUpon>reporteHeces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reporteHemograma.resx">
+      <DependentUpon>reporteHemograma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\reporteOrina.resx">
       <DependentUpon>reporteOrina.cs</DependentUpon>
     </EmbeddedResource>

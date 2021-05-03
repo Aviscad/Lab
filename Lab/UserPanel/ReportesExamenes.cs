@@ -82,5 +82,77 @@ namespace Lab.UserPanel
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            reporteHemograma toReporteHemograma = new reporteHemograma();
+            paciente getPaciente = new paciente();
+            hemograma getHemograma = new hemograma();
+
+            if (txtBuscar.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("No se ha seleccionado ningun paciente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int idPaciente = pacienteModel.id_paciente;
+
+                using (laboratorio_pEntities DB = new laboratorio_pEntities())
+                {
+                    var pacienteHelper = DB.paciente.Where(m => m.id_paciente == idPaciente).FirstOrDefault();
+                    try
+                    {
+                        var hemogramaHelper = DB.examenes.Where(m => m.id_paciente == idPaciente).FirstOrDefault();
+                        var getHemogramaHelper = DB.hemograma.Where(m => m.id_hemograma == hemogramaHelper.id_hemograma).FirstOrDefault();
+                        getPaciente = pacienteHelper;
+                        getHemograma = getHemogramaHelper;
+                        AddOwnedForm(toReporteHemograma);
+                        toReporteHemograma.paciente = getPaciente;
+                        toReporteHemograma.hemograma = getHemograma;
+                        toReporteHemograma.Show();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("El paciente: " + pacienteHelper.nombre + " no tiene registrado un hemograma", "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            reporteHeces toReporteHeces = new reporteHeces();
+            paciente getPaciente = new paciente();
+            heces getHeces = new heces();
+
+            if (txtBuscar.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("No se ha seleccionado ningun paciente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int idPaciente = pacienteModel.id_paciente;
+
+                using (laboratorio_pEntities DB = new laboratorio_pEntities())
+                {
+                    var pacienteHelper = DB.paciente.Where(m => m.id_paciente == idPaciente).FirstOrDefault();
+                    try
+                    {
+                        var hecesHelper = DB.examenes.Where(m => m.id_paciente == idPaciente).FirstOrDefault();
+                        var getHecesHelper = DB.heces.Where(m => m.id_heces == hecesHelper.id_heces).FirstOrDefault();
+                        getPaciente = pacienteHelper;
+                        getHeces = getHecesHelper;
+                        AddOwnedForm(toReporteHeces);
+                        toReporteHeces.paciente = getPaciente;
+                        toReporteHeces.heces = getHeces;
+                        toReporteHeces.Show();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("El paciente: " + pacienteHelper.nombre + " no tiene registrado un examen de heces", "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
     }
 }
