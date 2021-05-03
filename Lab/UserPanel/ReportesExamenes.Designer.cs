@@ -1,7 +1,7 @@
 ﻿
 namespace Lab.UserPanel
 {
-    partial class AddExamenes
+    partial class ReportesExamenes
     {
         /// <summary>
         /// Required designer variable.
@@ -34,12 +34,10 @@ namespace Lab.UserPanel
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvBusqueda = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
@@ -50,16 +48,15 @@ namespace Lab.UserPanel
             // 
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.btnGuardar);
             this.groupBox1.Controls.Add(this.txtBuscar);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.dgvBusqueda);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(27, 73);
+            this.groupBox1.Location = new System.Drawing.Point(21, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(880, 403);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.Size = new System.Drawing.Size(1097, 353);
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar Paciente:";
             // 
@@ -72,13 +69,12 @@ namespace Lab.UserPanel
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.button3.Location = new System.Drawing.Point(419, 278);
+            this.button3.Location = new System.Drawing.Point(666, 254);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 64);
+            this.button3.Size = new System.Drawing.Size(216, 54);
             this.button3.TabIndex = 18;
-            this.button3.Text = "AGREGAR EXAMEN DE HECES";
+            this.button3.Text = "GENERAR REPORTE HECES";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label3
             // 
@@ -91,23 +87,6 @@ namespace Lab.UserPanel
             this.label3.TabIndex = 15;
             this.label3.Text = "Nombre de Paciente:";
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.FlatAppearance.BorderSize = 2;
-            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.btnGuardar.Location = new System.Drawing.Point(672, 278);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(192, 64);
-            this.btnGuardar.TabIndex = 14;
-            this.btnGuardar.Text = "GUARDAR CAMBIOS";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
             // txtBuscar
             // 
             this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -115,9 +94,9 @@ namespace Lab.UserPanel
             this.txtBuscar.Location = new System.Drawing.Point(182, 57);
             this.txtBuscar.MaxLength = 50;
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(505, 26);
+            this.txtBuscar.Size = new System.Drawing.Size(524, 26);
             this.txtBuscar.TabIndex = 13;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // button2
             // 
@@ -128,11 +107,11 @@ namespace Lab.UserPanel
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.button2.Location = new System.Drawing.Point(221, 278);
+            this.button2.Location = new System.Drawing.Point(424, 254);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(192, 64);
+            this.button2.Size = new System.Drawing.Size(216, 54);
             this.button2.TabIndex = 17;
-            this.button2.Text = "AGREGAR EXAMEN DE ORINA";
+            this.button2.Text = "GENERAR REPORTE ORINA";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -145,13 +124,12 @@ namespace Lab.UserPanel
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.button1.Location = new System.Drawing.Point(23, 278);
+            this.button1.Location = new System.Drawing.Point(182, 254);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 64);
+            this.button1.Size = new System.Drawing.Size(216, 54);
             this.button1.TabIndex = 16;
-            this.button1.Text = "AGREGAR EXAMEN DE HEMOGRAMA";
+            this.button1.Text = "GENERAR REPORTE HEMOGRAMA";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvBusqueda
             // 
@@ -192,18 +170,8 @@ namespace Lab.UserPanel
             this.dgvBusqueda.ReadOnly = true;
             this.dgvBusqueda.RowHeadersVisible = false;
             this.dgvBusqueda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBusqueda.Size = new System.Drawing.Size(841, 159);
+            this.dgvBusqueda.Size = new System.Drawing.Size(1039, 99);
             this.dgvBusqueda.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(377, 30);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 26);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "EXAMENES";
             // 
             // Column2
             // 
@@ -214,41 +182,35 @@ namespace Lab.UserPanel
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Nombre";
+            this.Column1.HeaderText = "Pacientes";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
-            // AddExamenes
+            // ReportesExamenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(935, 776);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(1157, 641);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddExamenes";
-            this.Text = "AddExamenes";
-            this.Load += new System.EventHandler(this.AddExamenes_Load);
+            this.Name = "ReportesExamenes";
+            this.Text = "ReportesExamenes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dgvBusqueda;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvBusqueda;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }

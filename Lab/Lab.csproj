@@ -112,6 +112,12 @@
     <Compile Include="protozoarios_quistes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\reporteOrina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reporteOrina.Designer.cs">
+      <DependentUpon>reporteOrina.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPanel\AddExamenes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,12 @@
     <Compile Include="UserPanel\Pacientes.Designer.cs">
       <DependentUpon>Pacientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserPanel\ReportesExamenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel\ReportesExamenes.Designer.cs">
+      <DependentUpon>ReportesExamenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPanel\User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +185,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\reporteOrina.resx">
+      <DependentUpon>reporteOrina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserPanel\AddExamenes.resx">
       <DependentUpon>AddExamenes.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserPanel\Pacientes.resx">
       <DependentUpon>Pacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanel\ReportesExamenes.resx">
+      <DependentUpon>ReportesExamenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPanel\User.resx">
       <DependentUpon>User.cs</DependentUpon>
@@ -226,6 +244,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\blue.png" />
+    <None Include="Resources\white.png" />
     <None Include="Resources\microscopio.png" />
   </ItemGroup>
   <ItemGroup>

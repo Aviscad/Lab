@@ -12,7 +12,7 @@
           <Property Name="id_campaña" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="100" />
           <Property Name="fecha" Type="date" />
-          <Property Name="id_usuario" Type="int" />
+          <Property Name="id_usuario" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="examenes">
           <Key>
@@ -145,7 +145,9 @@
           <Property Name="tipo" Type="varchar" MaxLength="15" />
         </EntityType>
         <Association Name="FK_campaña_usuario">
-          <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="campaña" Type="Self.campaña" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="usuario">
@@ -157,7 +159,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_examenes_heces">
-          <End Role="heces" Type="Self.heces" Multiplicity="0..1" />
+          <End Role="heces" Type="Self.heces" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="examenes" Type="Self.examenes" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="heces">
@@ -169,7 +173,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_examenes_hemograma">
-          <End Role="hemograma" Type="Self.hemograma" Multiplicity="0..1" />
+          <End Role="hemograma" Type="Self.hemograma" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="examenes" Type="Self.examenes" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="hemograma">
@@ -181,7 +187,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_examenes_orina">
-          <End Role="orina" Type="Self.orina" Multiplicity="0..1" />
+          <End Role="orina" Type="Self.orina" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="examenes" Type="Self.examenes" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="orina">
@@ -193,7 +201,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_examenes_paciente">
-          <End Role="paciente" Type="Self.paciente" Multiplicity="1" />
+          <End Role="paciente" Type="Self.paciente" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="examenes" Type="Self.examenes" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="paciente">
@@ -205,7 +215,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_heces_protozoarios_activos">
-          <End Role="protozoarios_activos" Type="Self.protozoarios_activos" Multiplicity="0..1" />
+          <End Role="protozoarios_activos" Type="Self.protozoarios_activos" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="heces" Type="Self.heces" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="protozoarios_activos">
@@ -217,7 +229,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_heces_protozoarios_quistes">
-          <End Role="protozoarios_quistes" Type="Self.protozoarios_quistes" Multiplicity="0..1" />
+          <End Role="protozoarios_quistes" Type="Self.protozoarios_quistes" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="heces" Type="Self.heces" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="protozoarios_quistes">
@@ -225,6 +239,18 @@
             </Principal>
             <Dependent Role="heces">
               <PropertyRef Name="id_protozoarios_quistes" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_paciente_campaña">
+          <End Role="campaña" Type="Self.campaña" Multiplicity="0..1" />
+          <End Role="paciente" Type="Self.paciente" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="campaña">
+              <PropertyRef Name="id_campaña" />
+            </Principal>
+            <Dependent Role="paciente">
+              <PropertyRef Name="id_campaña" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -266,6 +292,10 @@
             <End Role="protozoarios_quistes" EntitySet="protozoarios_quistes" />
             <End Role="heces" EntitySet="heces" />
           </AssociationSet>
+          <AssociationSet Name="FK_paciente_campaña" Association="Self.FK_paciente_campaña">
+            <End Role="campaña" EntitySet="campaña" />
+            <End Role="paciente" EntitySet="paciente" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -278,7 +308,7 @@
           <Property Name="id_campaña" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="fecha" Type="DateTime" Precision="0" />
-          <Property Name="id_usuario" Type="Int32" />
+          <Property Name="id_usuario" Type="Int32" Nullable="false" />
           <NavigationProperty Name="usuario" Relationship="Self.FK_campaña_usuario" FromRole="campaña" ToRole="usuario" />
           <NavigationProperty Name="paciente" Relationship="Self.FK_paciente_campaña" FromRole="campaña" ToRole="paciente" />
         </EntityType>
@@ -427,7 +457,7 @@
           <Property Name="tipo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_campaña_usuario">
-          <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+          <End Role="usuario" Type="Self.usuario" Multiplicity="1" />
           <End Role="campaña" Type="Self.campaña" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="usuario">

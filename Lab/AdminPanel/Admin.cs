@@ -33,7 +33,7 @@ namespace Lab.AdminPanel
                 var getUserName = (from usuario in DB.usuario
                                    where usuario.id_usuario == login.id
                                    select usuario.nombre_usuario).FirstOrDefault();
-                lblUserLogged.Text = "Bienvenido: \n" + getUserName.ToString().ToUpper();
+                lblUserLogged.Text = "BIENVENIDO: \n" + getUserName.ToString().ToUpper();
             }
 
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;

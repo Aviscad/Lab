@@ -20,7 +20,7 @@ namespace Lab.UserPanel
 
         private void Clear()
         {
-            txtNombre.Text = txtEdad.Text = txtCodigo.Text = "";
+            txtNombre.Text = txtCodigo.Text = "";
             btnEliminar.Enabled = false;
             btnGuardar.Text = "Guardar";
             pacienteModel.id_paciente = 0;
@@ -118,7 +118,7 @@ namespace Lab.UserPanel
                     pacienteModel = DB.paciente.Where(x => x.id_paciente == pacienteModel.id_paciente).FirstOrDefault();
                     
                     txtNombre.Text = pacienteModel.nombre;
-                    txtEdad.Text = pacienteModel.fecha_nacimiento.ToString();
+                    dateTimePicker1.Value = Convert.ToDateTime(pacienteModel.fecha_nacimiento);
                     txtCodigo.Text = pacienteModel.codigo;
 
                     cbbCampania.SelectedValue = pacienteModel.id_campaña;

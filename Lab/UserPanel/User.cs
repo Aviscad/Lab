@@ -44,7 +44,7 @@ namespace Lab.UserPanel
                 var getUserName = (from usuario in DB.usuario
                                 where usuario.id_usuario == login.id
                                 select usuario.nombre_usuario).FirstOrDefault();
-                lblUserLogged.Text = "Bienvenido: \n" + getUserName.ToString().ToUpper();
+                lblUserLogged.Text = "BIENVENIDO: \n" + getUserName.ToString().ToUpper();
             }
 
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
@@ -107,6 +107,16 @@ namespace Lab.UserPanel
         private void button1_Click_1(object sender, EventArgs e)
         {
             AbrirFormWrapper(new AddExamenes());
+        }
+
+        private void Wrapper_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormWrapper(new ReportesExamenes());
         }
     }
 }

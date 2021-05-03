@@ -32,7 +32,7 @@ namespace Lab.UserPanel
 
                 foreach (var paciente in query.ToList())
                 {
-                    dgvBusqueda.Rows.Add(paciente.nombre);
+                    dgvBusqueda.Rows.Add(paciente.id_paciente, paciente.nombre);
 
                     pacienteModel.id_paciente = paciente.id_paciente;
                     pacienteModel.id_campaña = paciente.id_campaña;
@@ -100,21 +100,27 @@ namespace Lab.UserPanel
             {
                 examenes newExamen = new examenes();
 
-                newExamen.id_paciente = pacienteModel.id_paciente;
-                newExamen.id_orina = id_orina;
-                newExamen.id_heces = id_heces;
-                newExamen.id_hemograma = id_hemograma;
-                newExamen.fecha = DateTime.Today;
+                /*********          OJO:   **************/
+                //if(id_heces == 0) <-- VALIDACION DE IDS DE EXAMENES QUE NO VENGAN EN 0 O NULL
 
-                //MessageBox.Show(pacienteModel.id_paciente.ToString());
-                //MessageBox.Show(id_orina.ToString());
-                //MessageBox.Show(id_heces.ToString());
-                //MessageBox.Show(id_hemograma.ToString());
+                /*********            **************/
 
-                DB.examenes.Add(newExamen);
-                DB.SaveChanges();
+                if (id_heces == 0 || id_hemograma == 0 || id_orina == 0)
+                {
+                    MessageBox.Show("Complete los datos de todos los examenes");
+                }
+                else {
+                    newExamen.id_paciente = pacienteModel.id_paciente;
+                    newExamen.id_orina = id_orina;
+                    newExamen.id_heces = id_heces;
+                    newExamen.id_hemograma = id_hemograma;
+                    newExamen.fecha = DateTime.Today;
 
-                MessageBox.Show("Guardado correctamente","Información",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DB.examenes.Add(newExamen);
+                    DB.SaveChanges();
+
+                    MessageBox.Show("Guardado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }

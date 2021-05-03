@@ -36,8 +36,8 @@ namespace Lab.UserPanel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 campaniaModel.nombre = txtNomCampania.Text.Trim();
                 campaniaModel.fecha = DateTime.Today;
                 campaniaModel.id_usuario = id;
@@ -95,11 +95,11 @@ namespace Lab.UserPanel
                         }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         void fillRows()
