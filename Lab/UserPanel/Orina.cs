@@ -25,6 +25,11 @@ namespace Lab.UserPanel
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             using (laboratorio_pEntities DB = new laboratorio_pEntities())
             {
                 orina examenOrina = new orina();
@@ -36,12 +41,12 @@ namespace Lab.UserPanel
                 examenOrina.ph = txtPh.Text.Trim();
                 examenOrina.proteinas = txtProteinas.Text.Trim();
                 examenOrina.glucosa = txtGlucosa.Text.Trim();
-                examenOrina.sangre_oculta =txtSangreOculta.Text.Trim();
+                examenOrina.sangre_oculta = txtSangreOculta.Text.Trim();
                 examenOrina.cuerpos_cetonicos = txtCuerCeton.Text.Trim();
                 examenOrina.urobilinogeno = txtUrobilinogeno.Text.Trim();
                 examenOrina.bilirrubina = txtBilirrubina.Text.Trim();
                 examenOrina.nitritos = txtNitritos.Text.Trim();
-                examenOrina.hemoglobina =txtHemoglobina.Text.Trim();
+                examenOrina.hemoglobina = txtHemoglobina.Text.Trim();
                 examenOrina.esteriasa_leucocitaria = txtEsteriasaLeuc.Text.Trim();
 
                 //Examen Microscopio

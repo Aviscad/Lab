@@ -19,6 +19,11 @@ namespace Lab.UserPanel
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             int proto_ActivosId = 0;
             int proto_QuistesId = 0;
             using (laboratorio_pEntities DB = new laboratorio_pEntities())

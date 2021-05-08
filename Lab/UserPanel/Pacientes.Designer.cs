@@ -46,14 +46,14 @@ namespace Lab.UserPanel
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dgvPacientes = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
             this.SuspendLayout();
@@ -287,26 +287,6 @@ namespace Lab.UserPanel
             this.dgvPacientes.TabIndex = 1;
             this.dgvPacientes.DoubleClick += new System.EventHandler(this.dgvPacientes_DoubleClick);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(435, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 26);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "PACIENTES";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(403, 348);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(251, 24);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "LISTADO DE PACIENTES";
-            // 
             // Column1
             // 
             this.Column1.FillWeight = 48.28326F;
@@ -354,12 +334,32 @@ namespace Lab.UserPanel
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(435, 38);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(146, 26);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "PACIENTES";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(403, 348);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(251, 24);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "LISTADO DE PACIENTES";
+            // 
             // Pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1061, 894);
+            this.ClientSize = new System.Drawing.Size(1029, 801);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvPacientes);

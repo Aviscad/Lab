@@ -22,10 +22,6 @@ namespace Lab.UserPanel
         public int getExamenId() {
             return idExamen;
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void Hemograma_Load(object sender, EventArgs e)
         {
@@ -35,7 +31,13 @@ namespace Lab.UserPanel
        
         private void button1_Click_1(object sender, EventArgs e)
         {
-            using (laboratorio_pEntities DB = new laboratorio_pEntities()) {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (laboratorio_pEntities DB = new laboratorio_pEntities())
+            {
 
                 hemograma newHemograma = new hemograma();
 
@@ -64,37 +66,12 @@ namespace Lab.UserPanel
                 DB.hemograma.Add(newHemograma);
                 DB.SaveChanges();
 
-                MessageBox.Show("Examen agregado correctamente","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Examen agregado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 AddExamenes parent = Owner as AddExamenes;
                 parent.id_hemograma = newHemograma.id_hemograma;
 
                 this.Close();
-
-                //int getHemogramaID = newHemograma.id_hemograma;
-
-                ///* NOTA: 
-                // * LUEGO DE GUARDAR EL EXAMEN AL USAR EL DB.SAVECHANGES() 
-                // * SE ACTUALIZA EL MODEL CON EL ID CORRESPONDIENTE
-                // */
-
-                //examenes newExamen = new examenes();
-
-                //newExamen.id_paciente = pacienteModel.id_paciente;
-                //newExamen.id_hemograma = getHemogramaID;
-                //newExamen.fecha = DateTime.Today;
-
-                //MessageBox.Show(pacienteModel.id_paciente.ToString());
-
-                //DB.examenes.Add(newExamen);
-                //DB.SaveChanges();
-
-                //idExamen = newExamen.id_examenes;
-
-                //User u = Owner as User;
-                //u.id_examen = newExamen.id_examenes;
-                //u.id_paciente = pacienteModel.id_paciente;
-                //send currnet examen id
 
                 /*
                  * FALTAN LAS VALIDACIONES Y EL RESET DE LOS TXT ( Clear(); )
