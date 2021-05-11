@@ -23,6 +23,7 @@ namespace Lab.UserPanel
             txtNombre.Text = txtCodigo.Text = "";
             btnEliminar.Enabled = false;
             btnGuardar.Text = "Guardar";
+            btnGuardar.Image = Properties.Resources.guardar;
             pacienteModel.id_paciente = 0;
 
             cbbCampania.SelectedIndex = 0;
@@ -55,19 +56,16 @@ namespace Lab.UserPanel
         {
             if (txtNombre.Text.Trim().Equals("")  )
             {
-                MessageBox.Show("Rellene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe proporcionar toda la información del paciente antes de guardar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 if (!System.Text.RegularExpressions.Regex.IsMatch(txtNombre.Text, @"^[A-Z\sÑ]+$")) //regEx solo letras
                 {
-                    MessageBox.Show("El Nombre debe contener solo letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El Nombre del paciente debe contener solo letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else 
                 {
-                    //if (Convert.ToInt32(txtEdad.Text.Trim()) < 1){
-                    //    MessageBox.Show("La Edad tiene que ser mayor de 0", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //} else {
                         pacienteModel.nombre = txtNombre.Text.Trim();
                         pacienteModel.fecha_nacimiento = Convert.ToDateTime(dateTimePicker1.Value.ToShortDateString());
                         pacienteModel.codigo = txtCodigo.Text.Trim();
@@ -78,16 +76,15 @@ namespace Lab.UserPanel
                         {
                             if (pacienteModel.id_paciente == 0){
                                 DB.paciente.Add(pacienteModel);
-                                MessageBox.Show("Registro agregado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Registro agregado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             } else {
                                 DB.Entry(pacienteModel).State = EntityState.Modified;
-                                MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Registro actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             DB.SaveChanges();
                         }
                         fillRows();
                         Clear();
-                    //}
                 }
             }
         }
@@ -130,6 +127,7 @@ namespace Lab.UserPanel
                         cbbGenero.SelectedIndex = 1;
                     }
                     btnGuardar.Text = "Modificar";
+                    btnGuardar.Image = Properties.Resources.editar;
                     btnEliminar.Enabled = true;
                 }
                 catch (Exception ex)
@@ -154,7 +152,7 @@ namespace Lab.UserPanel
                     Clear();
                     fillRows();
 
-                    MessageBox.Show("Registro eliminado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Registro eliminado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

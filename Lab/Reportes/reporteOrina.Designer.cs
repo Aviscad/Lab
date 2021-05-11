@@ -36,6 +36,7 @@ namespace Lab.Reportes
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
@@ -93,14 +94,13 @@ namespace Lab.Reportes
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.txtColor = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -197,6 +197,16 @@ namespace Lab.Reportes
             this.label19.TabIndex = 46;
             this.label19.Text = "LABORATORIO CLÍNICO INMUNOHEMATOLOGICO \r\nESCOBAR";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Lab.Properties.Resources.blue;
+            this.pictureBox1.Location = new System.Drawing.Point(30, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(74, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 45;
+            this.pictureBox1.TabStop = false;
             // 
             // groupBox5
             // 
@@ -857,16 +867,6 @@ namespace Lab.Reportes
             this.txtColor.TabIndex = 36;
             this.txtColor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Lab.Properties.Resources.blue;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(74, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 45;
-            this.pictureBox1.TabStop = false;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
@@ -876,11 +876,13 @@ namespace Lab.Reportes
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.button2.Location = new System.Drawing.Point(619, 7);
+            this.button2.Image = global::Lab.Properties.Resources.imprimir;
+            this.button2.Location = new System.Drawing.Point(671, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(192, 43);
+            this.button2.Size = new System.Drawing.Size(140, 43);
             this.button2.TabIndex = 45;
             this.button2.Text = "IMPRIMIR";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -903,13 +905,13 @@ namespace Lab.Reportes
             this.Load += new System.EventHandler(this.reporteOrina_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

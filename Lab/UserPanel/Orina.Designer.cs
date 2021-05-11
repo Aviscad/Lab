@@ -30,6 +30,7 @@ namespace Lab.UserPanel
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtParasitos = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -80,7 +81,6 @@ namespace Lab.UserPanel
             this.label32 = new System.Windows.Forms.Label();
             this.txtColor = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -103,6 +103,24 @@ namespace Lab.UserPanel
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DE EXAMEN";
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
+            this.button1.Image = global::Lab.Properties.Resources.guardar;
+            this.button1.Location = new System.Drawing.Point(638, 662);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 44);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Guardar";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox4
             // 
@@ -626,22 +644,6 @@ namespace Lab.UserPanel
             this.label13.Size = new System.Drawing.Size(174, 20);
             this.label13.TabIndex = 44;
             this.label13.Text = "EXAMEN DE ORINA";
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.button1.Location = new System.Drawing.Point(638, 662);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 44);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Orina
             // 

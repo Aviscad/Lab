@@ -22,11 +22,19 @@ namespace Lab.UserPanel
         {
             if (txtBuscar.Text.Trim().Equals(""))
             {
-                MessageBox.Show("No se ha seleccionado ningun paciente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seleccione un paciente primero! " +
+                    "\n 1. Buscar al paciente en la barra de busqueda \n 2. En la tabla de resultados dar doble click en el nombre del paciente.",
+                    "Error!!!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
             else if (examenesModel.id_orina == null)
             {
-                MessageBox.Show("No se ha seleccionado ningun examen");
+                MessageBox.Show("Seleccione un examen primero! " +
+                    "\n 1. En la tabla de resultados de examenes dar doble click en la fila del examen. \n 2. Dar click nuevamente en el boton de generar reporte.",
+                    "Error!!!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
             else
             {
@@ -105,10 +113,18 @@ namespace Lab.UserPanel
         {
             if (txtBuscar.Text.Trim().Equals(""))
             {
-                MessageBox.Show("No se ha seleccionado ningun paciente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seleccione un paciente primero! " +
+                    "\n 1. Buscar al paciente en la barra de busqueda \n 2. En la tabla de resultados dar doble click en el nombre del paciente.",
+                    "Error!!!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
             else if (examenesModel.id_hemograma == null) {
-                MessageBox.Show("No se ha seleccionado ningun examen");
+                MessageBox.Show("Seleccione un examen primero! " +
+                    "\n 1. En la tabla de resultados de examenes dar doble click en la fila del examen. \n 2. Dar click nuevamente en el boton de generar reporte.",
+                    "Error!!!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
             else
             {
@@ -136,11 +152,19 @@ namespace Lab.UserPanel
         {
             if (txtBuscar.Text.Trim().Equals(""))
             {
-                MessageBox.Show("No se ha seleccionado ningun paciente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seleccione un paciente primero! " +
+                    "\n 1. Buscar al paciente en la barra de busqueda \n 2. En la tabla de resultados dar doble click en el nombre del paciente.",
+                    "Error!!!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
             else if (examenesModel.id_heces == null)
             {
-                MessageBox.Show("No se ha seleccionado ningun examen");
+                MessageBox.Show("Seleccione un examen primero! " +
+                    "\n 1. En la tabla de resultados de examenes dar doble click en la fila del examen. \n 2. Dar click nuevamente en el boton de generar reporte.",
+                    "Error!!!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
             else
             {
@@ -192,7 +216,7 @@ namespace Lab.UserPanel
                 try
                 {
                     pacienteModel = DB.paciente.Where(x => x.id_paciente == pacienteModel.id_paciente).FirstOrDefault();
-                    MessageBox.Show("Seleccionado: " + pacienteModel.nombre);
+                    MessageBox.Show("Paciente seleccionado: " + pacienteModel.nombre, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                     /* SELECCIONAR DATOS DE EXAMENES */
@@ -232,8 +256,7 @@ namespace Lab.UserPanel
                 try
                 {     
                     examenesModel = DB.examenes.Where(x => x.id_examenes == examenesModel.id_examenes).FirstOrDefault();
-                    MessageBox.Show("Seleccionado el examen con fecha: " + examenesModel.fecha.ToShortDateString());
-
+                    MessageBox.Show("Seleccionado el examen con fecha: " + examenesModel.fecha.ToShortDateString(), "Información",MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     /* SELECCIONAR DATOS DE EXAMENES */
                     paciente getPaciente = new paciente();

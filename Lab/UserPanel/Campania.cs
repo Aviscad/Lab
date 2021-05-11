@@ -36,8 +36,6 @@ namespace Lab.UserPanel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //try
-            //{
                 campaniaModel.nombre = txtNomCampania.Text.Trim();
                 campaniaModel.fecha = DateTime.Today;
                 campaniaModel.id_usuario = id;
@@ -46,7 +44,7 @@ namespace Lab.UserPanel
                 {
                     if (txtNomCampania.Text.Trim().Equals(""))
                     {
-                        MessageBox.Show("Rellene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Debe colocar un nombre de campaña antes de guardarla.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else {
 
@@ -56,7 +54,7 @@ namespace Lab.UserPanel
 
                         if (checkCampania.ToList().Count > 0)
                         {
-                            MessageBox.Show("La campaña " + campaniaModel.nombre + " ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("La campaña " + campaniaModel.nombre + " ya existe, intente con otro nombre.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else {
                             if (campaniaModel.id_campaña == 0)
@@ -66,12 +64,12 @@ namespace Lab.UserPanel
 
                                 if (campaniaCheck.Count > 0)
                                 {
-                                    MessageBox.Show("La campaña '" + txtNomCampania.Text.Trim() + "' ya existe!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("La campaña '" + txtNomCampania.Text.Trim() + "' ya existe, intente con otro nombre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                                 else
                                 {
                                     DB.campaña.Add(campaniaModel); //insert
-                                    MessageBox.Show("Registro agregado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Registro agregado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                             }
                             else
@@ -81,12 +79,12 @@ namespace Lab.UserPanel
 
                                 if (campaniaCheck.Count > 0)
                                 {
-                                    MessageBox.Show("La campaña '" + txtNomCampania.Text.Trim() + "' ya existe!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("La campaña '" + txtNomCampania.Text.Trim() + "' ya existe, intente con otro nombre.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                                 else
                                 {
                                     DB.Entry(campaniaModel).State = EntityState.Modified; //update
-                                    MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Registro actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                             }
                             DB.SaveChanges();
@@ -95,11 +93,6 @@ namespace Lab.UserPanel
                         }
                     }
                 }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
         }
 
         void fillRows()
@@ -122,6 +115,7 @@ namespace Lab.UserPanel
             txtNomCampania.Text = "";
             btnEliminar.Enabled = false;
             btnGuardar.Text = "Guardar";
+            btnGuardar.Image = Properties.Resources.guardar;
             campaniaModel.id_campaña = 0;
         }
 
@@ -143,6 +137,7 @@ namespace Lab.UserPanel
                     campaniaModel = DB.campaña.Where(x => x.id_campaña == campaniaModel.id_campaña).FirstOrDefault();
                     txtNomCampania.Text = campaniaModel.nombre;
                     btnGuardar.Text = "Modificar";
+                    btnGuardar.Image = Properties.Resources.editar;
                     btnEliminar.Enabled = true;
                 }
                 catch (Exception ex)
@@ -167,7 +162,7 @@ namespace Lab.UserPanel
                     Clear();
                     fillRows();
 
-                    MessageBox.Show("Registro eliminado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Registro eliminado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

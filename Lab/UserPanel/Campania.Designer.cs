@@ -32,18 +32,18 @@ namespace Lab.UserPanel
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtNomCampania = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCampania = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCampania)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -56,22 +56,6 @@ namespace Lab.UserPanel
             this.txtNomCampania.Name = "txtNomCampania";
             this.txtNomCampania.Size = new System.Drawing.Size(315, 26);
             this.txtNomCampania.TabIndex = 0;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.FlatAppearance.BorderSize = 2;
-            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.btnGuardar.Location = new System.Drawing.Point(556, 51);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(130, 44);
-            this.btnGuardar.TabIndex = 1;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -154,38 +138,6 @@ namespace Lab.UserPanel
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatAppearance.BorderSize = 2;
-            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.btnCancelar.Location = new System.Drawing.Point(692, 51);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(130, 44);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.FlatAppearance.BorderSize = 2;
-            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.btnEliminar.Location = new System.Drawing.Point(828, 51);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(130, 44);
-            this.btnEliminar.TabIndex = 6;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -222,6 +174,60 @@ namespace Lab.UserPanel
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DE CAMPAÑA";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.FlatAppearance.BorderSize = 2;
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
+            this.btnGuardar.Image = global::Lab.Properties.Resources.guardar;
+            this.btnGuardar.Location = new System.Drawing.Point(556, 51);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(130, 44);
+            this.btnGuardar.TabIndex = 1;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.FlatAppearance.BorderSize = 2;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
+            this.btnEliminar.Image = global::Lab.Properties.Resources.eliminar;
+            this.btnEliminar.Location = new System.Drawing.Point(828, 51);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(130, 44);
+            this.btnEliminar.TabIndex = 6;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatAppearance.BorderSize = 2;
+            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
+            this.btnCancelar.Image = global::Lab.Properties.Resources.cancelar;
+            this.btnCancelar.Location = new System.Drawing.Point(692, 51);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(130, 44);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // Campania
             // 

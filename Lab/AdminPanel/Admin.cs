@@ -66,6 +66,7 @@ namespace Lab.AdminPanel
             txtCont.Text = txtUsuario.Text = txtReCont.Text = "";
             btnEliminar.Enabled = false;
             btnGuardar.Text = "Guardar";
+            btnGuardar.Image = Properties.Resources.guardar;
             userModel.id_usuario = 0;
         }
 
@@ -82,7 +83,7 @@ namespace Lab.AdminPanel
         {
             if (txtUsuario.Text.Trim().Equals(""))
             {
-                MessageBox.Show("Introduzca el nombre de usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Rellene los datos de el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -97,7 +98,7 @@ namespace Lab.AdminPanel
 
                         if (userExist.ToList().Count > 0)
                         {
-                            MessageBox.Show("El usuario " + txtUsuario.Text.Trim() + " ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("El usuario " + txtUsuario.Text.Trim() + " ya existe, intente con otro nombre de usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
@@ -108,7 +109,7 @@ namespace Lab.AdminPanel
                                 userModel.contraseña = hasing(txtCont.Text.Trim());
 
                                 DB.usuario.Add(userModel);
-                                MessageBox.Show("Registro agregado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Registro agregado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {
@@ -127,7 +128,7 @@ namespace Lab.AdminPanel
 
                             if (userExist.ToList().Count > 0)
                             {
-                                MessageBox.Show("El usuario " + txtUsuario.Text.Trim() + " ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("El usuario " + txtUsuario.Text.Trim() + " ya existe, intente con otro nombre de usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
@@ -144,7 +145,7 @@ namespace Lab.AdminPanel
                                         userModel.contraseña = hasing(txtCont.Text.Trim());
 
                                         DB.Entry(userModel).State = EntityState.Modified;
-                                        MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        MessageBox.Show("Registro actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     }
                                     else
                                     {
@@ -158,7 +159,7 @@ namespace Lab.AdminPanel
                                     userModel.tipo = cbbTipo.SelectedItem.ToString();
 
                                     DB.Entry(userModel).State = EntityState.Modified;
-                                    MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Registro actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                             }
                         }
@@ -176,7 +177,7 @@ namespace Lab.AdminPanel
                                     userModel.contraseña = hasing(txtCont.Text.Trim());
 
                                     DB.Entry(userModel).State = EntityState.Modified;
-                                    MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Registro actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                                 else
                                 {
@@ -188,7 +189,7 @@ namespace Lab.AdminPanel
                                 userModel.tipo = cbbTipo.SelectedItem.ToString();
 
                                 DB.Entry(userModel).State = EntityState.Modified;
-                                MessageBox.Show("Registro actualizado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Registro actualizado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                     }
@@ -217,6 +218,7 @@ namespace Lab.AdminPanel
                     else if (userModel.tipo.Equals("user")) { cbbTipo.SelectedIndex = 1; }
 
                     btnGuardar.Text = "Modificar";
+                    btnGuardar.Image = Properties.Resources.editar;
                     btnEliminar.Enabled = true;
                 }
                 catch (Exception ex)
@@ -246,7 +248,7 @@ namespace Lab.AdminPanel
                     Clear();
                     fillRows();
 
-                    MessageBox.Show("Registro eliminado", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Registro eliminado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -263,6 +265,11 @@ namespace Lab.AdminPanel
             {
                 Application.Exit();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

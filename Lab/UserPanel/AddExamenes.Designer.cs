@@ -40,7 +40,6 @@ namespace Lab.UserPanel
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.dgvBusqueda = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +48,7 @@ namespace Lab.UserPanel
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).BeginInit();
             this.SuspendLayout();
@@ -58,16 +58,15 @@ namespace Lab.UserPanel
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.btnGuardar);
-            this.groupBox1.Controls.Add(this.txtBuscar);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtBuscar);
             this.groupBox1.Controls.Add(this.dgvBusqueda);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(27, 73);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(996, 403);
+            this.groupBox1.Size = new System.Drawing.Size(1033, 368);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar Paciente:";
@@ -106,11 +105,13 @@ namespace Lab.UserPanel
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.button3.Location = new System.Drawing.Point(419, 278);
+            this.button3.Image = global::Lab.Properties.Resources.agregarExamen;
+            this.button3.Location = new System.Drawing.Point(320, 308);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 64);
+            this.button3.Size = new System.Drawing.Size(324, 47);
             this.button3.TabIndex = 18;
             this.button3.Text = "AGREGAR EXAMEN DE HECES";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -134,11 +135,13 @@ namespace Lab.UserPanel
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.btnGuardar.Location = new System.Drawing.Point(778, 278);
+            this.btnGuardar.Image = global::Lab.Properties.Resources.guardar;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(709, 447);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(192, 64);
+            this.btnGuardar.Size = new System.Drawing.Size(324, 47);
             this.btnGuardar.TabIndex = 14;
-            this.btnGuardar.Text = "GUARDAR CAMBIOS";
+            this.btnGuardar.Text = "GUARDAR EXAMENES";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -162,30 +165,15 @@ namespace Lab.UserPanel
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.button2.Location = new System.Drawing.Point(221, 278);
+            this.button2.Image = global::Lab.Properties.Resources.agregarExamen;
+            this.button2.Location = new System.Drawing.Point(682, 308);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(192, 64);
+            this.button2.Size = new System.Drawing.Size(324, 47);
             this.button2.TabIndex = 17;
             this.button2.Text = "AGREGAR EXAMEN DE ORINA";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.button1.Location = new System.Drawing.Point(23, 278);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 64);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "AGREGAR EXAMEN DE HEMOGRAMA";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvBusqueda
             // 
@@ -199,7 +187,7 @@ namespace Lab.UserPanel
             this.dgvBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
@@ -230,7 +218,7 @@ namespace Lab.UserPanel
             this.dgvBusqueda.ReadOnly = true;
             this.dgvBusqueda.RowHeadersVisible = false;
             this.dgvBusqueda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBusqueda.Size = new System.Drawing.Size(947, 159);
+            this.dgvBusqueda.Size = new System.Drawing.Size(983, 198);
             this.dgvBusqueda.TabIndex = 12;
             this.dgvBusqueda.DoubleClick += new System.EventHandler(this.dgvBusqueda_DoubleClick);
             // 
@@ -288,14 +276,34 @@ namespace Lab.UserPanel
             this.label6.TabIndex = 10;
             this.label6.Text = "EXAMENES";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
+            this.button1.Image = global::Lab.Properties.Resources.agregarExamen;
+            this.button1.Location = new System.Drawing.Point(23, 308);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(268, 47);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "AGREGAR HEMOGRAMA";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AddExamenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1045, 776);
+            this.ClientSize = new System.Drawing.Size(1091, 536);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnGuardar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddExamenes";
             this.Text = "AddExamenes";

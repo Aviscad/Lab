@@ -262,6 +262,21 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\editar.png" />
+    <None Include="Resources\imprimir.png" />
+    <None Include="Resources\agregarExamen.png" />
+    <None Include="Resources\reporteBlue.png" />
+    <None Include="Resources\eliminar.png" />
+    <None Include="Resources\cancelar.png" />
+    <None Include="Resources\guardar.png" />
+    <None Include="Resources\salirWhite.png" />
+    <None Include="Resources\log-out.png" />
+    <None Include="Resources\reporteWhite.png" />
+    <None Include="Resources\blood-test.png" />
+    <None Include="Resources\pacientes.png" />
+    <None Include="Resources\consulta.png" />
+    <None Include="Resources\log-in.png" />
+    <None Include="Resources\salir.png" />
     <None Include="Resources\blue.png" />
     <None Include="Resources\white.png" />
     <None Include="Resources\microscopio.png" />

@@ -46,6 +46,7 @@ namespace Lab.UserPanel
             this.txtMacroplaquetas = new System.Windows.Forms.TextBox();
             this.rtxtObservaciones = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -77,7 +78,6 @@ namespace Lab.UserPanel
             this.label15 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -263,6 +263,24 @@ namespace Lab.UserPanel
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS EXAMEN";
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
+            this.button1.Image = global::Lab.Properties.Resources.guardar;
+            this.button1.Location = new System.Drawing.Point(641, 480);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 44);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Guardar";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label30
             // 
@@ -594,22 +612,6 @@ namespace Lab.UserPanel
             this.label32.Size = new System.Drawing.Size(126, 20);
             this.label32.TabIndex = 45;
             this.label32.Text = "HEMOGRAMA";
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.button1.Location = new System.Drawing.Point(641, 480);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 44);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Hemograma
             // 
