@@ -38,6 +38,7 @@ namespace Lab
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -124,6 +125,7 @@ namespace Lab
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.linkLabel1);
             this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.groupBox2);
@@ -149,9 +151,9 @@ namespace Lab
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
             this.button2.Image = global::Lab.Properties.Resources.salir;
-            this.button2.Location = new System.Drawing.Point(164, 257);
+            this.button2.Location = new System.Drawing.Point(149, 269);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 44);
+            this.button2.Size = new System.Drawing.Size(123, 44);
             this.button2.TabIndex = 5;
             this.button2.Text = "Salir";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -169,9 +171,9 @@ namespace Lab
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
             this.button1.Image = global::Lab.Properties.Resources.log_in;
-            this.button1.Location = new System.Drawing.Point(22, 257);
+            this.button1.Location = new System.Drawing.Point(22, 269);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 44);
+            this.button1.Size = new System.Drawing.Size(123, 44);
             this.button1.TabIndex = 4;
             this.button1.Text = "Entrar";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -187,6 +189,20 @@ namespace Lab
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
+            this.linkLabel1.Location = new System.Drawing.Point(60, 229);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(190, 17);
+            this.linkLabel1.TabIndex = 6;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Olvidaste tu contraseña?";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // login
             // 
@@ -206,6 +222,7 @@ namespace Lab
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -222,6 +239,7 @@ namespace Lab
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 

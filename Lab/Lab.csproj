@@ -130,6 +130,12 @@
     <Compile Include="Reportes\reporteOrina.Designer.cs">
       <DependentUpon>reporteOrina.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResetPassword\resetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPassword\resetPassword.Designer.cs">
+      <DependentUpon>resetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPanel\AddExamenes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\reporteOrina.resx">
       <DependentUpon>reporteOrina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPassword\resetPassword.resx">
+      <DependentUpon>resetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPanel\AddExamenes.resx">
       <DependentUpon>AddExamenes.cs</DependentUpon>
