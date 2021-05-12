@@ -260,10 +260,8 @@ namespace Lab.Reportes
             if (!rtxtObservaciones.Text.Trim().Equals(""))
             {
                 hecesModel.id_heces = heces.id_heces;
-
-                if (protoActivos_Model.id_protozoarios_activos == 0 || protoQuistes_Model.id_protozoarios_quistes == 0)
-                {
-                    using (laboratorio_pEntities DB = new laboratorio_pEntities())
+                
+                using (laboratorio_pEntities DB = new laboratorio_pEntities())
                     {
                         //DATOS HECES
                         hecesModel.color = txtColor.Text.Trim();
@@ -272,69 +270,12 @@ namespace Lab.Reportes
                         hecesModel.hematies = txtHematies.Text.Trim();
                         hecesModel.leucocitos = txtLeucocitos.Text.Trim();
                         hecesModel.macrofagos = txtMacrofagos.Text.Trim();
-                        hecesModel.restos_alimenticios_macroscopicos = txtRestosAlimen.Text.Trim(); ;
+                        hecesModel.restos_alimenticios_macroscopicos = txtRestosAlimen.Text.Trim();
 
                         //PROTOZOARIOS ACTIVOS
-                        protoActivos_Helper.entamoeba_histolitica = txtEntamoebaHis_Activo.Text.Trim();
-                        protoActivos_Helper.entamoeba_coli = txtEntamoebaCol_Activo.Text.Trim();
-                        protoActivos_Helper.endolimax_nana = txtEndolimax_Activo.Text.Trim();
-                        protoActivos_Helper.guiardia_lamblia = txtGuiardia_Activo.Text.Trim();
-                        protoActivos_Helper.trichomonas_hominis = txtTrichomonas_Activos.Text.Trim();
-                        protoActivos_Helper.chilomastrix_mesnili = txtChilomastix_Activo.Text.Trim();
-                        protoActivos_Helper.blostocistis_hominis = txtBlostocistis_Activo.Text.Trim();
-
-                        DB.protozoarios_activos.Add(protoActivos_Helper);
-                        DB.SaveChanges();
+                        protoActivos_Helper.id_protozoarios_activos = protoActivos_Model.id_protozoarios_activos;
                         hecesModel.id_protozoarios_activos = protoActivos_Helper.id_protozoarios_activos;
 
-                        //PROTOZOARIOS QUISTES
-                        protoQuistes_Helper.entamoeba_histolitica = txtEntamoebaHis_Quistes.Text.Trim();
-                        protoQuistes_Helper.entamoeba_coli = txtEntamoebaCol_Quistes.Text.Trim();
-                        protoQuistes_Helper.endolimax_nana = txtEndolimax_Quistes.Text.Trim();
-                        protoQuistes_Helper.guiardia_lamblia = txtGuiardia_Quistes.Text.Trim();
-                        protoQuistes_Helper.trichomonas_hominis = txtTrichomonas_Quistes.Text.Trim();
-                        protoQuistes_Helper.chilomastrix_mesnili = txtChilomastix_Quistes.Text.Trim();
-                        protoQuistes_Helper.blostocistis_hominis = txtBlostocistis_Quistes.Text.Trim();
-
-                        DB.protozoarios_quistes.Add(protoQuistes_Helper);
-                        DB.SaveChanges();
-                        hecesModel.id_protozoarios_quistes = protoQuistes_Helper.id_protozoarios_quistes;
-
-                        //METAZOARIOS
-                        hecesModel.trichuris_trichiura = txtTrichuris.Text.Trim();
-                        hecesModel.ascaris_lumbricoides = txtAscaris.Text.Trim();
-                        hecesModel.uncinaria = txtUncinaria.Text.Trim();
-                        hecesModel.strongyloides_stercoralis = txtStrongy.Text.Trim();
-                        hecesModel.entorobius_vermicularis = txtEnterobius.Text.Trim();
-                        hecesModel.taenias_sp = txtTaenias.Text.Trim();
-
-                        hecesModel.observaciones = rtxtObservaciones.Text.Trim();
-
-                        DB.Entry(hecesModel).State = EntityState.Modified;
-                        DB.Entry(protoActivos_Helper).State = EntityState.Modified;
-                        DB.Entry(protoQuistes_Helper).State = EntityState.Modified;
-                        DB.SaveChanges();
-                        MessageBox.Show("El examen fue modificado correctamente!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                else {
-                    protoActivos_Helper.id_protozoarios_activos = protoActivos_Model.id_protozoarios_activos;
-                    protoQuistes_Helper.id_protozoarios_quistes = protoQuistes_Model.id_protozoarios_quistes;
-                    MessageBox.Show(protoActivos_Helper.id_protozoarios_activos.ToString());
-                    MessageBox.Show(protoQuistes_Helper.id_protozoarios_quistes.ToString());
-
-                    using (laboratorio_pEntities DB = new laboratorio_pEntities())
-                    {
-                        //DATOS HECES
-                        hecesModel.color = txtColor.Text.Trim();
-                        hecesModel.consistencia = txtConsistencia.Text.Trim();
-                        hecesModel.mucus = txtMucus.Text.Trim();
-                        hecesModel.hematies = txtHematies.Text.Trim();
-                        hecesModel.leucocitos = txtLeucocitos.Text.Trim();
-                        hecesModel.macrofagos = txtMacrofagos.Text.Trim();
-                        hecesModel.restos_alimenticios_macroscopicos = txtRestosAlimen.Text.Trim(); ;
-
-                        //PROTOZOARIOS ACTIVOS
                         protoActivos_Helper.entamoeba_histolitica = txtEntamoebaHis_Activo.Text.Trim();
                         protoActivos_Helper.entamoeba_coli = txtEntamoebaCol_Activo.Text.Trim();
                         protoActivos_Helper.endolimax_nana = txtEndolimax_Activo.Text.Trim();
@@ -343,9 +284,12 @@ namespace Lab.Reportes
                         protoActivos_Helper.chilomastrix_mesnili = txtChilomastix_Activo.Text.Trim();
                         protoActivos_Helper.blostocistis_hominis = txtBlostocistis_Activo.Text.Trim();
                         DB.Entry(protoActivos_Helper).State = EntityState.Modified;
-                        DB.SaveChangesAsync();
+                        DB.SaveChanges();
 
                         //PROTOZOARIOS QUISTES
+                        protoQuistes_Helper.id_protozoarios_quistes = protoQuistes_Model.id_protozoarios_quistes;
+                        hecesModel.id_protozoarios_quistes = protoQuistes_Helper.id_protozoarios_quistes;
+
                         protoQuistes_Helper.entamoeba_histolitica = txtEntamoebaHis_Quistes.Text.Trim();
                         protoQuistes_Helper.entamoeba_coli = txtEntamoebaCol_Quistes.Text.Trim();
                         protoQuistes_Helper.endolimax_nana = txtEndolimax_Quistes.Text.Trim();
@@ -354,7 +298,7 @@ namespace Lab.Reportes
                         protoQuistes_Helper.chilomastrix_mesnili = txtChilomastix_Quistes.Text.Trim();
                         protoQuistes_Helper.blostocistis_hominis = txtBlostocistis_Quistes.Text.Trim();
                         DB.Entry(protoQuistes_Helper).State = EntityState.Modified;
-                        DB.SaveChangesAsync();
+                        DB.SaveChanges();
 
                         //METAZOARIOS
                         hecesModel.trichuris_trichiura = txtTrichuris.Text.Trim();
@@ -366,10 +310,10 @@ namespace Lab.Reportes
 
                         hecesModel.observaciones = rtxtObservaciones.Text.Trim();
                         DB.Entry(hecesModel).State = EntityState.Modified;
-                        DB.SaveChangesAsync();
+                        DB.SaveChanges();
                         MessageBox.Show("El examen fue modificado correctamente!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                }
+                
                 desactivar();
                 btnGuardar.Enabled = false;
                 btnCancelar.Enabled = false;
