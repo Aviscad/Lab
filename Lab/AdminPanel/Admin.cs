@@ -271,5 +271,24 @@ namespace Lab.AdminPanel
         {
 
         }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+                ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+                (e.KeyChar >= 48 && e.KeyChar <=57) ||
+                (e.KeyChar == 08) ||
+                e.KeyChar == 164 ||
+                e.KeyChar == 165 ||
+                Char.IsSeparator(e.KeyChar)
+                )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

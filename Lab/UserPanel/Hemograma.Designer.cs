@@ -90,6 +90,8 @@ namespace Lab.UserPanel
             this.txtGlobulosRojos.Name = "txtGlobulosRojos";
             this.txtGlobulosRojos.Size = new System.Drawing.Size(110, 26);
             this.txtGlobulosRojos.TabIndex = 1;
+            this.txtGlobulosRojos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGlobulosRojos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGlobulosRojos_KeyPress);
             // 
             // txtHemoglobina
             // 
@@ -99,6 +101,8 @@ namespace Lab.UserPanel
             this.txtHemoglobina.Name = "txtHemoglobina";
             this.txtHemoglobina.Size = new System.Drawing.Size(110, 26);
             this.txtHemoglobina.TabIndex = 2;
+            this.txtHemoglobina.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHemoglobina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHemoglobina_KeyPress);
             // 
             // txtHematocrito
             // 
@@ -108,6 +112,8 @@ namespace Lab.UserPanel
             this.txtHematocrito.Name = "txtHematocrito";
             this.txtHematocrito.Size = new System.Drawing.Size(110, 26);
             this.txtHematocrito.TabIndex = 3;
+            this.txtHematocrito.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHematocrito.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHematocrito_KeyPress);
             // 
             // txtVGM
             // 
@@ -117,6 +123,8 @@ namespace Lab.UserPanel
             this.txtVGM.Name = "txtVGM";
             this.txtVGM.Size = new System.Drawing.Size(110, 26);
             this.txtVGM.TabIndex = 4;
+            this.txtVGM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVGM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVGM_KeyPress);
             // 
             // txtHCM
             // 
@@ -126,6 +134,8 @@ namespace Lab.UserPanel
             this.txtHCM.Name = "txtHCM";
             this.txtHCM.Size = new System.Drawing.Size(110, 26);
             this.txtHCM.TabIndex = 5;
+            this.txtHCM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHCM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHCM_KeyPress);
             // 
             // txtCHCM
             // 
@@ -135,6 +145,8 @@ namespace Lab.UserPanel
             this.txtCHCM.Name = "txtCHCM";
             this.txtCHCM.Size = new System.Drawing.Size(110, 26);
             this.txtCHCM.TabIndex = 6;
+            this.txtCHCM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCHCM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCHCM_KeyPress);
             // 
             // txtBasofilo
             // 
@@ -144,6 +156,8 @@ namespace Lab.UserPanel
             this.txtBasofilo.Name = "txtBasofilo";
             this.txtBasofilo.Size = new System.Drawing.Size(110, 26);
             this.txtBasofilo.TabIndex = 13;
+            this.txtBasofilo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBasofilo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBasofilo_KeyPress);
             // 
             // txtEosinofilo
             // 
@@ -153,6 +167,8 @@ namespace Lab.UserPanel
             this.txtEosinofilo.Name = "txtEosinofilo";
             this.txtEosinofilo.Size = new System.Drawing.Size(110, 26);
             this.txtEosinofilo.TabIndex = 12;
+            this.txtEosinofilo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEosinofilo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEosinofilo_KeyPress);
             // 
             // txtLinfocitos
             // 
@@ -162,6 +178,8 @@ namespace Lab.UserPanel
             this.txtLinfocitos.Name = "txtLinfocitos";
             this.txtLinfocitos.Size = new System.Drawing.Size(110, 26);
             this.txtLinfocitos.TabIndex = 11;
+            this.txtLinfocitos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLinfocitos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLinfocitos_KeyPress);
             // 
             // txtNeutroBanda
             // 
@@ -171,6 +189,8 @@ namespace Lab.UserPanel
             this.txtNeutroBanda.Name = "txtNeutroBanda";
             this.txtNeutroBanda.Size = new System.Drawing.Size(110, 26);
             this.txtNeutroBanda.TabIndex = 10;
+            this.txtNeutroBanda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNeutroBanda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNeutroBanda_KeyPress);
             // 
             // txtNeutroSeg
             // 
@@ -180,6 +200,8 @@ namespace Lab.UserPanel
             this.txtNeutroSeg.Name = "txtNeutroSeg";
             this.txtNeutroSeg.Size = new System.Drawing.Size(110, 26);
             this.txtNeutroSeg.TabIndex = 9;
+            this.txtNeutroSeg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNeutroSeg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNeutroSeg_KeyPress);
             // 
             // txtLeucocitos
             // 
@@ -189,6 +211,8 @@ namespace Lab.UserPanel
             this.txtLeucocitos.Name = "txtLeucocitos";
             this.txtLeucocitos.Size = new System.Drawing.Size(110, 26);
             this.txtLeucocitos.TabIndex = 8;
+            this.txtLeucocitos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLeucocitos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLeucocitos_KeyPress);
             // 
             // txtMonocitos
             // 
@@ -198,6 +222,8 @@ namespace Lab.UserPanel
             this.txtMonocitos.Name = "txtMonocitos";
             this.txtMonocitos.Size = new System.Drawing.Size(110, 26);
             this.txtMonocitos.TabIndex = 14;
+            this.txtMonocitos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMonocitos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMonocitos_KeyPress);
             // 
             // txtPlaquetas
             // 
@@ -207,6 +233,8 @@ namespace Lab.UserPanel
             this.txtPlaquetas.Name = "txtPlaquetas";
             this.txtPlaquetas.Size = new System.Drawing.Size(110, 26);
             this.txtPlaquetas.TabIndex = 15;
+            this.txtPlaquetas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPlaquetas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlaquetas_KeyPress);
             // 
             // txtMacroplaquetas
             // 
@@ -216,6 +244,8 @@ namespace Lab.UserPanel
             this.txtMacroplaquetas.Name = "txtMacroplaquetas";
             this.txtMacroplaquetas.Size = new System.Drawing.Size(110, 26);
             this.txtMacroplaquetas.TabIndex = 16;
+            this.txtMacroplaquetas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMacroplaquetas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMacroplaquetas_KeyPress);
             // 
             // rtxtObservaciones
             // 
@@ -606,12 +636,13 @@ namespace Lab.UserPanel
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(351, 24);
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
+            this.label32.Location = new System.Drawing.Point(253, 32);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(126, 20);
+            this.label32.Size = new System.Drawing.Size(315, 26);
             this.label32.TabIndex = 45;
-            this.label32.Text = "HEMOGRAMA";
+            this.label32.Text = "EXAMEN DE HEMOGRAMA";
             // 
             // Hemograma
             // 
@@ -624,7 +655,7 @@ namespace Lab.UserPanel
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Hemograma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hemograma";
+            this.Text = "Examen de Hemograma";
             this.Load += new System.EventHandler(this.Hemograma_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

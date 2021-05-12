@@ -230,6 +230,8 @@ namespace Lab.Reportes
             this.txtPlaquetas.Name = "txtPlaquetas";
             this.txtPlaquetas.Size = new System.Drawing.Size(110, 26);
             this.txtPlaquetas.TabIndex = 14;
+            this.txtPlaquetas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPlaquetas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPlaquetas_KeyPress);
             // 
             // txtMacroplaquetas
             // 
@@ -239,6 +241,8 @@ namespace Lab.Reportes
             this.txtMacroplaquetas.Name = "txtMacroplaquetas";
             this.txtMacroplaquetas.Size = new System.Drawing.Size(110, 26);
             this.txtMacroplaquetas.TabIndex = 15;
+            this.txtMacroplaquetas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMacroplaquetas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMacroplaquetas_KeyPress);
             // 
             // label9
             // 
@@ -489,6 +493,8 @@ namespace Lab.Reportes
             this.txtLeucocitos.Name = "txtLeucocitos";
             this.txtLeucocitos.Size = new System.Drawing.Size(110, 26);
             this.txtLeucocitos.TabIndex = 7;
+            this.txtLeucocitos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLeucocitos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLeucocitos_KeyPress);
             // 
             // txtNeutroSeg
             // 
@@ -498,6 +504,8 @@ namespace Lab.Reportes
             this.txtNeutroSeg.Name = "txtNeutroSeg";
             this.txtNeutroSeg.Size = new System.Drawing.Size(110, 26);
             this.txtNeutroSeg.TabIndex = 8;
+            this.txtNeutroSeg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNeutroSeg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNeutroSeg_KeyPress);
             // 
             // txtMonocitos
             // 
@@ -507,6 +515,8 @@ namespace Lab.Reportes
             this.txtMonocitos.Name = "txtMonocitos";
             this.txtMonocitos.Size = new System.Drawing.Size(110, 26);
             this.txtMonocitos.TabIndex = 13;
+            this.txtMonocitos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMonocitos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMonocitos_KeyPress);
             // 
             // txtNeutroBanda
             // 
@@ -516,6 +526,8 @@ namespace Lab.Reportes
             this.txtNeutroBanda.Name = "txtNeutroBanda";
             this.txtNeutroBanda.Size = new System.Drawing.Size(110, 26);
             this.txtNeutroBanda.TabIndex = 9;
+            this.txtNeutroBanda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNeutroBanda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNeutroBanda_KeyPress);
             // 
             // txtLinfocitos
             // 
@@ -525,6 +537,8 @@ namespace Lab.Reportes
             this.txtLinfocitos.Name = "txtLinfocitos";
             this.txtLinfocitos.Size = new System.Drawing.Size(110, 26);
             this.txtLinfocitos.TabIndex = 10;
+            this.txtLinfocitos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLinfocitos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLinfocitos_KeyPress);
             // 
             // txtEosinofilo
             // 
@@ -534,6 +548,8 @@ namespace Lab.Reportes
             this.txtEosinofilo.Name = "txtEosinofilo";
             this.txtEosinofilo.Size = new System.Drawing.Size(110, 26);
             this.txtEosinofilo.TabIndex = 11;
+            this.txtEosinofilo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEosinofilo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEosinofilo_KeyPress);
             // 
             // txtBasofilo
             // 
@@ -543,6 +559,8 @@ namespace Lab.Reportes
             this.txtBasofilo.Name = "txtBasofilo";
             this.txtBasofilo.Size = new System.Drawing.Size(110, 26);
             this.txtBasofilo.TabIndex = 12;
+            this.txtBasofilo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBasofilo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBasofilo_KeyPress);
             // 
             // txtGlobulosRojos
             // 
@@ -552,6 +570,8 @@ namespace Lab.Reportes
             this.txtGlobulosRojos.Name = "txtGlobulosRojos";
             this.txtGlobulosRojos.Size = new System.Drawing.Size(110, 26);
             this.txtGlobulosRojos.TabIndex = 1;
+            this.txtGlobulosRojos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGlobulosRojos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGlobulosRojos_KeyPress);
             // 
             // txtHemoglobina
             // 
@@ -561,6 +581,8 @@ namespace Lab.Reportes
             this.txtHemoglobina.Name = "txtHemoglobina";
             this.txtHemoglobina.Size = new System.Drawing.Size(110, 26);
             this.txtHemoglobina.TabIndex = 2;
+            this.txtHemoglobina.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHemoglobina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHemoglobina_KeyPress);
             // 
             // txtHematocrito
             // 
@@ -570,6 +592,8 @@ namespace Lab.Reportes
             this.txtHematocrito.Name = "txtHematocrito";
             this.txtHematocrito.Size = new System.Drawing.Size(110, 26);
             this.txtHematocrito.TabIndex = 3;
+            this.txtHematocrito.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHematocrito.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHematocrito_KeyPress);
             // 
             // txtVGM
             // 
@@ -579,6 +603,8 @@ namespace Lab.Reportes
             this.txtVGM.Name = "txtVGM";
             this.txtVGM.Size = new System.Drawing.Size(110, 26);
             this.txtVGM.TabIndex = 4;
+            this.txtVGM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVGM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVGM_KeyPress);
             // 
             // txtHCM
             // 
@@ -588,6 +614,8 @@ namespace Lab.Reportes
             this.txtHCM.Name = "txtHCM";
             this.txtHCM.Size = new System.Drawing.Size(110, 26);
             this.txtHCM.TabIndex = 5;
+            this.txtHCM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHCM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHCM_KeyPress);
             // 
             // txtCHCM
             // 
@@ -597,6 +625,8 @@ namespace Lab.Reportes
             this.txtCHCM.Name = "txtCHCM";
             this.txtCHCM.Size = new System.Drawing.Size(110, 26);
             this.txtCHCM.TabIndex = 6;
+            this.txtCHCM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCHCM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCHCM_KeyPress);
             // 
             // txtGenero
             // 

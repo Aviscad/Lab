@@ -95,14 +95,15 @@ namespace Lab.UserPanel
                 using (laboratorio_pEntities DB = new laboratorio_pEntities())
                 {
                     var campania = (from campaña in DB.campaña where campaña.nombre.ToUpper().StartsWith(txtBuscar.Text.Trim()) select campaña).FirstOrDefault();
-                    var query = from paciente in DB.paciente where paciente.id_campaña == campania.id_campaña select paciente;
-                    if (txtBuscar.Text.Trim().Length > 0)
-                    {
-
-                        foreach (var paciente in query.ToList())
+                    if (campania != null) {
+                        var query = from paciente in DB.paciente where paciente.id_campaña == campania.id_campaña select paciente;
+                        if (txtBuscar.Text.Trim().Length > 0)
                         {
-                            var getCampania = (from campaña in DB.campaña where campaña.id_campaña == paciente.id_campaña select campaña).FirstOrDefault();
-                            dgvBusqueda.Rows.Add(paciente.id_paciente, paciente.nombre, paciente.codigo, getCampania.nombre, paciente.fecha_nacimiento.ToShortDateString(), paciente.genero);
+                            foreach (var paciente in query.ToList())
+                            {
+                                var getCampania = (from campaña in DB.campaña where campaña.id_campaña == paciente.id_campaña select campaña).FirstOrDefault();
+                                dgvBusqueda.Rows.Add(paciente.id_paciente, paciente.nombre, paciente.codigo, getCampania.nombre, paciente.fecha_nacimiento.ToShortDateString(), paciente.genero);
+                            }
                         }
                     }
                 }

@@ -56,16 +56,19 @@ namespace Lab.UserPanel
             {
                 using (laboratorio_pEntities DB = new laboratorio_pEntities())
                 {
-                    var campania = (from campaña in DB.campaña where campaña.nombre.ToUpper().StartsWith(txtBuscar.Text.Trim()) select campaña).FirstOrDefault();
-                    var query = from paciente in DB.paciente where paciente.id_campaña == campania.id_campaña select paciente;
                     if (txtBuscar.Text.Trim().Length > 0)
                     {
+                            var campania = (from campaña in DB.campaña where campaña.nombre.ToUpper().StartsWith(txtBuscar.Text.Trim()) select campaña).FirstOrDefault();
 
-                        foreach (var paciente in query.ToList())
-                        {
-                            var getCampania = (from campaña in DB.campaña where campaña.id_campaña == paciente.id_campaña select campaña).FirstOrDefault();
-                            dgvBusqueda.Rows.Add(paciente.id_paciente, paciente.nombre, paciente.codigo, getCampania.nombre, paciente.fecha_nacimiento.ToShortDateString(), paciente.genero);
-                        }
+                            if (campania != null)
+                            {
+                                var query = from paciente in DB.paciente where paciente.id_campaña == campania.id_campaña select paciente;
+                                foreach (var paciente in query.ToList())
+                                {
+                                    var getCampania = (from campaña in DB.campaña where campaña.id_campaña == paciente.id_campaña select campaña).FirstOrDefault();
+                                    dgvBusqueda.Rows.Add(paciente.id_paciente, paciente.nombre, paciente.codigo, getCampania.nombre, paciente.fecha_nacimiento.ToShortDateString(), paciente.genero);
+                                }
+                            }
                     }
                 }
             }
@@ -183,7 +186,7 @@ namespace Lab.UserPanel
                     MessageBox.Show("Complete los datos de todos los examenes \n Para llenar los datos de los examenes hacer lo siguiente:" +
                         "\n     1. Dar click en los botones de Agregar Examen." +
                         "\n     2. Llenar los datos correspondientes del examen." +
-                        "\n     3. Dar click en el boton guiardar.","Advertencia!!!",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        "\n     3. Dar click en el boton guardar.","Advertencia!!!",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {

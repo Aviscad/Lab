@@ -87,5 +87,558 @@ namespace Lab.UserPanel
                 this.Close();
             }
         }
+
+        private void txtColor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+                ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+                (e.KeyChar == 08) ||
+                e.KeyChar == 164 ||
+                e.KeyChar == 165 ||
+                Char.IsSeparator(e.KeyChar)
+                )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtMucus_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+                ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+                (e.KeyChar == 08) ||
+                e.KeyChar == 164 ||
+                e.KeyChar == 165 ||
+                Char.IsSeparator(e.KeyChar)
+                )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtConsistencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+                ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+                (e.KeyChar == 08) ||
+                e.KeyChar == 164 ||
+                e.KeyChar == 165 ||
+                Char.IsSeparator(e.KeyChar)
+                )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtRestosAlimen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+                ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+                (e.KeyChar == 08) ||
+                e.KeyChar == 164 ||
+                e.KeyChar == 165 ||
+                Char.IsSeparator(e.KeyChar)
+                )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtHematies_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+                ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+                (e.KeyChar == 08) ||
+                e.KeyChar == 164 ||
+                e.KeyChar == 45 ||
+                e.KeyChar == 46 ||
+                e.KeyChar == 165 ||
+                Char.IsSeparator(e.KeyChar)
+                )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtLeucocitos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+                ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+                (e.KeyChar == 08) ||
+                e.KeyChar == 164 ||
+                e.KeyChar == 45 ||
+                e.KeyChar == 46 ||
+                e.KeyChar == 165 ||
+                Char.IsSeparator(e.KeyChar)
+                )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtEntamoebaHis_Activo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtEntamoebaCol_Activo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtEndolimax_Activo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtGuiardia_Activo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTrichomonas_Activos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtChilomastix_Activo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtBlostocistis_Activo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtEntamoebaHis_Quistes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtEntamoebaCol_Quistes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtEndolimax_Quistes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtGuiardia_Quistes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTrichomonas_Quistes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtChilomastix_Quistes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtBlostocistis_Quistes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTrichuris_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtAscaris_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtUncinaria_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTaenias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtStrongy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtEnterobius_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtMacrofagos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               (e.KeyChar == 08) ||
+               e.KeyChar == 164 ||
+               e.KeyChar == 46 ||
+               e.KeyChar == 43 ||
+               e.KeyChar == 45 ||
+               e.KeyChar == 165 ||
+               Char.IsSeparator(e.KeyChar)
+               )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

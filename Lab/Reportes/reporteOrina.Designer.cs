@@ -318,6 +318,7 @@ namespace Lab.Reportes
             this.txtParasitos.Size = new System.Drawing.Size(110, 26);
             this.txtParasitos.TabIndex = 24;
             this.txtParasitos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtParasitos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParasitos_KeyPress);
             // 
             // label12
             // 
@@ -491,6 +492,7 @@ namespace Lab.Reportes
             this.txtCilindrosGranulosos.Size = new System.Drawing.Size(110, 26);
             this.txtCilindrosGranulosos.TabIndex = 15;
             this.txtCilindrosGranulosos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCilindrosGranulosos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCilindrosGranulosos_KeyPress);
             // 
             // txtLeucocitarios
             // 
@@ -502,6 +504,7 @@ namespace Lab.Reportes
             this.txtLeucocitarios.Size = new System.Drawing.Size(110, 26);
             this.txtLeucocitarios.TabIndex = 16;
             this.txtLeucocitarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLeucocitarios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLeucocitarios_KeyPress);
             // 
             // txtHematicos
             // 
@@ -513,6 +516,7 @@ namespace Lab.Reportes
             this.txtHematicos.Size = new System.Drawing.Size(110, 26);
             this.txtHematicos.TabIndex = 17;
             this.txtHematicos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHematicos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHematicos_KeyPress);
             // 
             // txtHialinos
             // 
@@ -524,6 +528,7 @@ namespace Lab.Reportes
             this.txtHialinos.Size = new System.Drawing.Size(110, 26);
             this.txtHialinos.TabIndex = 18;
             this.txtHialinos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHialinos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHialinos_KeyPress);
             // 
             // rtxtObservaciones
             // 
@@ -583,6 +588,7 @@ namespace Lab.Reportes
             this.txtEsteriasaLeuc.Size = new System.Drawing.Size(110, 26);
             this.txtEsteriasaLeuc.TabIndex = 13;
             this.txtEsteriasaLeuc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEsteriasaLeuc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEsteriasaLeuc_KeyPress);
             // 
             // txtHemoglobina
             // 
@@ -594,6 +600,7 @@ namespace Lab.Reportes
             this.txtHemoglobina.Size = new System.Drawing.Size(110, 26);
             this.txtHemoglobina.TabIndex = 12;
             this.txtHemoglobina.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHemoglobina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHemoglobina_KeyPress);
             // 
             // txtNitritos
             // 
@@ -605,6 +612,7 @@ namespace Lab.Reportes
             this.txtNitritos.Size = new System.Drawing.Size(110, 26);
             this.txtNitritos.TabIndex = 11;
             this.txtNitritos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNitritos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNitritos_KeyPress);
             // 
             // txtBilirrubina
             // 
@@ -616,6 +624,7 @@ namespace Lab.Reportes
             this.txtBilirrubina.Size = new System.Drawing.Size(110, 26);
             this.txtBilirrubina.TabIndex = 10;
             this.txtBilirrubina.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBilirrubina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBilirrubina_KeyPress);
             // 
             // label6
             // 
@@ -678,6 +687,7 @@ namespace Lab.Reportes
             this.txtUrobilinogeno.Size = new System.Drawing.Size(110, 26);
             this.txtUrobilinogeno.TabIndex = 9;
             this.txtUrobilinogeno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUrobilinogeno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUrobilinogeno_KeyPress);
             // 
             // txtCuerCeton
             // 
@@ -689,6 +699,7 @@ namespace Lab.Reportes
             this.txtCuerCeton.Size = new System.Drawing.Size(110, 26);
             this.txtCuerCeton.TabIndex = 8;
             this.txtCuerCeton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCuerCeton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCuerCeton_KeyPress);
             // 
             // txtSangreOculta
             // 
@@ -700,6 +711,7 @@ namespace Lab.Reportes
             this.txtSangreOculta.Size = new System.Drawing.Size(110, 26);
             this.txtSangreOculta.TabIndex = 7;
             this.txtSangreOculta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSangreOculta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSangreOculta_KeyPress);
             // 
             // txtGlucosa
             // 
@@ -711,6 +723,7 @@ namespace Lab.Reportes
             this.txtGlucosa.Size = new System.Drawing.Size(110, 26);
             this.txtGlucosa.TabIndex = 6;
             this.txtGlucosa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGlucosa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGlucosa_KeyPress);
             // 
             // txtProteinas
             // 
@@ -722,6 +735,7 @@ namespace Lab.Reportes
             this.txtProteinas.Size = new System.Drawing.Size(110, 26);
             this.txtProteinas.TabIndex = 5;
             this.txtProteinas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtProteinas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProteinas_KeyPress);
             // 
             // txtPh
             // 
@@ -733,6 +747,7 @@ namespace Lab.Reportes
             this.txtPh.Size = new System.Drawing.Size(110, 26);
             this.txtPh.TabIndex = 4;
             this.txtPh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPh_KeyPress);
             // 
             // txtDensidad
             // 
@@ -744,6 +759,7 @@ namespace Lab.Reportes
             this.txtDensidad.Size = new System.Drawing.Size(110, 26);
             this.txtDensidad.TabIndex = 3;
             this.txtDensidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDensidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDensidad_KeyPress);
             // 
             // txtAspecto
             // 
@@ -755,6 +771,7 @@ namespace Lab.Reportes
             this.txtAspecto.Size = new System.Drawing.Size(110, 26);
             this.txtAspecto.TabIndex = 2;
             this.txtAspecto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAspecto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAspecto_KeyPress);
             // 
             // label39
             // 
@@ -846,6 +863,7 @@ namespace Lab.Reportes
             this.txtColor.Size = new System.Drawing.Size(110, 26);
             this.txtColor.TabIndex = 1;
             this.txtColor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtColor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtColor_KeyPress);
             // 
             // button2
             // 
