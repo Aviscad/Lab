@@ -75,9 +75,14 @@ namespace Lab.UserPanel
         {
             if (pacienteModel.id_paciente != 0)
             {
-                Hemograma vHemograma = new Hemograma();
-                AddOwnedForm(vHemograma);
-                vHemograma.Show();
+                if (id_hemograma == 0) {
+                    Hemograma vHemograma = new Hemograma();
+                    AddOwnedForm(vHemograma);
+                    vHemograma.Show();
+                }
+                else{
+                    MessageBox.Show("El examen de hemograma ya fue guardado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
@@ -93,9 +98,16 @@ namespace Lab.UserPanel
         {
             if (pacienteModel.id_paciente != 0)
             {
-                Orina vOrina = new Orina();
-                AddOwnedForm(vOrina);
-                vOrina.Show();
+                if (id_orina == 0)
+                {
+                    Orina vOrina = new Orina();
+                    AddOwnedForm(vOrina);
+                    vOrina.Show();
+                }
+                else {
+                    MessageBox.Show("El examen de orina ya fue guardado","Advertencia",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
             }
             else
             {
@@ -111,9 +123,15 @@ namespace Lab.UserPanel
         {
             if (pacienteModel.id_paciente != 0)
             {
-                Heces vHeces = new Heces();
-                AddOwnedForm(vHeces);
-                vHeces.Show();
+                if (id_heces == 0)
+                {
+                    Heces vHeces = new Heces();
+                    AddOwnedForm(vHeces);
+                    vHeces.Show();
+                }
+                else {
+                    MessageBox.Show("El examen de heces ya fue guardado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
@@ -160,12 +178,6 @@ namespace Lab.UserPanel
             using (laboratorio_pEntities DB = new laboratorio_pEntities())
             {
                 examenes newExamen = new examenes();
-
-                /*********          OJO:   **************/
-                //if(id_heces == 0) <-- VALIDACION DE IDS DE EXAMENES QUE NO VENGAN EN 0 O NULL
-
-                /*********            **************/
-
                 if (id_heces == 0 || id_hemograma == 0 || id_orina == 0)
                 {
                     MessageBox.Show("Complete los datos de todos los examenes \n Para llenar los datos de los examenes hacer lo siguiente:" +
@@ -185,6 +197,8 @@ namespace Lab.UserPanel
                     DB.SaveChanges();
 
                     MessageBox.Show("Guardado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtBuscar.Text = "";
+                    dgvBusqueda.Rows.Clear();
                 }
             }
         }

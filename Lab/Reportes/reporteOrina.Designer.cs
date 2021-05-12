@@ -96,6 +96,9 @@ namespace Lab.Reportes
             this.txtColor = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -301,7 +304,7 @@ namespace Lab.Reportes
             this.groupBox4.Location = new System.Drawing.Point(411, 438);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(321, 263);
-            this.groupBox4.TabIndex = 31;
+            this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Otros";
             // 
@@ -312,9 +315,8 @@ namespace Lab.Reportes
             this.txtParasitos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtParasitos.Location = new System.Drawing.Point(182, 188);
             this.txtParasitos.Name = "txtParasitos";
-            this.txtParasitos.ReadOnly = true;
             this.txtParasitos.Size = new System.Drawing.Size(110, 26);
-            this.txtParasitos.TabIndex = 32;
+            this.txtParasitos.TabIndex = 24;
             this.txtParasitos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
@@ -374,9 +376,8 @@ namespace Lab.Reportes
             this.txtHematies.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtHematies.Location = new System.Drawing.Point(182, 60);
             this.txtHematies.Name = "txtHematies";
-            this.txtHematies.ReadOnly = true;
             this.txtHematies.Size = new System.Drawing.Size(110, 26);
-            this.txtHematies.TabIndex = 11;
+            this.txtHematies.TabIndex = 20;
             this.txtHematies.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLeucocitos
@@ -386,9 +387,8 @@ namespace Lab.Reportes
             this.txtLeucocitos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtLeucocitos.Location = new System.Drawing.Point(182, 92);
             this.txtLeucocitos.Name = "txtLeucocitos";
-            this.txtLeucocitos.ReadOnly = true;
             this.txtLeucocitos.Size = new System.Drawing.Size(110, 26);
-            this.txtLeucocitos.TabIndex = 12;
+            this.txtLeucocitos.TabIndex = 21;
             this.txtLeucocitos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtCelulasEpiteliales
@@ -398,9 +398,8 @@ namespace Lab.Reportes
             this.txtCelulasEpiteliales.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtCelulasEpiteliales.Location = new System.Drawing.Point(182, 124);
             this.txtCelulasEpiteliales.Name = "txtCelulasEpiteliales";
-            this.txtCelulasEpiteliales.ReadOnly = true;
             this.txtCelulasEpiteliales.Size = new System.Drawing.Size(110, 26);
-            this.txtCelulasEpiteliales.TabIndex = 13;
+            this.txtCelulasEpiteliales.TabIndex = 22;
             this.txtCelulasEpiteliales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtCristales
@@ -410,9 +409,8 @@ namespace Lab.Reportes
             this.txtCristales.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtCristales.Location = new System.Drawing.Point(182, 156);
             this.txtCristales.Name = "txtCristales";
-            this.txtCristales.ReadOnly = true;
             this.txtCristales.Size = new System.Drawing.Size(110, 26);
-            this.txtCristales.TabIndex = 14;
+            this.txtCristales.TabIndex = 23;
             this.txtCristales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label30
@@ -439,7 +437,7 @@ namespace Lab.Reportes
             this.groupBox2.Location = new System.Drawing.Point(411, 241);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(321, 190);
-            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Examen Microscopio";
             // 
@@ -490,9 +488,8 @@ namespace Lab.Reportes
             this.txtCilindrosGranulosos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtCilindrosGranulosos.Location = new System.Drawing.Point(182, 33);
             this.txtCilindrosGranulosos.Name = "txtCilindrosGranulosos";
-            this.txtCilindrosGranulosos.ReadOnly = true;
             this.txtCilindrosGranulosos.Size = new System.Drawing.Size(110, 26);
-            this.txtCilindrosGranulosos.TabIndex = 11;
+            this.txtCilindrosGranulosos.TabIndex = 15;
             this.txtCilindrosGranulosos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtLeucocitarios
@@ -502,9 +499,8 @@ namespace Lab.Reportes
             this.txtLeucocitarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtLeucocitarios.Location = new System.Drawing.Point(182, 65);
             this.txtLeucocitarios.Name = "txtLeucocitarios";
-            this.txtLeucocitarios.ReadOnly = true;
             this.txtLeucocitarios.Size = new System.Drawing.Size(110, 26);
-            this.txtLeucocitarios.TabIndex = 12;
+            this.txtLeucocitarios.TabIndex = 16;
             this.txtLeucocitarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtHematicos
@@ -514,9 +510,8 @@ namespace Lab.Reportes
             this.txtHematicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtHematicos.Location = new System.Drawing.Point(182, 97);
             this.txtHematicos.Name = "txtHematicos";
-            this.txtHematicos.ReadOnly = true;
             this.txtHematicos.Size = new System.Drawing.Size(110, 26);
-            this.txtHematicos.TabIndex = 13;
+            this.txtHematicos.TabIndex = 17;
             this.txtHematicos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtHialinos
@@ -526,9 +521,8 @@ namespace Lab.Reportes
             this.txtHialinos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtHialinos.Location = new System.Drawing.Point(182, 129);
             this.txtHialinos.Name = "txtHialinos";
-            this.txtHialinos.ReadOnly = true;
             this.txtHialinos.Size = new System.Drawing.Size(110, 26);
-            this.txtHialinos.TabIndex = 14;
+            this.txtHialinos.TabIndex = 18;
             this.txtHialinos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // rtxtObservaciones
@@ -539,9 +533,8 @@ namespace Lab.Reportes
             this.rtxtObservaciones.Location = new System.Drawing.Point(66, 744);
             this.rtxtObservaciones.MaxLength = 200;
             this.rtxtObservaciones.Name = "rtxtObservaciones";
-            this.rtxtObservaciones.ReadOnly = true;
             this.rtxtObservaciones.Size = new System.Drawing.Size(335, 160);
-            this.rtxtObservaciones.TabIndex = 20;
+            this.rtxtObservaciones.TabIndex = 25;
             this.rtxtObservaciones.Text = "";
             // 
             // groupBox3
@@ -576,7 +569,7 @@ namespace Lab.Reportes
             this.groupBox3.Location = new System.Drawing.Point(66, 238);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(339, 463);
-            this.groupBox3.TabIndex = 36;
+            this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Examen Fisicoquímico";
             // 
@@ -587,9 +580,8 @@ namespace Lab.Reportes
             this.txtEsteriasaLeuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtEsteriasaLeuc.Location = new System.Drawing.Point(204, 420);
             this.txtEsteriasaLeuc.Name = "txtEsteriasaLeuc";
-            this.txtEsteriasaLeuc.ReadOnly = true;
             this.txtEsteriasaLeuc.Size = new System.Drawing.Size(110, 26);
-            this.txtEsteriasaLeuc.TabIndex = 61;
+            this.txtEsteriasaLeuc.TabIndex = 13;
             this.txtEsteriasaLeuc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtHemoglobina
@@ -599,9 +591,8 @@ namespace Lab.Reportes
             this.txtHemoglobina.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtHemoglobina.Location = new System.Drawing.Point(204, 388);
             this.txtHemoglobina.Name = "txtHemoglobina";
-            this.txtHemoglobina.ReadOnly = true;
             this.txtHemoglobina.Size = new System.Drawing.Size(110, 26);
-            this.txtHemoglobina.TabIndex = 60;
+            this.txtHemoglobina.TabIndex = 12;
             this.txtHemoglobina.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtNitritos
@@ -611,9 +602,8 @@ namespace Lab.Reportes
             this.txtNitritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtNitritos.Location = new System.Drawing.Point(204, 356);
             this.txtNitritos.Name = "txtNitritos";
-            this.txtNitritos.ReadOnly = true;
             this.txtNitritos.Size = new System.Drawing.Size(110, 26);
-            this.txtNitritos.TabIndex = 59;
+            this.txtNitritos.TabIndex = 11;
             this.txtNitritos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBilirrubina
@@ -623,9 +613,8 @@ namespace Lab.Reportes
             this.txtBilirrubina.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtBilirrubina.Location = new System.Drawing.Point(204, 324);
             this.txtBilirrubina.Name = "txtBilirrubina";
-            this.txtBilirrubina.ReadOnly = true;
             this.txtBilirrubina.Size = new System.Drawing.Size(110, 26);
-            this.txtBilirrubina.TabIndex = 58;
+            this.txtBilirrubina.TabIndex = 10;
             this.txtBilirrubina.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
@@ -686,9 +675,8 @@ namespace Lab.Reportes
             this.txtUrobilinogeno.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtUrobilinogeno.Location = new System.Drawing.Point(204, 292);
             this.txtUrobilinogeno.Name = "txtUrobilinogeno";
-            this.txtUrobilinogeno.ReadOnly = true;
             this.txtUrobilinogeno.Size = new System.Drawing.Size(110, 26);
-            this.txtUrobilinogeno.TabIndex = 52;
+            this.txtUrobilinogeno.TabIndex = 9;
             this.txtUrobilinogeno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtCuerCeton
@@ -698,9 +686,8 @@ namespace Lab.Reportes
             this.txtCuerCeton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtCuerCeton.Location = new System.Drawing.Point(204, 260);
             this.txtCuerCeton.Name = "txtCuerCeton";
-            this.txtCuerCeton.ReadOnly = true;
             this.txtCuerCeton.Size = new System.Drawing.Size(110, 26);
-            this.txtCuerCeton.TabIndex = 51;
+            this.txtCuerCeton.TabIndex = 8;
             this.txtCuerCeton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSangreOculta
@@ -710,9 +697,8 @@ namespace Lab.Reportes
             this.txtSangreOculta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtSangreOculta.Location = new System.Drawing.Point(204, 228);
             this.txtSangreOculta.Name = "txtSangreOculta";
-            this.txtSangreOculta.ReadOnly = true;
             this.txtSangreOculta.Size = new System.Drawing.Size(110, 26);
-            this.txtSangreOculta.TabIndex = 50;
+            this.txtSangreOculta.TabIndex = 7;
             this.txtSangreOculta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtGlucosa
@@ -722,9 +708,8 @@ namespace Lab.Reportes
             this.txtGlucosa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtGlucosa.Location = new System.Drawing.Point(204, 196);
             this.txtGlucosa.Name = "txtGlucosa";
-            this.txtGlucosa.ReadOnly = true;
             this.txtGlucosa.Size = new System.Drawing.Size(110, 26);
-            this.txtGlucosa.TabIndex = 49;
+            this.txtGlucosa.TabIndex = 6;
             this.txtGlucosa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtProteinas
@@ -734,9 +719,8 @@ namespace Lab.Reportes
             this.txtProteinas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtProteinas.Location = new System.Drawing.Point(204, 164);
             this.txtProteinas.Name = "txtProteinas";
-            this.txtProteinas.ReadOnly = true;
             this.txtProteinas.Size = new System.Drawing.Size(110, 26);
-            this.txtProteinas.TabIndex = 48;
+            this.txtProteinas.TabIndex = 5;
             this.txtProteinas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPh
@@ -746,9 +730,8 @@ namespace Lab.Reportes
             this.txtPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtPh.Location = new System.Drawing.Point(204, 132);
             this.txtPh.Name = "txtPh";
-            this.txtPh.ReadOnly = true;
             this.txtPh.Size = new System.Drawing.Size(110, 26);
-            this.txtPh.TabIndex = 47;
+            this.txtPh.TabIndex = 4;
             this.txtPh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDensidad
@@ -758,9 +741,8 @@ namespace Lab.Reportes
             this.txtDensidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtDensidad.Location = new System.Drawing.Point(204, 100);
             this.txtDensidad.Name = "txtDensidad";
-            this.txtDensidad.ReadOnly = true;
             this.txtDensidad.Size = new System.Drawing.Size(110, 26);
-            this.txtDensidad.TabIndex = 46;
+            this.txtDensidad.TabIndex = 3;
             this.txtDensidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtAspecto
@@ -770,9 +752,8 @@ namespace Lab.Reportes
             this.txtAspecto.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtAspecto.Location = new System.Drawing.Point(204, 68);
             this.txtAspecto.Name = "txtAspecto";
-            this.txtAspecto.ReadOnly = true;
             this.txtAspecto.Size = new System.Drawing.Size(110, 26);
-            this.txtAspecto.TabIndex = 45;
+            this.txtAspecto.TabIndex = 2;
             this.txtAspecto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label39
@@ -862,9 +843,8 @@ namespace Lab.Reportes
             this.txtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtColor.Location = new System.Drawing.Point(204, 36);
             this.txtColor.Name = "txtColor";
-            this.txtColor.ReadOnly = true;
             this.txtColor.Size = new System.Drawing.Size(110, 26);
-            this.txtColor.TabIndex = 36;
+            this.txtColor.TabIndex = 1;
             this.txtColor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button2
@@ -890,12 +870,74 @@ namespace Lab.Reportes
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.Transparent;
+            this.btnModificar.FlatAppearance.BorderSize = 2;
+            this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
+            this.btnModificar.Image = global::Lab.Properties.Resources.editar;
+            this.btnModificar.Location = new System.Drawing.Point(12, 12);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(164, 43);
+            this.btnModificar.TabIndex = 50;
+            this.btnModificar.Text = "MODIFICAR";
+            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.Enabled = false;
+            this.btnGuardar.FlatAppearance.BorderSize = 2;
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
+            this.btnGuardar.Image = global::Lab.Properties.Resources.guardar;
+            this.btnGuardar.Location = new System.Drawing.Point(182, 12);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(140, 43);
+            this.btnGuardar.TabIndex = 51;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.FlatAppearance.BorderSize = 2;
+            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
+            this.btnCancelar.Image = global::Lab.Properties.Resources.cancelar;
+            this.btnCancelar.Location = new System.Drawing.Point(328, 12);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(140, 43);
+            this.btnCancelar.TabIndex = 52;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // reporteOrina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(826, 985);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -985,5 +1027,8 @@ namespace Lab.Reportes
         private System.Windows.Forms.TextBox txtColor;
         private System.Windows.Forms.Button button2;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

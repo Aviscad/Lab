@@ -28,8 +28,6 @@ namespace Lab.UserPanel
             int proto_QuistesId = 0;
             using (laboratorio_pEntities DB = new laboratorio_pEntities())
             {
-
-
                 //PROTOZOARIOS ACTIVOS
                 protozoarios_activos _Activos = new protozoarios_activos();
                 _Activos.entamoeba_histolitica = txtEntamoebaHis_Activo.Text.Trim();
@@ -86,8 +84,6 @@ namespace Lab.UserPanel
                 parent.id_heces = eHeces.id_heces;
 
                 MessageBox.Show("Examen agregado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
                 this.Close();
             }
         }

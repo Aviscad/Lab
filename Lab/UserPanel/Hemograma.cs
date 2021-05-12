@@ -36,47 +36,45 @@ namespace Lab.UserPanel
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (laboratorio_pEntities DB = new laboratorio_pEntities())
+            if (!rtxtObservaciones.Text.Trim().Equals(""))
             {
+                using (laboratorio_pEntities DB = new laboratorio_pEntities())
+                {
+                    hemograma newHemograma = new hemograma();
 
-                hemograma newHemograma = new hemograma();
+                    newHemograma.globulos_rojos = txtGlobulosRojos.Text.Trim();
+                    newHemograma.hemoglobina = txtHemoglobina.Text.Trim();
+                    newHemograma.hematocrito = txtHematocrito.Text.Trim();
+                    newHemograma.vgm = txtVGM.Text.Trim();
+                    newHemograma.hcm = txtHCM.Text.Trim();
+                    newHemograma.chcm = txtCHCM.Text.Trim();
 
-                newHemograma.globulos_rojos = txtGlobulosRojos.Text.Trim();
-                newHemograma.hemoglobina = txtHemoglobina.Text.Trim();
-                newHemograma.hematocrito = txtHematocrito.Text.Trim();
-                newHemograma.vgm = txtVGM.Text.Trim();
-                newHemograma.hcm = txtHCM.Text.Trim();
-                newHemograma.chcm = txtCHCM.Text.Trim();
+                    //Leucocitos
+                    newHemograma.leucocitos = txtLeucocitos.Text.Trim();
+                    newHemograma.neutrofilos_segmentados = txtNeutroSeg.Text.Trim();
+                    newHemograma.neutrofilos_en_banda = txtNeutroBanda.Text.Trim();
+                    newHemograma.linfocitos = txtLinfocitos.Text.Trim();
+                    newHemograma.eosinofilo = txtEosinofilo.Text.Trim();
+                    newHemograma.basofilo = txtBasofilo.Text.Trim();
+                    newHemograma.monocitos = txtMonocitos.Text.Trim();
 
-                //Leucocitos
-                newHemograma.leucocitos = txtLeucocitos.Text.Trim();
-                newHemograma.neutrofilos_segmentados = txtNeutroSeg.Text.Trim();
-                newHemograma.neutrofilos_en_banda = txtNeutroBanda.Text.Trim();
-                newHemograma.linfocitos = txtLinfocitos.Text.Trim();
-                newHemograma.eosinofilo = txtEosinofilo.Text.Trim();
-                newHemograma.basofilo = txtBasofilo.Text.Trim();
-                newHemograma.monocitos = txtMonocitos.Text.Trim();
+                    newHemograma.plaquetas = txtPlaquetas.Text.Trim();
+                    newHemograma.macroplaquetas = txtMacroplaquetas.Text.Trim();
 
-                newHemograma.plaquetas = txtPlaquetas.Text.Trim();
-                newHemograma.macroplaquetas = txtMacroplaquetas.Text.Trim();
+                    newHemograma.observaciones = rtxtObservaciones.Text.Trim();
 
-                newHemograma.observaciones = rtxtObservaciones.Text.Trim();
+                    DB.hemograma.Add(newHemograma);
+                    DB.SaveChanges();
 
+                    MessageBox.Show("Examen agregado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                DB.hemograma.Add(newHemograma);
-                DB.SaveChanges();
-
-                MessageBox.Show("Examen agregado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                AddExamenes parent = Owner as AddExamenes;
-                parent.id_hemograma = newHemograma.id_hemograma;
-
-                this.Close();
-
-                /*
-                 * FALTAN LAS VALIDACIONES Y EL RESET DE LOS TXT ( Clear(); )
-                 */
-
+                    AddExamenes parent = Owner as AddExamenes;
+                    parent.id_hemograma = newHemograma.id_hemograma;
+                    this.Close();
+                }
+            }
+            else {
+                MessageBox.Show("Debe colocar al menos la observación, en caso de que no trajo muestra.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
