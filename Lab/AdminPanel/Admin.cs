@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
@@ -16,6 +17,7 @@ namespace Lab.AdminPanel
     {
 
         usuario userModel = new usuario();
+        private SqlConnection con = new SqlConnection(@"Data Source=localhost;Initial Catalog=laboratorio_p;User ID=sa;Password=12345");
         public Admin()
         {
             InitializeComponent();
@@ -288,6 +290,68 @@ namespace Lab.AdminPanel
             else
             {
                 e.Handled = true;
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            FolderBrowserDialog dgl = new FolderBrowserDialog();
+            if (dgl.ShowDialog() == DialogResult.OK)
+            {
+                string database = con.Database.ToString();
+                try
+                {
+                        string cmd = "BACKUP DATABASE [" + database + "] TO DISK='" + dgl.SelectedPath + "\\" + database + "-" + DateTime.Now.ToString("dd-MM-yyyy--HH-mm-ss") + ".bak'";
+                        using (SqlCommand command = new SqlCommand(cmd, con))
+                        {
+                            if (con.State != ConnectionState.Open)
+                            {
+                                con.Open();
+                            }
+                            command.ExecuteNonQuery();
+                            con.Close();
+
+                            MessageBox.Show("Backup de Base de Datos realizado correctamente!","Información",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Sucedio un error inesperado. Error: " + ex.Message.ToString(),"Error!",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnRestore_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "SQL SERVER database backup files|*.bak";
+            dlg.Title = "Database restore";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string database = con.Database.ToString();
+                try
+                {
+                    con.Open();
+                    string sqlStmt2 = string.Format("ALTER DATABASE [" + database + "] SET SINGLE_USER WITH ROLLBACK IMMEDIATE");
+                    SqlCommand bu2 = new SqlCommand(sqlStmt2, con);
+                    bu2.ExecuteNonQuery();
+
+                    string sqlStmt3 = string.Format("USE MASTER RESTORE DATABASE [" + database + "] FROM DISK='" + dlg.FileName + "' WITH REPLACE;");
+                    SqlCommand bu3 = new SqlCommand(sqlStmt3, con);
+                    bu3.ExecuteNonQuery();
+
+                    string sqlStm4 = string.Format("ALTER DATABASE [" + database + "] SET MULTI_USER");
+                    SqlCommand bu4 = new SqlCommand(sqlStm4, con);
+                    bu4.ExecuteNonQuery();
+
+                    MessageBox.Show("Base de Datos restaurada correctamente!","Información",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    fillRows();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Sucedio un error inesperado. Error: " + ex.Message.ToString(), "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
