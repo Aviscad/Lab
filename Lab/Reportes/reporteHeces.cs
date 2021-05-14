@@ -402,6 +402,7 @@ namespace Lab.Reportes
         private void txtHematies_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+                ((e.KeyChar >= 48) && (e.KeyChar <= 57)) ||
                 ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
                 (e.KeyChar == 08) ||
                 e.KeyChar == 164 ||
@@ -422,6 +423,7 @@ namespace Lab.Reportes
         private void txtLeucocitos_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+                ((e.KeyChar >= 48) && (e.KeyChar <= 57)) ||
                 ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
                 (e.KeyChar == 08) ||
                 e.KeyChar == 164 ||

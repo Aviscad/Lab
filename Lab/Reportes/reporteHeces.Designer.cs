@@ -784,11 +784,11 @@ namespace Lab.Reportes
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.label20.Location = new System.Drawing.Point(356, 202);
+            this.label20.Location = new System.Drawing.Point(297, 205);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(126, 20);
+            this.label20.Size = new System.Drawing.Size(179, 20);
             this.label20.TabIndex = 47;
-            this.label20.Text = "HEMOGRAMA";
+            this.label20.Text = "EXAMEN DE HECES";
             // 
             // label19
             // 
@@ -1005,6 +1005,7 @@ namespace Lab.Reportes
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "reporteHeces";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte Examen General de Heces";

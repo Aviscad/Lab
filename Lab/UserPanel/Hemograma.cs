@@ -80,7 +80,8 @@ namespace Lab.UserPanel
 
         private void txtLeucocitos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -92,7 +93,8 @@ namespace Lab.UserPanel
 
         private void txtNeutroSeg_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -104,7 +106,8 @@ namespace Lab.UserPanel
 
         private void txtNeutroBanda_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -116,7 +119,8 @@ namespace Lab.UserPanel
 
         private void txtLinfocitos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -128,7 +132,8 @@ namespace Lab.UserPanel
 
         private void txtEosinofilo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -140,7 +145,8 @@ namespace Lab.UserPanel
 
         private void txtBasofilo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -152,7 +158,8 @@ namespace Lab.UserPanel
 
         private void txtMonocitos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -164,7 +171,8 @@ namespace Lab.UserPanel
 
         private void txtCHCM_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -176,7 +184,8 @@ namespace Lab.UserPanel
 
         private void txtHematocrito_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -188,7 +197,8 @@ namespace Lab.UserPanel
 
         private void txtHemoglobina_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -200,7 +210,8 @@ namespace Lab.UserPanel
 
         private void txtHCM_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -212,7 +223,8 @@ namespace Lab.UserPanel
 
         private void txtVGM_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -224,7 +236,8 @@ namespace Lab.UserPanel
 
         private void txtGlobulosRojos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -236,7 +249,8 @@ namespace Lab.UserPanel
 
         private void txtPlaquetas_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -248,7 +262,7 @@ namespace Lab.UserPanel
 
         private void txtMacroplaquetas_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 || e.KeyChar == 08)
             {
                 e.Handled = false;
             }

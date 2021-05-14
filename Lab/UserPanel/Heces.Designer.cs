@@ -763,6 +763,7 @@ namespace Lab.UserPanel
             this.ClientSize = new System.Drawing.Size(1093, 716);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "Heces";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Heces";

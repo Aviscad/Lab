@@ -119,7 +119,11 @@ namespace Lab.UserPanel
 
         private void txtDensidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <=57))
+            if (
+                (e.KeyChar >= 48 && e.KeyChar <=57) ||
+                e.KeyChar == 08
+                
+                )
             {
                 e.Handled = false;
             }
@@ -131,7 +135,8 @@ namespace Lab.UserPanel
 
         private void txtPh_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+            if (e.KeyChar >= 48 && e.KeyChar <= 57 ||
+                e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -313,6 +318,7 @@ namespace Lab.UserPanel
         {
             if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               ((e.KeyChar >= 48) && (e.KeyChar <= 57)) ||
               (e.KeyChar == 08) ||
               e.KeyChar == 164 ||
               e.KeyChar == 46 ||
@@ -435,14 +441,15 @@ namespace Lab.UserPanel
         private void txtHematies_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
-                ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
-                (e.KeyChar == 08) ||
-                e.KeyChar == 164 ||
-                e.KeyChar == 45 ||
-                e.KeyChar == 46 ||
-                e.KeyChar == 165 ||
-                Char.IsSeparator(e.KeyChar)
-                )
+                 ((e.KeyChar >= 48) && (e.KeyChar <= 57)) ||
+                 ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+                 (e.KeyChar == 08) ||
+                 e.KeyChar == 164 ||
+                 e.KeyChar == 45 ||
+                 e.KeyChar == 46 ||
+                 e.KeyChar == 165 ||
+                 Char.IsSeparator(e.KeyChar)
+                 )
             {
                 e.Handled = false;
             }
@@ -455,14 +462,15 @@ namespace Lab.UserPanel
         private void txtLeucocitos_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
-                ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
-                (e.KeyChar == 08) ||
-                e.KeyChar == 164 ||
-                e.KeyChar == 45 ||
-                e.KeyChar == 46 ||
-                e.KeyChar == 165 ||
-                Char.IsSeparator(e.KeyChar)
-                )
+                 ((e.KeyChar >= 48) && (e.KeyChar <= 57)) ||
+                 ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+                 (e.KeyChar == 08) ||
+                 e.KeyChar == 164 ||
+                 e.KeyChar == 45 ||
+                 e.KeyChar == 46 ||
+                 e.KeyChar == 165 ||
+                 Char.IsSeparator(e.KeyChar)
+                 )
             {
                 e.Handled = false;
             }

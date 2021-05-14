@@ -126,8 +126,8 @@ namespace Lab.Reportes
             txtGlobulosRojos.Enabled = true;
             txtHemoglobina.Enabled = true;
             txtHematocrito.Enabled = true;
-            txtVGM.Enabled = true;           
-            txtHCM.Enabled = true;           
+            txtVGM.Enabled = true;
+            txtHCM.Enabled = true;
             txtCHCM.Enabled = true;
 
             //LEUCOCITOS
@@ -144,9 +144,7 @@ namespace Lab.Reportes
             txtMacroplaquetas.Enabled = true;
             rtxtObservaciones.Enabled = true;
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
+        private void desactivar(){
             btnModificar.Enabled = true;
             btnGuardar.Enabled = false;
             btnCancelar.Enabled = false;
@@ -179,7 +177,10 @@ namespace Lab.Reportes
             txtPlaquetas.Enabled = false;
             txtMacroplaquetas.Enabled = false;
             rtxtObservaciones.Enabled = false;
-
+        }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            desactivar();
             setData();
         }
 
@@ -216,7 +217,7 @@ namespace Lab.Reportes
                     DB.SaveChanges();
                     MessageBox.Show("El examen fue modificado correctamente!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
+                desactivar();
                 btnGuardar.Enabled = false;
                 btnCancelar.Enabled = false;
                 btnModificar.Enabled = true;
@@ -228,7 +229,7 @@ namespace Lab.Reportes
 
         private void txtLeucocitos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 08 || e.KeyChar == 46)
             {
                 e.Handled = false;
             }
@@ -240,7 +241,7 @@ namespace Lab.Reportes
 
         private void txtNeutroSeg_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 08 || e.KeyChar == 46)
             {
                 e.Handled = false;
             }
@@ -252,7 +253,7 @@ namespace Lab.Reportes
 
         private void txtNeutroBanda_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 08 || e.KeyChar == 46)
             {
                 e.Handled = false;
             }
@@ -264,7 +265,7 @@ namespace Lab.Reportes
 
         private void txtLinfocitos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 08 || e.KeyChar == 46)
             {
                 e.Handled = false;
             }
@@ -276,7 +277,7 @@ namespace Lab.Reportes
 
         private void txtEosinofilo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 08 || e.KeyChar == 46)
             {
                 e.Handled = false;
             }
@@ -288,7 +289,7 @@ namespace Lab.Reportes
 
         private void txtBasofilo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 08 || e.KeyChar == 46)
             {
                 e.Handled = false;
             }
@@ -300,7 +301,7 @@ namespace Lab.Reportes
 
         private void txtMonocitos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 08 || e.KeyChar == 46)
             {
                 e.Handled = false;
             }
@@ -312,7 +313,7 @@ namespace Lab.Reportes
 
         private void txtCHCM_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 || e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -324,7 +325,7 @@ namespace Lab.Reportes
 
         private void txtHCM_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 || e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -336,7 +337,7 @@ namespace Lab.Reportes
 
         private void txtVGM_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 || e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -348,7 +349,7 @@ namespace Lab.Reportes
 
         private void txtHematocrito_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 || e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -360,7 +361,7 @@ namespace Lab.Reportes
 
         private void txtHemoglobina_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 || e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -372,7 +373,7 @@ namespace Lab.Reportes
 
         private void txtGlobulosRojos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 || e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -384,7 +385,7 @@ namespace Lab.Reportes
 
         private void txtPlaquetas_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46 || e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -396,7 +397,7 @@ namespace Lab.Reportes
 
         private void txtMacroplaquetas_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 46)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 08 || e.KeyChar == 46)
             {
                 e.Handled = false;
             }

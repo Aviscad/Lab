@@ -155,8 +155,8 @@ namespace Lab.Reportes
             rtxtObservaciones.Enabled = true;
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
+
+        private void desactivar() {
             btnModificar.Enabled = true;
             btnGuardar.Enabled = false;
 
@@ -188,7 +188,10 @@ namespace Lab.Reportes
             txtCristales.Enabled = false;
             txtParasitos.Enabled = false;
             rtxtObservaciones.Enabled = false;
-
+        }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            desactivar();
             setData();
         }
 
@@ -235,6 +238,7 @@ namespace Lab.Reportes
                     DB.SaveChanges();
                     MessageBox.Show("El examen fue modificado correctamente!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                desactivar();
                 btnGuardar.Enabled = false;
                 btnCancelar.Enabled = false;
                 btnModificar.Enabled = true;
@@ -521,6 +525,7 @@ namespace Lab.Reportes
         {
             if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
               ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+               ((e.KeyChar >= 48) && (e.KeyChar <= 57)) ||
               (e.KeyChar == 08) ||
               e.KeyChar == 164 ||
               e.KeyChar == 46 ||
@@ -576,7 +581,7 @@ namespace Lab.Reportes
 
         private void txtDensidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar >= 48 && e.KeyChar <= 57))
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 08)
             {
                 e.Handled = false;
             }
@@ -588,7 +593,85 @@ namespace Lab.Reportes
 
         private void txtPh_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar >= 48 && e.KeyChar <= 57)
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || e.KeyChar == 08)
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtHematies_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+                ((e.KeyChar >= 48) && (e.KeyChar <= 57)) ||
+                ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+                (e.KeyChar == 08) ||
+                e.KeyChar == 164 ||
+                e.KeyChar == 45 ||
+                e.KeyChar == 46 ||
+                e.KeyChar == 165 ||
+                Char.IsSeparator(e.KeyChar)
+                )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtLeucocitos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+                ((e.KeyChar >= 48) && (e.KeyChar <= 57)) ||
+                ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+                (e.KeyChar == 08) ||
+                e.KeyChar == 164 ||
+                e.KeyChar == 45 ||
+                e.KeyChar == 46 ||
+                e.KeyChar == 165 ||
+                Char.IsSeparator(e.KeyChar)
+                )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCristales_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+                ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+                (e.KeyChar == 08) ||
+                e.KeyChar == 164 ||
+                e.KeyChar == 165 ||
+                Char.IsSeparator(e.KeyChar)
+                )
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCelulasEpiteliales_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= 65) && (e.KeyChar <= 90)) ||
+                ((e.KeyChar >= 97) && (e.KeyChar <= 122)) ||
+                (e.KeyChar == 08) ||
+                e.KeyChar == 164 ||
+                e.KeyChar == 165 ||
+                Char.IsSeparator(e.KeyChar)
+                )
             {
                 e.Handled = false;
             }

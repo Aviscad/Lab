@@ -380,6 +380,7 @@ namespace Lab.Reportes
             this.txtHematies.Size = new System.Drawing.Size(110, 26);
             this.txtHematies.TabIndex = 20;
             this.txtHematies.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtHematies.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHematies_KeyPress);
             // 
             // txtLeucocitos
             // 
@@ -391,6 +392,7 @@ namespace Lab.Reportes
             this.txtLeucocitos.Size = new System.Drawing.Size(110, 26);
             this.txtLeucocitos.TabIndex = 21;
             this.txtLeucocitos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLeucocitos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLeucocitos_KeyPress);
             // 
             // txtCelulasEpiteliales
             // 
@@ -402,6 +404,7 @@ namespace Lab.Reportes
             this.txtCelulasEpiteliales.Size = new System.Drawing.Size(110, 26);
             this.txtCelulasEpiteliales.TabIndex = 22;
             this.txtCelulasEpiteliales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCelulasEpiteliales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelulasEpiteliales_KeyPress);
             // 
             // txtCristales
             // 
@@ -413,6 +416,7 @@ namespace Lab.Reportes
             this.txtCristales.Size = new System.Drawing.Size(110, 26);
             this.txtCristales.TabIndex = 23;
             this.txtCristales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCristales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCristales_KeyPress);
             // 
             // label30
             // 
@@ -959,6 +963,7 @@ namespace Lab.Reportes
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "reporteOrina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte de Examen de Orina";
