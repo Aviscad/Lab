@@ -30,7 +30,21 @@ namespace Lab
 
         private void login_Load(object sender, EventArgs e)
         {
+            using (laboratorio_pEntities DB = new laboratorio_pEntities())
+            {
+                var query = from usuario in DB.usuario
+                            select usuario;
+                if (query.ToList().Count == 0)
+                {
+                    usuario userModel = new usuario();
+                    userModel.nombre_usuario = "admin";
+                    userModel.contraseña = "0DPiKuNIrrVmD8IUCuw1hQxNqZc=";
+                    userModel.tipo = "admin";
 
+                    DB.usuario.Add(userModel);
+                    DB.SaveChanges();
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -29,6 +29,8 @@ namespace Lab.Reportes
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reporteHemograma));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -96,6 +98,7 @@ namespace Lab.Reportes
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
+            this.helpMessage = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -148,7 +151,7 @@ namespace Lab.Reportes
             this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.groupBox1.Location = new System.Drawing.Point(12, 53);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(799, 782);
+            this.groupBox1.Size = new System.Drawing.Size(799, 762);
             this.groupBox1.TabIndex = 45;
             this.groupBox1.TabStop = false;
             // 
@@ -704,7 +707,7 @@ namespace Lab.Reportes
             // 
             // groupBox5
             // 
-            this.groupBox5.Location = new System.Drawing.Point(424, 585);
+            this.groupBox5.Location = new System.Drawing.Point(419, 577);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(321, 168);
             this.groupBox5.TabIndex = 44;
@@ -714,7 +717,7 @@ namespace Lab.Reportes
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(447, 562);
+            this.label18.Location = new System.Drawing.Point(442, 554);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(269, 20);
             this.label18.TabIndex = 43;
@@ -783,7 +786,7 @@ namespace Lab.Reportes
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(75, 564);
+            this.label30.Location = new System.Drawing.Point(70, 556);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(118, 20);
             this.label30.TabIndex = 35;
@@ -794,7 +797,7 @@ namespace Lab.Reportes
             this.rtxtObservaciones.BackColor = System.Drawing.Color.White;
             this.rtxtObservaciones.Enabled = false;
             this.rtxtObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.rtxtObservaciones.Location = new System.Drawing.Point(79, 593);
+            this.rtxtObservaciones.Location = new System.Drawing.Point(74, 585);
             this.rtxtObservaciones.MaxLength = 200;
             this.rtxtObservaciones.Name = "rtxtObservaciones";
             this.rtxtObservaciones.Size = new System.Drawing.Size(335, 160);
@@ -861,6 +864,7 @@ namespace Lab.Reportes
             this.btnGuardar.TabIndex = 54;
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.helpMessage.SetToolTip(this.btnGuardar, "Guardar cambios");
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -880,6 +884,7 @@ namespace Lab.Reportes
             this.btnModificar.TabIndex = 53;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.helpMessage.SetToolTip(this.btnModificar, "Modificar los datos de este examen");
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
@@ -888,13 +893,14 @@ namespace Lab.Reportes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(826, 847);
+            this.ClientSize = new System.Drawing.Size(821, 820);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "reporteHemograma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -978,5 +984,6 @@ namespace Lab.Reportes
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.ToolTip helpMessage;
     }
 }

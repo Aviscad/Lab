@@ -29,6 +29,7 @@ namespace Lab.UserPanel
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hemograma));
             this.txtGlobulosRojos = new System.Windows.Forms.TextBox();
             this.txtHemoglobina = new System.Windows.Forms.TextBox();
             this.txtHematocrito = new System.Windows.Forms.TextBox();
@@ -250,7 +251,7 @@ namespace Lab.UserPanel
             // rtxtObservaciones
             // 
             this.rtxtObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.rtxtObservaciones.Location = new System.Drawing.Point(23, 377);
+            this.rtxtObservaciones.Location = new System.Drawing.Point(23, 361);
             this.rtxtObservaciones.MaxLength = 200;
             this.rtxtObservaciones.Name = "rtxtObservaciones";
             this.rtxtObservaciones.Size = new System.Drawing.Size(748, 97);
@@ -287,9 +288,9 @@ namespace Lab.UserPanel
             this.groupBox1.Controls.Add(this.txtCHCM);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.groupBox1.Location = new System.Drawing.Point(25, 65);
+            this.groupBox1.Location = new System.Drawing.Point(12, 38);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(787, 541);
+            this.groupBox1.Size = new System.Drawing.Size(787, 521);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS EXAMEN";
@@ -303,7 +304,7 @@ namespace Lab.UserPanel
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
             this.button1.Image = global::Lab.Properties.Resources.guardar;
-            this.button1.Location = new System.Drawing.Point(641, 480);
+            this.button1.Location = new System.Drawing.Point(641, 464);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 44);
             this.button1.TabIndex = 18;
@@ -316,7 +317,7 @@ namespace Lab.UserPanel
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(22, 354);
+            this.label30.Location = new System.Drawing.Point(22, 338);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(118, 20);
             this.label30.TabIndex = 35;
@@ -638,7 +639,7 @@ namespace Lab.UserPanel
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.label32.Location = new System.Drawing.Point(253, 32);
+            this.label32.Location = new System.Drawing.Point(238, 9);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(315, 26);
             this.label32.TabIndex = 45;
@@ -649,14 +650,15 @@ namespace Lab.UserPanel
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(829, 628);
+            this.ClientSize = new System.Drawing.Size(812, 570);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Hemograma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Examen de Hemograma";
+            this.Text = "Agregar Examen de Hemograma";
             this.Load += new System.EventHandler(this.Hemograma_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

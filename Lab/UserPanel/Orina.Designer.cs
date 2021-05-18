@@ -29,6 +29,7 @@ namespace Lab.UserPanel
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Orina));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -97,9 +98,9 @@ namespace Lab.UserPanel
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.groupBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.groupBox1.Location = new System.Drawing.Point(17, 57);
+            this.groupBox1.Location = new System.Drawing.Point(9, 38);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(791, 725);
+            this.groupBox1.Size = new System.Drawing.Size(760, 678);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DE EXAMEN";
@@ -113,7 +114,7 @@ namespace Lab.UserPanel
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
             this.button1.Image = global::Lab.Properties.Resources.guardar;
-            this.button1.Location = new System.Drawing.Point(638, 662);
+            this.button1.Location = new System.Drawing.Point(622, 628);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 44);
             this.button1.TabIndex = 27;
@@ -135,7 +136,7 @@ namespace Lab.UserPanel
             this.groupBox4.Controls.Add(this.txtCelulasEpiteliales);
             this.groupBox4.Controls.Add(this.txtCristales);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(403, 263);
+            this.groupBox4.Location = new System.Drawing.Point(379, 252);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(373, 260);
             this.groupBox4.TabIndex = 20;
@@ -148,7 +149,7 @@ namespace Lab.UserPanel
             this.txtParasitos.Location = new System.Drawing.Point(187, 183);
             this.txtParasitos.MaxLength = 25;
             this.txtParasitos.Name = "txtParasitos";
-            this.txtParasitos.Size = new System.Drawing.Size(110, 26);
+            this.txtParasitos.Size = new System.Drawing.Size(162, 26);
             this.txtParasitos.TabIndex = 25;
             this.txtParasitos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtParasitos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParasitos_KeyPress);
@@ -209,7 +210,7 @@ namespace Lab.UserPanel
             this.txtHematies.Location = new System.Drawing.Point(187, 55);
             this.txtHematies.MaxLength = 25;
             this.txtHematies.Name = "txtHematies";
-            this.txtHematies.Size = new System.Drawing.Size(110, 26);
+            this.txtHematies.Size = new System.Drawing.Size(162, 26);
             this.txtHematies.TabIndex = 21;
             this.txtHematies.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtHematies.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHematies_KeyPress);
@@ -220,7 +221,7 @@ namespace Lab.UserPanel
             this.txtLeucocitos.Location = new System.Drawing.Point(187, 87);
             this.txtLeucocitos.MaxLength = 25;
             this.txtLeucocitos.Name = "txtLeucocitos";
-            this.txtLeucocitos.Size = new System.Drawing.Size(110, 26);
+            this.txtLeucocitos.Size = new System.Drawing.Size(162, 26);
             this.txtLeucocitos.TabIndex = 22;
             this.txtLeucocitos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLeucocitos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLeucocitos_KeyPress);
@@ -232,7 +233,7 @@ namespace Lab.UserPanel
             this.txtCelulasEpiteliales.Location = new System.Drawing.Point(187, 119);
             this.txtCelulasEpiteliales.MaxLength = 25;
             this.txtCelulasEpiteliales.Name = "txtCelulasEpiteliales";
-            this.txtCelulasEpiteliales.Size = new System.Drawing.Size(110, 26);
+            this.txtCelulasEpiteliales.Size = new System.Drawing.Size(162, 26);
             this.txtCelulasEpiteliales.TabIndex = 23;
             this.txtCelulasEpiteliales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCelulasEpiteliales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelulasEpiteliales_KeyPress);
@@ -243,7 +244,7 @@ namespace Lab.UserPanel
             this.txtCristales.Location = new System.Drawing.Point(187, 151);
             this.txtCristales.MaxLength = 25;
             this.txtCristales.Name = "txtCristales";
-            this.txtCristales.Size = new System.Drawing.Size(110, 26);
+            this.txtCristales.Size = new System.Drawing.Size(162, 26);
             this.txtCristales.TabIndex = 24;
             this.txtCristales.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCristales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCristales_KeyPress);
@@ -252,7 +253,7 @@ namespace Lab.UserPanel
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(26, 539);
+            this.label30.Location = new System.Drawing.Point(12, 515);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(118, 20);
             this.label30.TabIndex = 35;
@@ -269,7 +270,7 @@ namespace Lab.UserPanel
             this.groupBox2.Controls.Add(this.txtHematicos);
             this.groupBox2.Controls.Add(this.txtHialinos);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(403, 49);
+            this.groupBox2.Location = new System.Drawing.Point(379, 38);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(373, 208);
             this.groupBox2.TabIndex = 15;
@@ -322,7 +323,7 @@ namespace Lab.UserPanel
             this.txtCilindrosGranulosos.Location = new System.Drawing.Point(187, 53);
             this.txtCilindrosGranulosos.MaxLength = 25;
             this.txtCilindrosGranulosos.Name = "txtCilindrosGranulosos";
-            this.txtCilindrosGranulosos.Size = new System.Drawing.Size(110, 26);
+            this.txtCilindrosGranulosos.Size = new System.Drawing.Size(162, 26);
             this.txtCilindrosGranulosos.TabIndex = 16;
             this.txtCilindrosGranulosos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCilindrosGranulosos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCilindrosGranulosos_KeyPress);
@@ -333,7 +334,7 @@ namespace Lab.UserPanel
             this.txtLeucocitarios.Location = new System.Drawing.Point(187, 85);
             this.txtLeucocitarios.MaxLength = 25;
             this.txtLeucocitarios.Name = "txtLeucocitarios";
-            this.txtLeucocitarios.Size = new System.Drawing.Size(110, 26);
+            this.txtLeucocitarios.Size = new System.Drawing.Size(162, 26);
             this.txtLeucocitarios.TabIndex = 17;
             this.txtLeucocitarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLeucocitarios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLeucocitarios_KeyPress);
@@ -344,7 +345,7 @@ namespace Lab.UserPanel
             this.txtHematicos.Location = new System.Drawing.Point(187, 117);
             this.txtHematicos.MaxLength = 25;
             this.txtHematicos.Name = "txtHematicos";
-            this.txtHematicos.Size = new System.Drawing.Size(110, 26);
+            this.txtHematicos.Size = new System.Drawing.Size(162, 26);
             this.txtHematicos.TabIndex = 18;
             this.txtHematicos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtHematicos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHematicos_KeyPress);
@@ -355,7 +356,7 @@ namespace Lab.UserPanel
             this.txtHialinos.Location = new System.Drawing.Point(187, 149);
             this.txtHialinos.MaxLength = 25;
             this.txtHialinos.Name = "txtHialinos";
-            this.txtHialinos.Size = new System.Drawing.Size(110, 26);
+            this.txtHialinos.Size = new System.Drawing.Size(162, 26);
             this.txtHialinos.TabIndex = 19;
             this.txtHialinos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtHialinos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHialinos_KeyPress);
@@ -363,10 +364,10 @@ namespace Lab.UserPanel
             // rtxtObservaciones
             // 
             this.rtxtObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.rtxtObservaciones.Location = new System.Drawing.Point(30, 562);
+            this.rtxtObservaciones.Location = new System.Drawing.Point(16, 538);
             this.rtxtObservaciones.MaxLength = 200;
             this.rtxtObservaciones.Name = "rtxtObservaciones";
-            this.rtxtObservaciones.Size = new System.Drawing.Size(738, 84);
+            this.rtxtObservaciones.Size = new System.Drawing.Size(736, 84);
             this.rtxtObservaciones.TabIndex = 26;
             this.rtxtObservaciones.Text = "";
             // 
@@ -399,7 +400,7 @@ namespace Lab.UserPanel
             this.groupBox3.Controls.Add(this.label32);
             this.groupBox3.Controls.Add(this.txtColor);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(30, 49);
+            this.groupBox3.Location = new System.Drawing.Point(6, 38);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(367, 474);
             this.groupBox3.TabIndex = 1;
@@ -409,10 +410,10 @@ namespace Lab.UserPanel
             // txtEsteriasaLeuc
             // 
             this.txtEsteriasaLeuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtEsteriasaLeuc.Location = new System.Drawing.Point(203, 423);
+            this.txtEsteriasaLeuc.Location = new System.Drawing.Point(189, 423);
             this.txtEsteriasaLeuc.MaxLength = 25;
             this.txtEsteriasaLeuc.Name = "txtEsteriasaLeuc";
-            this.txtEsteriasaLeuc.Size = new System.Drawing.Size(110, 26);
+            this.txtEsteriasaLeuc.Size = new System.Drawing.Size(157, 26);
             this.txtEsteriasaLeuc.TabIndex = 14;
             this.txtEsteriasaLeuc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtEsteriasaLeuc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEsteriasaLeuc_KeyPress);
@@ -420,10 +421,10 @@ namespace Lab.UserPanel
             // txtHemoglobina
             // 
             this.txtHemoglobina.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtHemoglobina.Location = new System.Drawing.Point(203, 391);
+            this.txtHemoglobina.Location = new System.Drawing.Point(189, 391);
             this.txtHemoglobina.MaxLength = 25;
             this.txtHemoglobina.Name = "txtHemoglobina";
-            this.txtHemoglobina.Size = new System.Drawing.Size(110, 26);
+            this.txtHemoglobina.Size = new System.Drawing.Size(157, 26);
             this.txtHemoglobina.TabIndex = 13;
             this.txtHemoglobina.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtHemoglobina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHemoglobina_KeyPress);
@@ -431,10 +432,10 @@ namespace Lab.UserPanel
             // txtNitritos
             // 
             this.txtNitritos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtNitritos.Location = new System.Drawing.Point(203, 359);
+            this.txtNitritos.Location = new System.Drawing.Point(189, 359);
             this.txtNitritos.MaxLength = 25;
             this.txtNitritos.Name = "txtNitritos";
-            this.txtNitritos.Size = new System.Drawing.Size(110, 26);
+            this.txtNitritos.Size = new System.Drawing.Size(157, 26);
             this.txtNitritos.TabIndex = 12;
             this.txtNitritos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNitritos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNitritos_KeyPress);
@@ -442,10 +443,10 @@ namespace Lab.UserPanel
             // txtBilirrubina
             // 
             this.txtBilirrubina.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtBilirrubina.Location = new System.Drawing.Point(203, 327);
+            this.txtBilirrubina.Location = new System.Drawing.Point(189, 327);
             this.txtBilirrubina.MaxLength = 25;
             this.txtBilirrubina.Name = "txtBilirrubina";
-            this.txtBilirrubina.Size = new System.Drawing.Size(110, 26);
+            this.txtBilirrubina.Size = new System.Drawing.Size(157, 26);
             this.txtBilirrubina.TabIndex = 11;
             this.txtBilirrubina.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBilirrubina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBilirrubina_KeyPress);
@@ -454,7 +455,7 @@ namespace Lab.UserPanel
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(27, 426);
+            this.label6.Location = new System.Drawing.Point(13, 426);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 20);
             this.label6.TabIndex = 57;
@@ -465,7 +466,7 @@ namespace Lab.UserPanel
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(90, 394);
+            this.label5.Location = new System.Drawing.Point(76, 394);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 20);
             this.label5.TabIndex = 56;
@@ -475,7 +476,7 @@ namespace Lab.UserPanel
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(135, 362);
+            this.label4.Location = new System.Drawing.Point(121, 362);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 20);
             this.label4.TabIndex = 55;
@@ -485,7 +486,7 @@ namespace Lab.UserPanel
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(115, 330);
+            this.label3.Location = new System.Drawing.Point(101, 330);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 54;
@@ -495,7 +496,7 @@ namespace Lab.UserPanel
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(86, 298);
+            this.label2.Location = new System.Drawing.Point(72, 298);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 20);
             this.label2.TabIndex = 53;
@@ -504,10 +505,10 @@ namespace Lab.UserPanel
             // txtUrobilinogeno
             // 
             this.txtUrobilinogeno.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtUrobilinogeno.Location = new System.Drawing.Point(203, 295);
+            this.txtUrobilinogeno.Location = new System.Drawing.Point(189, 295);
             this.txtUrobilinogeno.MaxLength = 25;
             this.txtUrobilinogeno.Name = "txtUrobilinogeno";
-            this.txtUrobilinogeno.Size = new System.Drawing.Size(110, 26);
+            this.txtUrobilinogeno.Size = new System.Drawing.Size(157, 26);
             this.txtUrobilinogeno.TabIndex = 10;
             this.txtUrobilinogeno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUrobilinogeno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUrobilinogeno_KeyPress);
@@ -515,10 +516,10 @@ namespace Lab.UserPanel
             // txtCuerCeton
             // 
             this.txtCuerCeton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtCuerCeton.Location = new System.Drawing.Point(203, 263);
+            this.txtCuerCeton.Location = new System.Drawing.Point(189, 263);
             this.txtCuerCeton.MaxLength = 25;
             this.txtCuerCeton.Name = "txtCuerCeton";
-            this.txtCuerCeton.Size = new System.Drawing.Size(110, 26);
+            this.txtCuerCeton.Size = new System.Drawing.Size(157, 26);
             this.txtCuerCeton.TabIndex = 9;
             this.txtCuerCeton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCuerCeton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCuerCeton_KeyPress);
@@ -526,10 +527,10 @@ namespace Lab.UserPanel
             // txtSangreOculta
             // 
             this.txtSangreOculta.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtSangreOculta.Location = new System.Drawing.Point(203, 231);
+            this.txtSangreOculta.Location = new System.Drawing.Point(189, 231);
             this.txtSangreOculta.MaxLength = 25;
             this.txtSangreOculta.Name = "txtSangreOculta";
-            this.txtSangreOculta.Size = new System.Drawing.Size(110, 26);
+            this.txtSangreOculta.Size = new System.Drawing.Size(157, 26);
             this.txtSangreOculta.TabIndex = 8;
             this.txtSangreOculta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSangreOculta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSangreOculta_KeyPress);
@@ -537,10 +538,10 @@ namespace Lab.UserPanel
             // txtGlucosa
             // 
             this.txtGlucosa.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtGlucosa.Location = new System.Drawing.Point(203, 199);
+            this.txtGlucosa.Location = new System.Drawing.Point(189, 199);
             this.txtGlucosa.MaxLength = 25;
             this.txtGlucosa.Name = "txtGlucosa";
-            this.txtGlucosa.Size = new System.Drawing.Size(110, 26);
+            this.txtGlucosa.Size = new System.Drawing.Size(157, 26);
             this.txtGlucosa.TabIndex = 7;
             this.txtGlucosa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtGlucosa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGlucosa_KeyPress);
@@ -548,10 +549,10 @@ namespace Lab.UserPanel
             // txtProteinas
             // 
             this.txtProteinas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtProteinas.Location = new System.Drawing.Point(203, 167);
+            this.txtProteinas.Location = new System.Drawing.Point(189, 167);
             this.txtProteinas.MaxLength = 25;
             this.txtProteinas.Name = "txtProteinas";
-            this.txtProteinas.Size = new System.Drawing.Size(110, 26);
+            this.txtProteinas.Size = new System.Drawing.Size(157, 26);
             this.txtProteinas.TabIndex = 6;
             this.txtProteinas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtProteinas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProteinas_KeyPress);
@@ -559,10 +560,10 @@ namespace Lab.UserPanel
             // txtPh
             // 
             this.txtPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtPh.Location = new System.Drawing.Point(203, 135);
+            this.txtPh.Location = new System.Drawing.Point(189, 135);
             this.txtPh.MaxLength = 25;
             this.txtPh.Name = "txtPh";
-            this.txtPh.Size = new System.Drawing.Size(110, 26);
+            this.txtPh.Size = new System.Drawing.Size(157, 26);
             this.txtPh.TabIndex = 5;
             this.txtPh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPh_KeyPress);
@@ -570,10 +571,10 @@ namespace Lab.UserPanel
             // txtDensidad
             // 
             this.txtDensidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtDensidad.Location = new System.Drawing.Point(203, 103);
+            this.txtDensidad.Location = new System.Drawing.Point(189, 103);
             this.txtDensidad.MaxLength = 25;
             this.txtDensidad.Name = "txtDensidad";
-            this.txtDensidad.Size = new System.Drawing.Size(110, 26);
+            this.txtDensidad.Size = new System.Drawing.Size(157, 26);
             this.txtDensidad.TabIndex = 4;
             this.txtDensidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDensidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDensidad_KeyPress);
@@ -582,10 +583,10 @@ namespace Lab.UserPanel
             // 
             this.txtAspecto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAspecto.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtAspecto.Location = new System.Drawing.Point(203, 71);
+            this.txtAspecto.Location = new System.Drawing.Point(189, 71);
             this.txtAspecto.MaxLength = 25;
             this.txtAspecto.Name = "txtAspecto";
-            this.txtAspecto.Size = new System.Drawing.Size(110, 26);
+            this.txtAspecto.Size = new System.Drawing.Size(157, 26);
             this.txtAspecto.TabIndex = 3;
             this.txtAspecto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtAspecto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAspecto_KeyPress);
@@ -594,7 +595,7 @@ namespace Lab.UserPanel
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(49, 266);
+            this.label39.Location = new System.Drawing.Point(35, 266);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(148, 20);
             this.label39.TabIndex = 44;
@@ -604,7 +605,7 @@ namespace Lab.UserPanel
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(82, 234);
+            this.label38.Location = new System.Drawing.Point(68, 234);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(115, 20);
             this.label38.TabIndex = 43;
@@ -614,7 +615,7 @@ namespace Lab.UserPanel
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(125, 202);
+            this.label37.Location = new System.Drawing.Point(111, 202);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(72, 20);
             this.label37.TabIndex = 42;
@@ -624,7 +625,7 @@ namespace Lab.UserPanel
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(117, 170);
+            this.label36.Location = new System.Drawing.Point(103, 170);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(80, 20);
             this.label36.TabIndex = 41;
@@ -634,7 +635,7 @@ namespace Lab.UserPanel
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(165, 138);
+            this.label35.Location = new System.Drawing.Point(151, 138);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(32, 20);
             this.label35.TabIndex = 40;
@@ -644,7 +645,7 @@ namespace Lab.UserPanel
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(116, 106);
+            this.label34.Location = new System.Drawing.Point(102, 106);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(81, 20);
             this.label34.TabIndex = 39;
@@ -654,7 +655,7 @@ namespace Lab.UserPanel
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(125, 74);
+            this.label33.Location = new System.Drawing.Point(111, 74);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(72, 20);
             this.label33.TabIndex = 38;
@@ -664,7 +665,7 @@ namespace Lab.UserPanel
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(147, 42);
+            this.label32.Location = new System.Drawing.Point(133, 42);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(50, 20);
             this.label32.TabIndex = 37;
@@ -674,10 +675,10 @@ namespace Lab.UserPanel
             // 
             this.txtColor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtColor.Location = new System.Drawing.Point(203, 39);
+            this.txtColor.Location = new System.Drawing.Point(189, 39);
             this.txtColor.MaxLength = 25;
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(110, 26);
+            this.txtColor.Size = new System.Drawing.Size(157, 26);
             this.txtColor.TabIndex = 2;
             this.txtColor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtColor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtColor_KeyPress);
@@ -687,7 +688,7 @@ namespace Lab.UserPanel
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
-            this.label13.Location = new System.Drawing.Point(307, 21);
+            this.label13.Location = new System.Drawing.Point(282, 9);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(234, 26);
             this.label13.TabIndex = 44;
@@ -698,14 +699,15 @@ namespace Lab.UserPanel
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(824, 797);
+            this.ClientSize = new System.Drawing.Size(777, 722);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Orina";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Examen de Orina";
+            this.Text = "Agregar Examen de Orina";
             this.Load += new System.EventHandler(this.Orina_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

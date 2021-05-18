@@ -57,7 +57,11 @@ namespace Lab.AdminPanel
             dgvUsuarios.Rows.Clear();
             using (laboratorio_pEntities DB = new laboratorio_pEntities())
             {
-                foreach (var user in DB.usuario)
+                var query = from usuario in DB.usuario
+                            where usuario.id_usuario != 1
+                            select usuario;
+
+                foreach (var user in query.ToList())
                 {
                     dgvUsuarios.Rows.Add(user.id_usuario, user.nombre_usuario, user.contraseña, user.tipo);
                 }
@@ -353,6 +357,11 @@ namespace Lab.AdminPanel
                     MessageBox.Show("Sucedio un error inesperado. Error: " + ex.Message.ToString(), "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

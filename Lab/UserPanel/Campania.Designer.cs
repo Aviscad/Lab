@@ -29,6 +29,7 @@ namespace Lab.UserPanel
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtNomCampania = new System.Windows.Forms.TextBox();
@@ -44,6 +45,7 @@ namespace Lab.UserPanel
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.helpMessage = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCampania)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +58,7 @@ namespace Lab.UserPanel
             this.txtNomCampania.Name = "txtNomCampania";
             this.txtNomCampania.Size = new System.Drawing.Size(315, 26);
             this.txtNomCampania.TabIndex = 0;
+            this.helpMessage.SetToolTip(this.txtNomCampania, "Coloque un nombre de campaña");
             // 
             // label1
             // 
@@ -267,5 +270,6 @@ namespace Lab.UserPanel
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ToolTip helpMessage;
     }
 }
