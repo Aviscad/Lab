@@ -71,6 +71,7 @@ namespace Lab.AdminPanel
         {
             txtCont.Text = txtUsuario.Text = txtReCont.Text = "";
             btnEliminar.Enabled = false;
+            btnCancelar.Enabled = false;
             btnGuardar.Text = "Guardar";
             btnGuardar.Image = Properties.Resources.guardar;
             userModel.id_usuario = 0;
@@ -226,6 +227,7 @@ namespace Lab.AdminPanel
                     btnGuardar.Text = "Modificar";
                     btnGuardar.Image = Properties.Resources.editar;
                     btnEliminar.Enabled = true;
+                    btnCancelar.Enabled = true;
                 }
                 catch (Exception ex)
                 {

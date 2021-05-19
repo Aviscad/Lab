@@ -22,6 +22,7 @@ namespace Lab.UserPanel
         {
             txtNombre.Text = txtCodigo.Text = "";
             btnEliminar.Enabled = false;
+            btnCancelar.Enabled = false;
             btnGuardar.Text = "Guardar";
             btnGuardar.Image = Properties.Resources.guardar;
             pacienteModel.id_paciente = 0;
@@ -39,13 +40,23 @@ namespace Lab.UserPanel
             {
                 var query = from campaña in DB.campaña select campaña;
                 var campaniaTolist = query.ToList();
-                cbbCampania.DataSource = campaniaTolist;
-                cbbCampania.DisplayMember = "nombre";
-                cbbCampania.ValueMember = "id_campaña";
-                cbbGenero.SelectedIndex = 0;     
+                if (campaniaTolist.Count > 0)
+                {
+                    btnGuardar.Enabled = true;
+                    cbbCampania.DataSource = campaniaTolist;
+                    cbbCampania.DisplayMember = "nombre";
+                    cbbCampania.ValueMember = "id_campaña";
+                    cbbGenero.SelectedIndex = 0;
+
+                    fillRows();
+                    Clear();
+                }
+                else {
+                    btnGuardar.Enabled = false;
+                    MessageBox.Show("Debe agregar una campaña primero, para agregar una nueva campaña: \n 1. Dar click en el boton campaña. \n 2. Colocar el nombre de la campaña y click en Guardar.","Error!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
             }
-            fillRows();
-            Clear();
+
 
             dgvPacientes.EnableHeadersVisualStyles = false;
             dgvPacientes.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#1682a7");
@@ -65,7 +76,7 @@ namespace Lab.UserPanel
                     MessageBox.Show("El Nombre del paciente debe contener solo letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else 
-                {
+                {   
                         pacienteModel.nombre = txtNombre.Text.Trim();
                         pacienteModel.fecha_nacimiento = Convert.ToDateTime(dateTimePicker1.Value.ToShortDateString());
                         pacienteModel.codigo = txtCodigo.Text.Trim();
@@ -129,6 +140,7 @@ namespace Lab.UserPanel
                     btnGuardar.Text = "Modificar";
                     btnGuardar.Image = Properties.Resources.editar;
                     btnEliminar.Enabled = true;
+                    btnCancelar.Enabled = true;
                 }
                 catch (Exception ex)
                 {

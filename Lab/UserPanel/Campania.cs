@@ -114,6 +114,7 @@ namespace Lab.UserPanel
         {
             txtNomCampania.Text = "";
             btnEliminar.Enabled = false;
+            btnCancelar.Enabled = false;
             btnGuardar.Text = "Guardar";
             btnGuardar.Image = Properties.Resources.guardar;
             campaniaModel.id_campaña = 0;
@@ -139,6 +140,7 @@ namespace Lab.UserPanel
                     btnGuardar.Text = "Modificar";
                     btnGuardar.Image = Properties.Resources.editar;
                     btnEliminar.Enabled = true;
+                    btnCancelar.Enabled = true;
                 }
                 catch (Exception ex)
                 {
@@ -149,20 +151,27 @@ namespace Lab.UserPanel
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Estas seguro de eliminar este registro, luego de hacerlo no se podra recuperar la información?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (campaniaModel.id_campaña == 0)
             {
-                using (laboratorio_pEntities DB = new laboratorio_pEntities())
+                MessageBox.Show("Test");
+            }
+            else {
+                if (MessageBox.Show("Estas seguro de eliminar este registro, luego de hacerlo no se podra recuperar la información?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    var entry = DB.Entry(campaniaModel);
-                    if (entry.State == EntityState.Detached)
-                        DB.campaña.Attach(campaniaModel);
-                    DB.campaña.Remove(campaniaModel);
-                    DB.SaveChanges();
+                    using (laboratorio_pEntities DB = new laboratorio_pEntities())
+                    {
 
-                    Clear();
-                    fillRows();
+                        var entry = DB.Entry(campaniaModel);
+                        if (entry.State == EntityState.Detached)
+                            DB.campaña.Attach(campaniaModel);
+                        DB.campaña.Remove(campaniaModel);
+                        DB.SaveChanges();
 
-                    MessageBox.Show("Registro eliminado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Clear();
+                        fillRows();
+
+                        MessageBox.Show("Registro eliminado!", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }

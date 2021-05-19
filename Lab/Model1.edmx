@@ -243,7 +243,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_paciente_campaña">
-          <End Role="campaña" Type="Self.campaña" Multiplicity="0..1" />
+          <End Role="campaña" Type="Self.campaña" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="paciente" Type="Self.paciente" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="campaña">
