@@ -136,6 +136,12 @@
     <Compile Include="ResetPassword\resetPassword.Designer.cs">
       <DependentUpon>resetPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Terminos_y_Condiciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Terminos_y_Condiciones.Designer.cs">
+      <DependentUpon>Terminos_y_Condiciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPanel\AddExamenes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     <EmbeddedResource Include="ResetPassword\resetPassword.resx">
       <DependentUpon>resetPassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Terminos_y_Condiciones.resx">
+      <DependentUpon>Terminos_y_Condiciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserPanel\AddExamenes.resx">
       <DependentUpon>AddExamenes.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +280,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\terms-and-conditions%281%29.png" />
+    <None Include="Resources\terms-and-conditions.png" />
+    <None Include="Resources\Logo_proy_inf.png" />
     <None Include="Resources\upload.png" />
     <None Include="Resources\down.png" />
     <None Include="Resources\editar.png" />

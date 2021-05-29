@@ -365,5 +365,10 @@ namespace Lab.AdminPanel
         {
 
         }
+
+        private void btnTerminos_Click(object sender, EventArgs e)
+        {
+            new Terminos_y_Condiciones().Show();
+        }
     }
 }

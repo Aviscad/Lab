@@ -118,5 +118,10 @@ namespace Lab.UserPanel
         {
             AbrirFormWrapper(new ReportesExamenes());
         }
+
+        private void btnTerminos_Click(object sender, EventArgs e)
+        {
+            new Terminos_y_Condiciones().Show();
+        }
     }
 }

@@ -183,6 +183,16 @@ namespace Lab.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_proy_inf {
+            get {
+                object obj = ResourceManager.GetObject("Logo_proy_inf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap microscopio {
             get {
                 object obj = ResourceManager.GetObject("microscopio", resourceCulture);
@@ -236,6 +246,26 @@ namespace Lab.Properties {
         internal static System.Drawing.Bitmap salirWhite {
             get {
                 object obj = ResourceManager.GetObject("salirWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap terms_and_conditions {
+            get {
+                object obj = ResourceManager.GetObject("terms-and-conditions", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap terms_and_conditions_1_ {
+            get {
+                object obj = ResourceManager.GetObject("terms-and-conditions(1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

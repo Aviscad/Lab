@@ -31,6 +31,7 @@ namespace Lab.UserPanel
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.btnCampania = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -41,8 +42,8 @@ namespace Lab.UserPanel
             this.btnPacientes = new System.Windows.Forms.Button();
             this.lblUserLogged = new System.Windows.Forms.Label();
             this.Wrapper = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.helpMessage = new System.Windows.Forms.ToolTip(this.components);
+            this.btnTerminos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +52,7 @@ namespace Lab.UserPanel
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(135)))), ((int)(((byte)(167)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnTerminos);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.btnCampania);
@@ -64,8 +66,19 @@ namespace Lab.UserPanel
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(297, 681);
+            this.panel1.Size = new System.Drawing.Size(297, 789);
             this.panel1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(223, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Versión 1.0";
             // 
             // button3
             // 
@@ -234,26 +247,36 @@ namespace Lab.UserPanel
             this.Wrapper.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Wrapper.Location = new System.Drawing.Point(297, 0);
             this.Wrapper.Name = "Wrapper";
-            this.Wrapper.Size = new System.Drawing.Size(706, 681);
+            this.Wrapper.Size = new System.Drawing.Size(706, 789);
             this.Wrapper.TabIndex = 4;
             this.Wrapper.Paint += new System.Windows.Forms.PaintEventHandler(this.Wrapper_Paint);
             // 
-            // label2
+            // btnTerminos
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(223, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Versión 1.0";
+            this.btnTerminos.BackColor = System.Drawing.Color.Transparent;
+            this.btnTerminos.FlatAppearance.BorderSize = 2;
+            this.btnTerminos.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(214)))), ((int)(((byte)(225)))));
+            this.btnTerminos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnTerminos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(143)))), ((int)(((byte)(214)))), ((int)(((byte)(225)))));
+            this.btnTerminos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTerminos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTerminos.ForeColor = System.Drawing.Color.White;
+            this.btnTerminos.Image = global::Lab.Properties.Resources.terms_and_conditions_1_;
+            this.btnTerminos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTerminos.Location = new System.Drawing.Point(10, 691);
+            this.btnTerminos.Name = "btnTerminos";
+            this.btnTerminos.Size = new System.Drawing.Size(279, 55);
+            this.btnTerminos.TabIndex = 21;
+            this.btnTerminos.Text = "TERMINOS DE USO";
+            this.helpMessage.SetToolTip(this.btnTerminos, "Restaurar base de datos con un archivo .bak");
+            this.btnTerminos.UseVisualStyleBackColor = false;
+            this.btnTerminos.Click += new System.EventHandler(this.btnTerminos_Click);
             // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 681);
+            this.ClientSize = new System.Drawing.Size(1003, 789);
             this.Controls.Add(this.Wrapper);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -283,5 +306,6 @@ namespace Lab.UserPanel
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolTip helpMessage;
+        private System.Windows.Forms.Button btnTerminos;
     }
 }
