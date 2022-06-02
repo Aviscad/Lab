@@ -13,7 +13,7 @@ Algunas de las cosas que se aprendieron en este proyecto son:
 ### Diagrama Entidad Relación (DER).
 ![Diagrama Entidad Relacion](https://github.com/Aviscad/Lab/blob/master/DER-labclinico.png)
 
-### Vistas de las Interfaces del Software
+### Vistas de Algunas de las Interfaces del Software
 
 #### Login
 ![login](https://github.com/Aviscad/Lab/blob/master/img/login.png)
