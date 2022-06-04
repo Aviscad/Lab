@@ -20,8 +20,8 @@ namespace Lab.ResetPassword
             InitializeComponent();
         }
 
-        const string USUARIO = "lab.clinicoescobar@gmail.com";
-        const string PASSWORD = "labescobar2021";
+        const string USUARIO = "**********";
+        const string PASSWORD = "*********";
 
         private string randomCode;
         private usuario userModel = new usuario();
